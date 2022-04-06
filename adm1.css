@@ -79,7 +79,6 @@ li:hover{
     bottom: 3.1rem;
     font-size: 2.5rem;
     font-weight: bold;
-    transition-delay: 550ms;
 }
 
 ul p{
@@ -97,52 +96,46 @@ p{
     margin-left: 4.5rem;
 }
 
+
 .nome{
     margin-top: -5.5rem;
     font-size: 1.4rem;
-    transition-delay: 150ms;
 }
 
 .profissao{
     margin-top: -3.8rem;
     font-size: 1.4rem;
     font-weight: bold;
-    transition-delay: 150ms;
 }
 
 .cadastro{
     margin-top: -5.3rem;
     font-size: 2.5rem;
     font-weight: bold;
-    transition-delay: 250ms;
 }
 
 .funcionarios{
     margin-top: -5.3rem;
     font-size: 2.5rem;
     font-weight: bold;
-    transition-delay: 350ms;
 }
 
 .clientes{
     margin-top: -5.3rem;
     font-size: 2.5rem;
     font-weight: bold;
-    transition-delay: 450ms;
 }
 
 .protocolos{
     margin-top: -5.4rem;
     font-size: 2.5rem;
     font-weight: bold;
-    transition-delay: 500ms;
 }
 
 .avisos{
     margin-top: -5.7rem;
     font-size: 2.5rem;
     font-weight: bold;
-    transition-delay: 500ms;
 }
 
 .barra-pesquisa{
