@@ -88,6 +88,7 @@ ul p{
 
 .barralateral:hover ul p{
     visibility: visible;
+    animation: op 300ms ease-out;
 }
 
 p{
@@ -96,6 +97,15 @@ p{
     margin-left: 4.5rem;
 }
 
+@keyframes op {
+    from{
+        transform: translateY(-50px);
+    }
+
+    to{
+        transform: translateY(0px);
+    }
+}
 
 .nome{
     margin-top: -5.5rem;
