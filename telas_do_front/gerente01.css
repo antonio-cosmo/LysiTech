@@ -1,8 +1,7 @@
 :root{
-    --primary-color: #51607e;
-    --fundo-color: #3F5071;
-    --destaque-color: #212D45;
-    --white-color: #EBEBEB;
+    --primary-color: #444A4B;
+    --fundo-color: #EBEBEB;
+    --destaque-color: #0a0e15;
 }
 
 *{
@@ -27,75 +26,14 @@ article{
 }
 
 .barralateral{
-    width: 5rem;
+    width: 7rem;
     height: 100vh;
     background: var(--primary-color);
-    padding: 1rem;
     transition: all ease 700ms;
     position: absolute;
     z-index: 2000;
 }
 
-.barralateral:hover{
-    width: 25rem;
-    opacity: 0.9;
-}
-
-.perfil{
-    background-image: url(msg-500772958-12895.jpg);
-    background-size: contain;
-    border-radius: 6rem;
-    width: 3rem;
-    height: 3.5rem;
-    margin-bottom: 1.5rem;
-    cursor: pointer;
-    margin-left: 0.4rem;
-}
-
-li{
-    display: flex;
-    justify-content: center;
-    width: 3rem;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    transition: all ease 500ms;
-    cursor: pointer;
-}
-
-li:hover{
-    background: var(--destaque-color);
-    border-radius: 1rem;
-    width: 23rem;
-    padding-left: 20rem;
-}
-
-.logout{
-    position: absolute;
-    bottom: 1rem;
-}
-
-.barralateral p:last-child{
-    position: absolute;
-    bottom: 3.1rem;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-ul p{
-    position: absolute;
-    visibility: hidden;
-}
-
-.barralateral:hover ul p{
-    visibility: visible;
-    animation: op 300ms ease-out;
-}
-
-p{
-    width: 20rem;
-    color: var(--white-color);
-    margin-left: 4.5rem;
-}
 
 @keyframes op {
     from{
@@ -107,43 +45,117 @@ p{
     }
 }
 
+@keyframes  linha{
+    from{
+        transform: translateX(0px);
+    }
+
+    to{
+        transform: translateX(25px);
+    }
+}
+
+.barralateral:hover{
+    width: 25rem;
+    opacity: 0.9;
+}
+
+.barralateral li{
+    display: flex;
+    justify-content: left;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+.barralateral img{
+    padding-left: 0.3rem;
+}
+
+.barralateral p{
+    padding-left: 1.5rem;
+}
+
+.linha{
+    animation: linha 300ms ease-out;
+    height: 6rem;
+}
+
+.linha2{
+    animation: linha 300ms ease-out;
+    height: 6rem;
+    position: absolute;
+    bottom: 0rem;
+}
+
+.linha:hover{
+    background: var(--destaque-color);
+    cursor: pointer;
+}
+
+.linha2:hover{
+    background: var(--destaque-color);
+    cursor: pointer;
+}
+
+.sair{
+    bottom: 1.6rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.barralateral p{
+    position: absolute;
+    visibility: hidden;
+}
+
+.barralateral:hover ul p{
+    visibility: visible;
+    animation: op 300ms ease-out;
+}
+
+.barralateral p{
+    width: 20rem;
+    color: var(--fundo-color);
+    margin-left: 5rem;
+}
+
 .nome{
-    margin-top: -5.5rem;
+    margin-top: -4.5rem;
     font-size: 1.4rem;
 }
 
 .profissao{
-    margin-top: -3.8rem;
+    margin-top: -3rem;
     font-size: 1.4rem;
     font-weight: bold;
 }
 
 .cadastro{
-    margin-top: -5.3rem;
+    margin-top: -4.5rem;
     font-size: 2.5rem;
     font-weight: bold;
 }
 
 .funcionarios{
-    margin-top: -5.3rem;
+    margin-top: -4.1rem;
     font-size: 2.5rem;
     font-weight: bold;
 }
 
 .clientes{
-    margin-top: -5.3rem;
+    margin-top: -4.15rem;
     font-size: 2.5rem;
     font-weight: bold;
 }
 
 .protocolos{
-    margin-top: -5.4rem;
+    margin-top: -4.5rem;
     font-size: 2.5rem;
     font-weight: bold;
 }
 
 .avisos{
-    margin-top: -5.7rem;
+    margin-top: -4.5rem;
     font-size: 2.5rem;
     font-weight: bold;
 }
@@ -162,10 +174,12 @@ p{
     text-align: center;
     height: 100%;
     width: 50%;
+    background: white;
 }
 
 .info-protocolos{
     text-align: center;
     height: 100%;
     width: 35%;
+    background: white;
 }
