@@ -29,35 +29,8 @@ article{
     width: 23rem;
     height: 100vh;
     background: var(--primary-color);
-    transition: all ease 700ms;
     position: absolute;
     z-index: 2000;
-}
-
-
-@keyframes op {
-    from{
-        transform: translateY(-50px);
-    }
-
-    to{
-        transform: translateY(0px);
-    }
-}
-
-@keyframes  linha{
-    from{
-        transform: translateX(0px);
-    }
-
-    to{
-        transform: translateX(25px);
-    }
-}
-
-.barralateral:hover{
-    width: 23rem;
-    opacity: 0.9;
 }
 
 .barralateral li{
@@ -81,17 +54,20 @@ article{
 }
 
 .name{
+    padding: 1rem 0rem;
     text-align: center;
+    color: #ffffff;
 }
 
 .linha{
-    animation: linha 300ms ease-out;
+    transition: all 350ms ease;
     height: 6rem;
 }
 
 .linha2{
-    animation: linha 300ms ease-out;
+    transition: all 350ms ease;
     height: 6rem;
+    width: 23rem;
     position: absolute;
     bottom: 0rem;
 }
@@ -107,42 +83,15 @@ article{
 }
 
 .sair{
+    position: absolute;
     bottom: 1.6rem;
     font-size: 2.5rem;
     font-weight: bold;
 }
 
 .barralateral ul p{
-    position: absolute;
-    
-}
-
-.barralateral:hover ul p{
-    visibility: visible;
-    animation: op 300ms ease-out;
-}
-
-.barralateral ul p{
-    width: 20rem;
     color: var(--fundo-color);
     margin-left: 5rem;
-}
-
-.nome{
-    margin-top: -4.5rem;
-    font-size: 1.4rem;
-}
-
-.profissao{
-    margin-top: -3rem;
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-
-.cadastro{
-    margin-top: -4.5rem;
-    font-size: 2.5rem;
-    font-weight: bold;
 }
 
 .funcionarios{
