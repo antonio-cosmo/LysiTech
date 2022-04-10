@@ -1,6 +1,6 @@
 :root{
-    --primary-color: #444A4B;
-    --fundo-color: #EBEBEB;
+    --primary-color: #0387DC;
+    --fundo-color: #ffffff;
     --destaque-color: #0a0e15;
 }
 
@@ -26,7 +26,7 @@ article{
 }
 
 .barralateral{
-    width: 7rem;
+    width: 23rem;
     height: 100vh;
     background: var(--primary-color);
     transition: all ease 700ms;
@@ -56,7 +56,7 @@ article{
 }
 
 .barralateral:hover{
-    width: 25rem;
+    width: 23rem;
     opacity: 0.9;
 }
 
@@ -71,8 +71,17 @@ article{
     padding-left: 0.3rem;
 }
 
-.barralateral p{
+.barralateral ul p{
     padding-left: 1.5rem;
+}
+
+
+.foto{
+    margin-left: 4.5rem;
+}
+
+.name{
+    text-align: center;
 }
 
 .linha{
@@ -103,9 +112,9 @@ article{
     font-weight: bold;
 }
 
-.barralateral p{
+.barralateral ul p{
     position: absolute;
-    visibility: hidden;
+    
 }
 
 .barralateral:hover ul p{
@@ -113,7 +122,7 @@ article{
     animation: op 300ms ease-out;
 }
 
-.barralateral p{
+.barralateral ul p{
     width: 20rem;
     color: var(--fundo-color);
     margin-left: 5rem;
