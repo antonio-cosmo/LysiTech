@@ -24,6 +24,9 @@ default: &default
 development:
   <<: *default
   database: app_lysitech_development
+  # username: app_lysitech
+  username: <%= ENV["APP_LYSITECH_DATABASE_USERNAME"] %>
+  password: <%= ENV["APP_LYSITECH_DATABASE_PASSWORD"] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +61,8 @@ development:
 test:
   <<: *default
   database: app_lysitech_test
+  username: <%= ENV["APP_LYSITECH_DATABASE_USERNAME"] %>
+  password: <%= ENV["APP_LYSITECH_DATABASE_PASSWORD"] %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -82,5 +87,5 @@ test:
 production:
   <<: *default
   database: app_lysitech_production
-  username: app_lysitech
+  username: <%= ENV["APP_LYSITECH_DATABASE_USERNAME"] %>
   password: <%= ENV["APP_LYSITECH_DATABASE_PASSWORD"] %>
