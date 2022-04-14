@@ -1,5 +1,6 @@
 :root{
-    --primary-color: #3A4F78;
+    --primary-color: #0387DC;
+    --fundo-color: #ffffff;
     --white-color: #EBEBEB
 }
 
@@ -26,13 +27,13 @@ section{
     flex-direction: column;
 }
 
-.logo p{
-    background: var(--white-color);
+.logo p img{
     width: 9rem;
     height: 9rem;
     border-radius: 5rem;
     margin-top: 5rem;
 }
+
 
 .login{
     width: min(60vw, 45rem);
@@ -59,6 +60,7 @@ section{
     opacity: 0.93;
     transition: all ease 300ms;
     font-family: 'Roboto Condensed', sans-serif;
+    outline: none;
 }
 
 .recuperar{
