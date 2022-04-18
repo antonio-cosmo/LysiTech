@@ -1,0 +1,14 @@
+<section>
+    <div class="logo">
+        <p> <%= image_tag "Logo.svg" %></p>
+    </div>
+    <div class="login">
+        <%= form_with do |form| %>
+            <%= form.text_field :username, placeholder:'Usuario', class: 'caixa' %>
+            <%= form.password_field :userpassword, placeholder: "Senha", class: 'caixa' %>
+            <%= form.submit "Entrar", class: 'caixa' %>
+            <%= form.submit "Recuperar senha", class: "recuperar" %>
+
+        <% end %>
+    </div>
+</section>
