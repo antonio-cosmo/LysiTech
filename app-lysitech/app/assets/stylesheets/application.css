@@ -53,21 +53,26 @@ section{
     padding: 5rem;
 }
 
-.caixa{
+.caixa, .btn-submit{
     margin-top: 1rem;
-    /* background: var(--primary-color); */
     background: var(--background-color);
     border: none;
     border-radius: 1rem;
     padding: 1.3rem;
-    /* color: var(--white-color); */
-    color: var(--primary-color);
     font-size: min(2.5vw, 2rem);
     margin-bottom: 1rem;
-    /* opacity: 0.93; */
     transition: all ease 300ms;
     font-family: 'Roboto Condensed', sans-serif;
     outline: none;
+}
+
+.caixa{
+    color: #000;
+}
+
+.btn-submit{
+    cursor: pointer;
+    color: var(--primary-color)
 }
 
 .recuperar{
@@ -77,10 +82,10 @@ section{
     padding: 0.4rem;
     color: var(--primary-color);
     font-size: min(1.8vw, 1.2rem);
-    /* opacity: 0.93; */
     transition: all ease 300ms;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 400;
+    cursor: pointer;
 }
 
 .recuperar:hover{

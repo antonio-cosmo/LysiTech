@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  # get 'login/index'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
+  get '/dashboard', to: "dashboard#index"
+  post '/dashboard', to: "dashboard#exist"
   root "login#index"
-  post "login/index", to: "login#index"
-
 end

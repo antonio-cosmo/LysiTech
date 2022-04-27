@@ -3,12 +3,12 @@
         <p> <%= image_tag "Logo.svg" %></p>
     </div>
     <div class="login">
-        <%= form_with do |form| %>
-            <%= form.text_field :username, placeholder:'Usuario', class: 'caixa' %>
-            <%= form.password_field :userpassword, placeholder: "Senha", class: 'caixa' %>
-            <%= form.submit "Entrar", class: 'caixa' %>
-            <%= form.submit "Recuperar senha", class: "recuperar" %>
-
+        <%= form_with url: "/dashboard", method: :post do |f| %>
+            <%= f.label :username, 'Usuario' %>
+            <%= f.text_field :username, placeholder:'Usuario', class: 'caixa' %>
+            <%= f.label :userpassword, 'Senha' %>
+            <%= f.password_field :userpassword, placeholder: "Senha", class: 'caixa' %>
+            <%= f.submit "Entrar", class: 'btn-submit' %>
         <% end %>
     </div>
 </section>
