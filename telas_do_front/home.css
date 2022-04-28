@@ -87,14 +87,6 @@ article{
     cursor: pointer;
 }
 
-.sair{
-    position: absolute;
-    bottom: 1.6rem;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-
 section{
     width: 100vw;
 }
@@ -103,7 +95,9 @@ header{
     display: flex;
     list-style: none;
     justify-content: center;
+    align-items: center;
     border-bottom: solid 2px var(--primary-color);
+    height: 30%;
 }
 
 header ul{
@@ -111,8 +105,15 @@ header ul{
 }
 
 .style0{
-    padding-top: 1rem;
     width: 30%;
+}
+
+.style0 h3{
+    font-size: min(2rem, 2.3vh);
+}
+
+.style0 li{
+    font-size: min(1.6rem, 2vh);
 }
 
 .style1{
@@ -124,9 +125,32 @@ header ul{
 }
 
 .perfil2{
-    padding: 5rem 3rem;
+    padding: 0rem 3rem;
 }
 
 .foto2 img{
     width: 12rem;
+}
+
+.topcs{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70%;
+}
+
+.topcs h3{
+    font-size: min(2rem, 2.8vh);
+}
+
+.top_func{
+    background: #C4C4C4;
+    width: 40%;
+    height: 80%;
+}
+
+.atend{
+    background: #C4C4C4;
+    width: 40%;
+    height: 80%;
 }

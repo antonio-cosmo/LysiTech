@@ -15,7 +15,7 @@ html{
 }
 
 body{
-    background: var(--primary-color);
+    background: var(--white-color);
     font-size: 1.6rem;
 }
 
@@ -37,7 +37,7 @@ section{
 
 .login{
     width: min(60vw, 45rem);
-    background: var(--white-color);
+    background: var(--primary-color);
     margin-top: 10rem;
     border-radius: 2%;
 }
@@ -50,11 +50,11 @@ section{
 
 .caixa{
     margin-top: 1rem;
-    background: var(--primary-color);
+    background: var(--white-color);
     border: none;
     border-radius: 1rem;
     padding: 1.3rem;
-    color: var(--white-color);
+    color: #000000;
     font-size: min(2.5vw, 2rem);
     margin-bottom: 1rem;
     opacity: 0.93;
@@ -63,12 +63,18 @@ section{
     outline: none;
 }
 
+.enviar{
+    background: #024877;
+    color: #ffffff;
+}
+
 .recuperar{
     margin-top: 1rem;
     border: none;
     border-radius: 1rem;
     padding: 0.4rem;
-    color: var(--primary-color);
+    color: var(--white-color);
+    background: none;
     font-size: min(1.8vw, 1.2rem);
     opacity: 0.93;
     transition: all ease 300ms;
@@ -90,7 +96,6 @@ section{
 }
 
 input::placeholder{
-    color: var(--white-color);
     opacity: 0.9;
 }
 
