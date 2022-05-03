@@ -2,8 +2,9 @@
     <div class="logo">
         <p> <%= image_tag "Logo.svg" %></p>
     </div>
+    <div ><%= notice%></div>
     <div class="login">
-        <%= form_with url: "/dashboard", method: :post do |f| %>
+        <%= form_with url: "/dashboard/exist", method: :post do |f| %>
             <%= f.label :username, 'Usuario' %>
             <%= f.text_field :username, placeholder:'Usuario', class: 'caixa' %>
             <%= f.label :userpassword, 'Senha' %>
