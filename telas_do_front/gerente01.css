@@ -96,79 +96,6 @@ article{
     font-weight: bold;
 }
 
-/*Modal-geral*/
-
-.modal-home{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0rem;
-    left: 0rem;
-    background: rgba(0, 0, 0, .5);
-    z-index: 2000;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-barra{
-    width: 100%;
-    height: 3.5rem;
-    position: absolute;
-    top: 0rem;
-    left: 0rem;
-}
-
-.modal-home.mostrar{
-    display: flex;
-}
-
-.modal{
-    margin-left: 10rem;
-    background: #ffffff;
-    width: 100rem;
-    height: 60rem;
-    padding: 3rem;
-    box-shadow: 0 0 0 .1rem var(--destaque-color);
-    position: relative;
-}
-
-.mostar .modal{
-    animation: modal 350ms;
-}
-
-.fechar{
-    position: absolute;
-    top: 0rem;
-    right: 0rem;
-    width: 5rem;
-    height: 3.5rem;
-    background: var(--fundo-color);
-    border: none;
-    cursor: pointer;
-    opacity: .7;
-    transition: all 350ms ease;
-}
-
-.fechar:hover{
-    background: var(--destaque-color);
-    color: var(--fundo-color);
-    opacity: 1;
-}
-
-@keyframes modal{
-    from{
-        opacity: 0;
-        transform: translate3d(0, -6rem, 0);
-    }
-    to{
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-/*style-modal-home*/
-
 .foto{
     margin-left: -0.1rem;
 }
@@ -221,7 +148,6 @@ header{
     align-items: center;
     border-bottom: solid 2px var(--primary-color);
     height: 30%;
-    margin-top: 2rem;
 }
 
 header ul{
@@ -242,14 +168,12 @@ header ul{
 
 .style1{
     background: #EAE8E8;
-    height: 4.5rem;
     padding-left: .7rem;
 }
 
 .style2{
     background: #C4C4C4;
-    height: 4.5rem;
-    padding-left: 1rem;
+    padding-left: .7rem;
 }
 
 .perfil2{
