@@ -1,7 +1,7 @@
 :root{
     --primary-color: #0387DC;
     --fundo-color: #ffffff;
-    --white-color: #EBEBEB
+    --white-color: #EBEBEB; 
 }
 
 *{
@@ -17,6 +17,7 @@ html{
 body{
     background: var(--white-color);
     font-size: 1.6rem;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 section{

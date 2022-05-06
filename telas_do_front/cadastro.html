@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lýsi</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="icon" href="svgs/Icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <article>
+        <aside class="barralateral">
+            <div class="perfil">
+                <li class="foto" id="home"><img title="Home" src="svgs/Foto de perfil.png"></li>
+                <p class="name">Níkollas David</p>
+            </div>
+            <ul> 
+                <div class="linha cadastro" title="Cadastro" id="cadastro">
+                    <li><img src="svgs/Funcionarios.svg"></li>
+                </div>
+                <div class="linha" title="Clientes">
+                    <li><img src="svgs/Clientes.svg"></li> 
+                </div>
+                <div class="linha" title="Protocolos">
+                    <li><img src="svgs/Protocolos.svg"></li>
+                </div>
+                <div class="linha" title="Avisos">
+                    <li><img src="svgs/Avisos.svg"></li>
+                </div>
+                <div class="linha2" title="Sair">
+                    <li class="logout"><img src="svgs/Logout.svg"></li>
+                </div>
+            </ul>
+        </aside>
+
+        <section>
+
+            <form>
+                <div>
+                <h2>Informações Pessoais</h2>
+                <div class="info-cadastro">
+                    <label for="nomecompleto">Nome completo:</label>
+                    <input type="text" name="nome" id="nome">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" name="cpf" id="cpf">
+                </div>
+                <div>
+                    <label for="datanascimento">Data de nascimento:</label>
+                    <input type="text" name="datanascimento" id="datanascimento">
+                    <label for="e-mail">E-mail:</label>
+                    <input type="email" name="e-mail" id="e-mail">
+                </div>
+                </div>
+                <div>
+                    <h2>Endereço</h2>
+                    <div>
+                        <label for="cep">CEP:</label>
+                        <input type="text" name="cep" id="cep">
+                        <label for="numerocasa">Número:</label>
+                        <input type="text" name="numerocasa" id="numerocasa">
+                    </div>
+                    <div>
+                        <label for="rua">Rua:</label>
+                        <input type="text" name="rua" id="rua">
+                        <label for="uf">UF:</label>
+                        <input type="text" name="uf" id="uf">
+                    </div>
+                </div>
+                <div>
+                    <h2>Informações Cadastrais</h2>
+                    <div>
+                        <label for="id">Matrículo/ID:</label>
+                        <input type="text" name="id" id="id">
+                        <label for="cargo">Cargo:</label>
+                        <input type="text" name="cargo" id="cargo">
+                    </div>
+                    <div>
+                        <label for="departamento">Departamento:</label>
+                        <input type="text" name="departamento" id="departamento">
+                        <label for="salario">Salário:</label>
+                        <input type="text" name="salario" id="salario">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="foto">
+                    <p class="foto2"><img src="svgs/Foto de perfil.png"></p>
+                    <p>Usuário</p>
+                    <button type="submit">Cadastrar funcionário </button>
+                </div>
+            </div>
+        </form>
+
+        </section>
+
+    </article>
+</body>
+</html>
