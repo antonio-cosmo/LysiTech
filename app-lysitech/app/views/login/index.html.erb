@@ -1,15 +1,17 @@
-<section>
-    <div class="logo">
-        <p> <%= image_tag "Logo.svg" %></p>
-    </div>
-    
-    <div class="alert"><%= flash[:alert]%></div>
-    <div class="login">
-        <%= form_with class: 'form', url: "/login", method: :post do |f| %>
-            <%= f.text_field :username, placeholder:'Usuario', class: 'caixa' %>
-            <%= f.password_field :userpassword, placeholder: "Senha", class: 'caixa' %>
-            <%= f.submit "Entrar", class: 'btn-submit' %>
-            <button class="recuperar" type="button">Recuperar senha</button>
-        <% end %>   
-    </div>
-</section>
+<main class="wrapper">
+    <section class="contain">
+        <div class="logo">
+            <p> <%= image_tag "Logo.svg" %></p>
+        </div>
+        
+        <div class="alert"><%= flash[:alert]%></div>
+        <div class="login">
+            <%= form_with class: 'form', url: "/login", method: :post do |f| %>
+                <%= f.text_field :username, placeholder:'Usuario', class: 'caixa' %>
+                <%= f.password_field :userpassword, placeholder: "Senha", class: 'caixa' %>
+                <%= f.submit "Entrar", class: 'btn-submit' %>
+                <button class="recuperar" type="button">Recuperar senha</button>
+            <% end %>   
+        </div>
+    </section>
+</main>

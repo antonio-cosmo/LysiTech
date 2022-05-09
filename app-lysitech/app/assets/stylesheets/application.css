@@ -20,9 +20,17 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-section{
+.wrapper{
     width: 100vw;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contain{
+    /* width: 100vw;
+    height: 100vh; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -31,15 +39,15 @@ section{
 .logo p img{
     width: 9rem;
     height: 9rem;
-    border-radius: 5rem;
-    margin-top: 5rem;
+    /* border-radius: 5rem; */
+    /* margin-top: 5rem; */
 }
 
 
 .login{
     width: min(60vw, 45rem);
     background: var(--primary-color);
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
     border-radius: 2%;
 }
 
@@ -186,6 +194,7 @@ article{
 
 .alert{
     height: 20px;
-    color: red;    
+    color: red;  
+    margin: 20px 0 20px 0;  
 }
 
