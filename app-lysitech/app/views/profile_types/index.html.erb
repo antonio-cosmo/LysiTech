@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Profile types</h1>
+
+<div id="profile_types">
+  <% @profile_types.each do |profile_type| %>
+    <%= render profile_type %>
+    <p>
+      <%= link_to "Show this profile type", profile_type %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New profile type", new_profile_type_path %>

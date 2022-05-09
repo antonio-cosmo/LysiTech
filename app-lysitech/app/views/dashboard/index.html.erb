@@ -1,2 +1,25 @@
-<h1>Dashboard</h1>
-<p>Projeto</p>
+<article>
+        <aside class="barralateral">
+            <div class="perfil">
+                <li class="foto"><%= image_tag "Foto_de_perfil.png" %></li>
+                <p class="name">Níkollas David</p>
+            </div>
+            <ul> 
+                <div class="linha" title="Funcionários">
+                    <li><%= image_tag "Funcionarios.svg" %></li>
+                </div>
+                <div class="linha" title="Clientes">
+                    <li><%= image_tag "Clientes.svg"%></li> 
+                </div>
+                <div class="linha" title="Protocolos">
+                    <li><%= image_tag "Protocolos.svg" %></li>
+                </div>
+                <div class="linha" title="Avisos">
+                    <li><%= image_tag "Avisos.svg" %></li>
+                </div>
+                <div class="linha2" title="Sair">
+                    <li class="logout"><a href="/login"><%= image_tag "Logout.svg" %></a></li>
+                </div>
+            </ul>
+        </aside>
+    </article>
