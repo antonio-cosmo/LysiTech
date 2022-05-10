@@ -1,14 +1,19 @@
 <main class="wrapper">
-    <section class="contain">
-        <div class="logo">
-            <p> <%= image_tag "Logo.svg" %></p>
+    <section class="container">
+        <div class="contain-logo">
+          <%= image_tag "Logo.svg" %>
         </div>
         
-        <div class="alert"><%= flash[:alert]%></div>
-        <div class="login">
-            <%= form_with class: 'form', url: "/login", method: :post do |f| %>
-                <%= f.text_field :username, placeholder:'Usuario', class: 'caixa' %>
-                <%= f.password_field :userpassword, placeholder: "Senha", class: 'caixa' %>
+        <div class="notice" style="visibility:<%=flash[:alert] ? "visible" : " hidden" %>">
+          <%if flash[:alert] %>
+            <div class="alert"><%= flash[:alert]%></div>
+          <%end%>
+        </div>
+
+        <div class="contain-login">
+            <%= form_with class: 'contain-form', url: "/login", method: :post do |f| %>
+                <%= f.text_field :username, placeholder:'Usuario', class: 'field' %>
+                <%= f.password_field :userpassword, placeholder: "Senha", class: 'field' %>
                 <%= f.submit "Entrar", class: 'btn-submit' %>
                 <button class="recuperar" type="button">Recuperar senha</button>
             <% end %>   

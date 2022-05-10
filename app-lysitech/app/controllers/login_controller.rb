@@ -1,21 +1,23 @@
 class LoginController < ApplicationController
+  layout "application_login"
+  
   def index
   end
 
-  def exist
-    user_exits = User.where(username: params[:username], userpassword: params[:userpassword])
-    if user_exits.size > 0 
+  def find_user
+
+    name = params[:username]
+    password = params[:userpassword]
+
+    is_user = User.find_by(username: name, userpassword: password)
+
+    if is_user 
       redirect_to '/dashboard'
     else
-      flash[:alert] = 'Usuario ou senha incorreto'
+      flash[:alert] = 'Atenção: Usuario ou senha incorreto!'
       redirect_to action: "index"
     end 
+
   end
-
-  private 
-
-    def login_params 
-      params.require(:login).permit(:username, :userpassword)
-    end
-
+  
 end

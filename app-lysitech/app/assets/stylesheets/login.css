@@ -1,0 +1,104 @@
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contain-logo img{
+  width: 8rem;
+  height: 8rem;
+}
+
+
+.contain-login{
+  min-width: 35rem;
+  background: var(--primary-color);
+  border-radius: 2%;
+}
+
+.contain-form{
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+}
+
+.field, .btn-submit{
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0.93;
+  transition: all ease 300ms;
+  outline: none;
+}
+
+.field{
+background: var(--white-color);
+color: #000000;
+}
+
+.btn-submit{
+background: #1a1a1a94;
+color: #ffffff;
+font-weight: bold;
+}
+
+.btn-submit:hover{
+  background: #075d96;
+}
+
+.recuperar{
+  margin-top: 1rem;
+  border: none;
+  padding: 0.4rem;
+  color: var(--white-color);
+  background: none;
+  font-size: 1rem;
+  transition: all ease 300ms;
+}
+
+.recuperar:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.field:hover{
+  opacity: 1;
+}
+
+.field:focus{
+  opacity: 1;
+}
+
+.field::placeholder{
+  opacity: 0.9;
+}
+
+.notice{
+  width: 20rem;
+  height: 3rem;
+  margin: 1rem 0 1rem 0;  
+}
+.alert{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(243, 157, 157);
+  color: #000;  
+  border-radius: 0.5rem;
+}
+
+
+
