@@ -3,14 +3,6 @@
 Projeto Integrador (Programação Orientada a Objetos): Sistema de gerenciamento de ordem de serviço.
 
 
-## Variáveis de Ambiente
-
-Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
-
-`APP_LYSITECH_DATABASE_USERNAME=**********`
-
-`APP_LYSITECH_DATABASE_PASSWORD=**********`
-
 ## Rodando localmente
 
 Clone o projeto
@@ -29,6 +21,13 @@ Instale as dependências
 
 ```bash
   bundle install
+```
+
+Crie o arquivo .env na raiz do projeto e adicione as seguintes variáveis de ambiente
+
+```bash
+  APP_LYSITECH_DATABASE_USERNAME=valor
+  APP_LYSITECH_DATABASE_PASSWORD=valor
 ```
 
 Inicie o setup da aplicação
