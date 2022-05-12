@@ -21,16 +21,15 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+/*Barra lateral*/
+
 article{
     display: flex;
 }
 
-/*Barra lateral*/
-
 .barralateral{
     width: 10rem;
-    height: 100vh;
-    min-height: 50rem;
+    min-height: 100vh;
     background: var(--primary-color);
     position: relative;
 }
@@ -45,6 +44,7 @@ article{
 .barralateral ul p{
     padding-left: 1.5rem;
 }
+
 
 .barralateral .perfil{
     width: 10rem;
@@ -62,40 +62,6 @@ article{
     padding: 1rem 0rem;
     text-align: center;
     color: #ffffff;
-}
-
-.linha{
-    transition: all 350ms ease;
-    height: 7.1rem;
-    display: flex;
-    justify-content: center;
-}
-
-.linha2{
-    transition: all 350ms ease;
-    height: 7.1rem;
-    width: 10rem;
-    position: absolute;
-    bottom: 0rem;
-    display: flex;
-    justify-content: center;
-}
-
-.linha:hover{
-    background: var(--destaque-color);
-    cursor: pointer;
-}
-
-.linha2:hover{
-    background: var(--destaque-color);
-    cursor: pointer;
-}
-
-.sair{
-    position: absolute;
-    bottom: 1.6rem;
-    font-size: 2.5rem;
-    font-weight: bold;
 }
 
 .foto{
@@ -207,3 +173,17 @@ input:focus{
     outline: none;
 }
 
+@media screen and (max-width: 70rem) {
+
+    form{
+        flex-direction: column;
+    }
+
+    form div{
+        margin-bottom: 2rem;
+    }
+
+    .endereco{
+        margin-left: -1rem;
+    }
+}
