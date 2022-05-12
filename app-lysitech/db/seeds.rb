@@ -16,17 +16,21 @@ profile_type = [
   }
 ]
 
-ProfileType.create(profile_type)
+profile_type.each do |type|
+  ProfileType.find_or_create_by(type) 
+end
+
+
 
 profile = {
   fullname: 'admin',
   register: '0',
   department: 'admin',
-  emial: nil,
+  email: nil,
   profile_type: ProfileType.all.first
 }
 
-Profile.create(profile)
+Profile.find_or_create_by(profile)
 
 user = {
   username: 'admin',
@@ -34,4 +38,4 @@ user = {
   profile: Profile.all.first
 }
 
-User.create(user)
+User.find_or_create_by(user)

@@ -1,14 +1,17 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Calls</h1>
+<div>
+  <p style="color: green"><%= notice %></p>
 
-<div id="calls">
-  <% @calls.each do |call| %>
-    <%= render call %>
-    <p>
-      <%= link_to "Show this call", call %>
-    </p>
-  <% end %>
+  <h1>Calls</h1>
+
+  <div id="calls">
+    <% @calls.each do |call| %>
+      <%= render call %>
+      <p>
+        <%= link_to "Show this call", call %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "New call", new_call_path %>
 </div>
-
-<%= link_to "New call", new_call_path %>
