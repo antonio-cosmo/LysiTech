@@ -1,10 +1,12 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @client %>
-
 <div>
-  <%= link_to "Edit this client", edit_client_path(@client) %> |
-  <%= link_to "Back to clients", clients_path %>
+  <p style="color: green"><%= notice %></p>
 
-  <%= button_to "Destroy this client", @client, method: :delete %>
+  <%= render @client %>
+
+  <div>
+    <%= link_to "Edit this client", edit_client_path(@client) %> |
+    <%= link_to "Back to clients", clients_path %>
+
+    <%= button_to "Destroy this client", @client, method: :delete %>
+  </div>
 </div>

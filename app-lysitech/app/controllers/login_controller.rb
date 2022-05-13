@@ -3,6 +3,7 @@ class LoginController < ApplicationController
   
 
   def index
+    @user = User.new
   end
 
   def find_user
@@ -11,11 +12,19 @@ class LoginController < ApplicationController
 
     # Se o usuario existir autentica o usuario, se não, redireciona para a pagina de login e notifica um alerta
     if is_user 
-      redirect_to '/admin'
-    else
-      flash[:alert] = 'Atenção: Usuario ou senha incorreto!'
-      redirect_to action: "index"
-    end 
+      user_type = is_user.profile.profile_type.description
+      
+      if user_type == "manager"
+        redirect_to '/admin'
+        return
+      end
+
+      redirect_to '/atend'
+      return
+    end
+
+    flash[:alert] = 'Atenção: Usuario ou senha incorreto!'
+    redirect_to action: "index"
 
   end
 

@@ -12,6 +12,7 @@
 }
  
 body {
+    height: 100%;
     background: var(--backgroud-color);
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1rem;
@@ -32,22 +33,15 @@ button {
     cursor: not-allowed;
 }
 
-@media(max-width: 1080px){
+@media(max-width: 1080px) {
   html{
     font-size: 93.75%;
-<<<<<<< HEAD
   }
 }
-@media(max-width: 720px){
+
+@media(max-width: 720px) {
   html{
     font-size: 87.5%;
   }
-=======
-    }
 }
-@media (max-width: 720px){
-    html{
-    font-size: 87.5%;
-    }
->>>>>>> 4a0dfd5c2e5de9a65693df6ed58a9471990513b2
-}
+

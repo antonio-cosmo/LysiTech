@@ -16,7 +16,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_09_013215) do
 
   create_table "calls", force: :cascade do |t|
     t.string "title"
-    t.text "description"
+    t.string "category"
+    t.text "call_description"
+    t.text "solution"
     t.date "begin_date"
     t.date "end_date"
     t.string "status"
@@ -30,12 +32,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_09_013215) do
 
   create_table "clients", force: :cascade do |t|
     t.string "fullname"
+    t.string "phone"
+    t.string "email"
     t.string "cpf"
     t.string "cnpj"
     t.string "street"
     t.string "house_number"
+    t.string "district"
     t.string "city"
     t.string "cep"
+    t.text "note"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

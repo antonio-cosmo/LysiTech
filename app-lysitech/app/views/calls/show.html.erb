@@ -1,10 +1,12 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @call %>
-
 <div>
-  <%= link_to "Edit this call", edit_call_path(@call) %> |
-  <%= link_to "Back to calls", calls_path %>
+  <p style="color: green"><%= notice %></p>
 
-  <%= button_to "Destroy this call", @call, method: :delete %>
+  <%= render @call %>
+
+  <div>
+    <%= link_to "Edit this call", edit_call_path(@call) %> |
+    <%= link_to "Back to calls", calls_path %>
+
+    <%= button_to "Destroy this call", @call, method: :delete %>
+  </div>
 </div>

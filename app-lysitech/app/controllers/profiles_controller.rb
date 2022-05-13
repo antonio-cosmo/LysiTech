@@ -13,10 +13,12 @@ class ProfilesController < ApplicationController
   # GET /profiles/new
   def new
     @profile = Profile.new
+    # @url = '/admin/profile'
   end
 
   # GET /profiles/1/edit
   def edit
+    # @url = "#{@profile.id}"
   end
 
   # POST /profiles or /profiles.json

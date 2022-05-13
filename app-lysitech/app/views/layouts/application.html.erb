@@ -15,9 +15,11 @@
   </head>
 
   <body>
-    <main class="app-container">
+    <div class="wrapper">
       <%= render "shared/sidebar_admin"%> 
-      <%= yield %>
-    </main>
+      <main class="app-container">
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>

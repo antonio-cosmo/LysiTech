@@ -1,91 +1,72 @@
 /* Home Gerente*/
-
-.app-container{
-  display: flex;
+.wrapper{
+  position: relative;
 }
-article{
-    display: flex;
+.app-container{
+  /* display: flex; */
+  position: relative;
+  margin-left: 8rem;
 }
 
 .sidebar{
-    width: 10rem;
-    height: 100vh;
+    width: 7rem;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
     background: var(--primary-color);
-    margin-right: 2rem;
-}
-
-.sidebar li{
-    display: flex;
-    justify-content: left;
-    padding: 1rem;
-    cursor: pointer;
-}
-
-.sidebar ul p{
-    padding-left: 1rem;
 }
 
 .sidebar .perfil{
-    width:100%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* .foto{
-    margin-left: -0.1rem;
-} */
-
-.foto img{
-    width: 7rem;
+.photo{
+padding: 0.5rem;
+}
+.photo img{
+  width: 5rem;
 }
 
 .name{
-  padding: 1rem 0rem;
-  text-align: center;
-  color: #ffffff;
+padding: 1rem 0rem;
+text-align: center;
+color: #ffffff;
 }
 
-.linha {
+.link {
   width: 100%;
-  height: 5rem;
-  transition: all 350ms ease;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.linha img{
-  width: 100%;
-}
-
-.linha2{
-    transition: all 350ms ease;
-    height: 5rem;
-    width: 10rem; 
-    position: absolute;
-    bottom: 0rem;
-    display: flex;
-    justify-content: center;
-}
-
-.linha:hover{
-  background: #075d96;
-  /* cursor: pointer; */
-}
-
-li {
   cursor: pointer;
+  transition: all 350ms ease;
 }
 
-.linha2:hover{
+.link a {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link img{
+  width: 20%;
+  height: 24%;
+}
+
+
+.link:hover{
   background: #075d96;
-  /* cursor: pointer; */
 }
 
-.sair{
-    position: absolute;
-    bottom: 1.6rem;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
 
 
 
