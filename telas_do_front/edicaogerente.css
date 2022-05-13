@@ -107,125 +107,83 @@ article{
 
 /*FIM*/
 
-
-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 2rem 0rem;
-}
-
-header{
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-    border-bottom: solid 2px var(--primary-color);
-    height: 30%;
-    width: 80%;
-}
-
-header ul{
-    list-style: none;
-}
-
-.style0{
-    width: 30%;
-}
-
-.style0 h3{
-    font-size: min(2rem, 2.3vh);
-}
-
-.style0 li{
-    font-size: min(1.6rem, 2vh);
-}
-
-.style1{
-    background: #EAE8E8;
-    padding-left: .7rem;
-}
-
-.style2{
-    background: #C4C4C4;
-    padding-left: .7rem;
-}
-
-.perfil2{
-    padding: 0rem 3rem;
-}
-
-.foto2 img{
-    width: min(8rem, 15vw)
-}
-
-.editar-informacoes{
-    text-align: center;
-    cursor: pointer;
-    border-radius: 1rem;
-    transition: all 350ms ease;
-}
-
-.editar-informacoes:hover{
-    background: #42576e;
-}
-
-.editar-informacoes img{
-    width: min(3rem, 5vw)
-}
-
-/*Lista de funcionários*/
-
-.adicionar-funcionario{
-    padding: .4rem;
-    border-radius: 35rem;
-    cursor: pointer;
-    transition: all 350ms ease;
-    margin-top: .5rem;    
-}
-
-.adicionar-funcionario:hover{
-    background: var(--primary-color);
-}
-
-.lista-funcionarios{
-    height: 60%;
-    overflow-y: scroll;
-}
-
-.lista-funcionarios li{
-    display: flex;
-    width: 80vw;
-    padding: 1rem;
-    margin: 1rem 0rem;
-    justify-content: space-around;
-    background: #42576e;
-    border-radius: 1rem;
-}
-
-.linha-funcionario{
-    display: flex;
-    cursor: pointer;
-    border-radius: 1rem;
-    transition: all 350ms ease;
-    width: 20rem;
-    padding: 1rem;
-}
-
-.linha-funcionario:hover{
+.cadastro{
     background: var(--destaque-color);
 }
 
-.linha-funcionario img{
-    width: min(5rem, 8vw);
+section{
+    width: 100vw;
+    display: flex;
+    padding: 5rem;
 }
 
-.informacoes-funcionario{
-    text-align: right;
+.foto2 img{
+    width: 12rem;
+}
+
+.foto p{
+    text-align: center;
+}
+
+.foto button{
+    cursor: pointer;
+    font-weight: bold;
+    background: var(--primary-color);
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    opacity: .95;
+    transition: all ease 300ms;
+    margin-top: 2rem;
+}
+
+.foto button:hover{
+    opacity: 1;
+}
+
+form{
     width: 100%;
-    color: var(--white-color);
-    font-size: min(1rem, 1.6vw);
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-/*FIM*/ 
+h2{
+    font-size: min(3rem, 2.5vw);
+}
+
+label{
+    font-size: min(2.2rem, 1.8vw);
+    font-weight: bold;
+    display: block;
+    padding: 1rem 0.3rem .2rem .2rem;
+}
+
+input{
+    background: rgb(204, 204, 204);
+    font-size: min(1.6rem, 1.4vw);
+    padding: .1rem .6rem;
+    box-shadow: 0px 0px 2px rgb(0, 0, 0, .5);
+    border-radius: .5rem;
+}
+
+input:focus{
+    outline: none;
+}
+
+@media screen and (max-width: 70rem) {
+
+    form{
+        flex-direction: column;
+    }
+
+    form div{
+        margin-bottom: 2rem;
+    }
+
+    .endereco{
+        margin-left: -1rem;
+    }
+} 

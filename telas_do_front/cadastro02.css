@@ -1,34 +1,57 @@
 :root{
-    --primary-color: #0387DC;
-    --fundo-color: #ffffff;
-    --destaque-color: #0a0e15;
+    /* --primary-color: #0387DC; */
+    --primary-color:#42576e;
+    --backgroud-color: #EBEBEB;
+    --white-color: #ffffff; 
+    --destaque-color: rgb(72, 72, 72);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-html{
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
-
-body{
-    background: var(--fundo-color);
-    font-size: 1.6rem;
+ 
+body {
+    background: var(--backgroud-color);
     font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1rem;
+    -webkit-font-smoothing: antialiased;
+}
+body, input, textarea, button {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+}
+h1, h2, h3, h4, h5, h6, strong {
+    font-weight: 700;
+}
+button {
+    cursor: pointer;
+}
+[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
-/*Barra lateral*/
+@media(max-width: 1080px){
+    html{
+    font-size: 93.75%;
+    }
+}
+@media (max-width: 720px){
+    html{
+    font-size: 87.5%;
+    }
+}
 
 article{
     display: flex;
 }
 
+/*Barra lateral*/
+
 .barralateral{
-    width: 10rem;
+    width: 7rem;
     min-height: 100vh;
     background: var(--primary-color);
     position: relative;
@@ -37,25 +60,21 @@ article{
 .barralateral li{
     display: flex;
     justify-content: left;
-    padding: 1.5rem;
+    padding: .75rem;
     cursor: pointer;
 }
 
 .barralateral ul p{
-    padding-left: 1.5rem;
+    padding-left: .75rem;
 }
 
 
 .barralateral .perfil{
-    width: 10rem;
-}
-
-.foto{
-    margin-left: -0.1rem;
+    width: 7rem;
 }
 
 .foto img{
-    width: 7rem;
+    width: 5rem;
 }
 
 .name{
@@ -65,34 +84,15 @@ article{
 }
 
 .foto{
-    margin-left: -0.1rem;
-}
-
-.foto img{
-    width: 7rem;
-}
-
-.name{
-    padding: 1rem 0rem;
-    text-align: center;
-    color: #ffffff;
+    margin-left: .2rem;
 }
 
 .linha{
     transition: all 350ms ease;
-    height: 7.1rem;
+    height: 4.5rem;
     display: flex;
     justify-content: center;
-}
-
-.linha2{
-    transition: all 350ms ease;
-    height: 7.1rem;
-    width: 10rem;
-    position: absolute;
-    bottom: 0rem;
-    display: flex;
-    justify-content: center;
+    
 }
 
 .linha:hover{

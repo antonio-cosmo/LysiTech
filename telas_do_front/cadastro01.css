@@ -73,10 +73,6 @@ article{
     width: 7rem;
 }
 
-.foto{
-    margin-left: -0.1rem;
-}
-
 .foto img{
     width: 5rem;
 }
@@ -91,27 +87,12 @@ article{
     margin-left: .2rem;
 }
 
-.name{
-    padding: 1rem 0rem;
-    text-align: center;
-    color: #ffffff;
-}
-
 .linha{
     transition: all 350ms ease;
     height: 4.5rem;
     display: flex;
     justify-content: center;
-}
-
-.linha2{
-    transition: all 350ms ease;
-    height: 4.5rem;
-    width: 7rem;
-    position: absolute;
-    bottom: 0rem;
-    display: flex;
-    justify-content: center;
+    
 }
 
 .linha:hover{
@@ -129,5 +110,73 @@ article{
 section{
     display: flex;
     flex-direction: column;
-    padding: 6rem;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0rem;
 }
+
+section h1{
+    font-size: 2rem;
+}
+
+.cabeca-lista{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Lista de funcionários*/
+
+.adicionar-funcionario{
+    padding: .4rem;
+    border-radius: 35rem;
+    cursor: pointer;
+    transition: all 350ms ease;
+    margin-top: .5rem;    
+}
+
+.adicionar-funcionario:hover{
+    background: var(--primary-color);
+}
+
+.lista-funcionarios{
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.lista-funcionarios li{
+    display: flex;
+    width: 80vw;
+    padding: 1rem;
+    margin: 1rem 0rem;
+    justify-content: space-around;
+    background: #42576e;
+    border-radius: 1rem;
+}
+
+.linha-funcionario{
+    display: flex;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition: all 350ms ease;
+    width: 20rem;
+    padding: 1rem;
+}
+
+.linha-funcionario:hover{
+    background: var(--destaque-color);
+}
+
+.linha-funcionario img{
+    width: min(5rem, 8vw);
+}
+
+.informacoes-funcionario{
+    text-align: right;
+    width: 100%;
+    color: var(--white-color);
+    font-size: min(1rem, 1.6vw);
+}
+
+/*FIM*/ 
