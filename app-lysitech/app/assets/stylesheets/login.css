@@ -55,6 +55,7 @@ font-weight: bold;
 
 .btn-submit:hover{
   background: #075d96;
+  cursor: pointer;
 }
 
 .recuperar{
@@ -84,7 +85,8 @@ font-weight: bold;
   opacity: 0.9;
 }
 
-.notice{
+#notice{
+  visibility: hidden;
   width: 20rem;
   height: 2rem;
   margin: 1rem 0 1rem 0;  
@@ -97,7 +99,7 @@ font-weight: bold;
   justify-content: center;
   background: rgb(243, 157, 157);
   color: #000;  
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
 }
 
 

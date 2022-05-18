@@ -4,7 +4,7 @@
           <%= image_tag "Logo.svg" %>
         </div>
         
-        <div class="notice" style="visibility:<%=flash[:alert] ? "visible" : " hidden" %>">
+        <div id="notice" <%='style=visibility:visible' if flash[:alert] %>>
           <%if flash[:alert] %>
             <div class="alert"><%= flash[:alert]%></div>
           <%end%>
@@ -20,3 +20,5 @@
         </div>
     </section>
 </main>
+
+
