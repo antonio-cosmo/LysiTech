@@ -3,22 +3,17 @@ default: &default
   adapter: postgresql
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  # pool: 5 
+  username: <%= ENV["APP_LYSITECH_DATABASE_USERNAME"] %>
+  password: <%= ENV["APP_LYSITECH_DATABASE_PASSWORD"] %>
 
 development:
   <<: *default
   database: lysitech_development
-  username: <%= ENV["APP_LYSITECH_DATABASE_USERNAME"] %>
-  password: <%= ENV["APP_LYSITECH_DATABASE_PASSWORD"] %>
 
 test:
   <<: *default
   database: lysitech_test
-  username: <%= ENV["APP_LYSITECH_DATABASE_USERNAME"] %>
-  password: <%= ENV["APP_LYSITECH_DATABASE_PASSWORD"] %>
 
 production:
   <<: *default
   database: lysitech_production
-  username: <%= ENV["APP_LYSITECH_DATABASE_USERNAME"] %>
-  password: <%= ENV["APP_LYSITECH_DATABASE_PASSWORD"] %>
