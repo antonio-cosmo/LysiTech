@@ -1,4 +1,5 @@
-class AtendController < ApplicationController
+class AtendController < SessionsController
+
   def index
   end
 end

@@ -15,8 +15,10 @@ Rails.application.routes.draw do
   # resources :profile_types
 
   #----Login--------
-  get '/login', to: 'login#index'
-  post '/login', to: 'login#find_user'
+  # post '/login', to: 'login#find_user'
+  post '/login', to: 'login#create'
+  get  "/logout", to: 'login#destroy'
+
 
   #--------- Dashboard Gerente------------
   get '/admin', to: 'admin#index'
@@ -31,5 +33,5 @@ Rails.application.routes.draw do
   # post 'admin/profile', to: 'profiles#create'
 
   # Pagina padrão
-  root "login#index"
+  root 'login#index'
 end

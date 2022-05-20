@@ -1,4 +1,5 @@
-class ProfileTypesController < ApplicationController
+class ProfileTypesController < SessionsController
+  
   before_action :set_profile_type, only: %i[ show edit update destroy ]
 
   # GET /profile_types or /profile_types.json
