@@ -1,8 +1,10 @@
 :root{
     /* --primary-color: #0387DC; */
-    --primary-color:#42576e;
-    --backgroud-color: #EBEBEB;
-    --white-color: #ffffff; 
+    --primary-color:#42576E;
+    --backgroud-color: #F0F2F5;
+    --border-color: #C4C4C4;
+    --white-color: #ffffff;
+    --black-color: #000000; 
     --destaque-color: rgb(72, 72, 72);
 }
 
@@ -55,6 +57,7 @@ article{
     min-height: 100vh;
     background: var(--primary-color);
     position: relative;
+    border-radius: 0rem .7rem .7rem 0rem;
 }
 
 .barralateral li{
@@ -80,7 +83,7 @@ article{
 .name{
     padding: 1rem 0rem;
     text-align: center;
-    color: #ffffff;
+    color: var(--white-color);
 }
 
 .foto{
@@ -113,7 +116,7 @@ section{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 2rem 0rem;
+    padding: 1.5rem 0rem;
 }
 
 header{
@@ -121,9 +124,9 @@ header{
     list-style: none;
     justify-content: center;
     align-items: center;
-    border-bottom: solid 2px var(--primary-color);
+    border-bottom: solid 2px var(--border-color);
     height: 30%;
-    width: 80%;
+    width: 85%;
 }
 
 header ul{
@@ -131,25 +134,37 @@ header ul{
 }
 
 .style0{
-    width: 30%;
+    width: 35%;
 }
 
 .style0 h3{
-    font-size: min(2rem, 2.3vh);
+    font-size: min(1.4rem, 2.5vw);
+    padding: 0.2rem 0rem;
 }
 
 .style0 li{
-    font-size: min(1.6rem, 2vh);
+    font-size: min(1rem, 2vw);
 }
 
 .style1{
-    background: #EAE8E8;
+    background: var(--white-color);
     padding-left: .7rem;
+    height: 3.5rem;
+    border-radius: .7rem .7rem 0rem 0rem;
 }
 
 .style2{
-    background: #C4C4C4;
+    background: var(--primary-color);
     padding-left: .7rem;
+    color: var(--white-color);
+    height: 3.5rem;
+}
+
+.style3{
+    background: var(--white-color);
+    padding-left: .7rem;
+    height: 3.5rem;
+    border-radius: 0rem 0rem .7rem .7rem;
 }
 
 .perfil2{
@@ -157,7 +172,7 @@ header ul{
 }
 
 .foto2 img{
-    width: min(8rem, 15vw)
+    width: min(8rem, 20vw)
 }
 
 .editar-informacoes{
@@ -167,65 +182,83 @@ header ul{
     transition: all 350ms ease;
 }
 
-.editar-informacoes:hover{
-    background: #42576e;
-}
-
 .editar-informacoes img{
-    width: min(3rem, 5vw)
+    width: min(3rem, 8vw)
 }
 
-/*Lista de funcionários*/
+/*Top de funcionários e Quantidade de atendimentos*/
 
-.adicionar-funcionario{
-    padding: .4rem;
-    border-radius: 35rem;
+.top-quantAtendimento{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    padding: 1.5rem 2rem;
+    justify-content: space-between;
+}
+
+.top-quantAtendimento h2{
+    font-size: min(1.6rem, 2.2vw);
+}
+
+.funcionario{
+    display: flex;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-radius: .7rem;
+    padding: 1rem;
+    margin: 1rem 1rem 1rem 0rem;
+    width: 30vw;
     cursor: pointer;
     transition: all 350ms ease;
-    margin-top: .5rem;    
 }
 
-.adicionar-funcionario:hover{
-    background: var(--primary-color);
+.funcionario:hover{
+    border: solid 1px var(--black-color);
 }
 
-.lista-funcionarios{
-    height: 60%;
-    overflow-y: scroll;
-}
-
-.lista-funcionarios li{
-    display: flex;
-    width: 80vw;
-    padding: 1rem;
-    margin: 1rem 0rem;
-    justify-content: space-around;
-    background: #42576e;
-    border-radius: 1rem;
-}
-
-.linha-funcionario{
-    display: flex;
-    cursor: pointer;
-    border-radius: 1rem;
-    transition: all 350ms ease;
-    width: 20rem;
-    padding: 1rem;
-}
-
-.linha-funcionario:hover{
-    background: var(--destaque-color);
-}
-
-.linha-funcionario img{
-    width: min(5rem, 8vw);
-}
-
-.informacoes-funcionario{
-    text-align: right;
+.info-funcionario{
     width: 100%;
-    color: var(--white-color);
-    font-size: min(1rem, 1.6vw);
 }
+
+.funcionario img{
+    width: min(5rem, 10vw)
+}
+
+.funcionario p{
+    font-size: min(1rem, 2vw);
+    text-align: right;
+}
+
+.atendimentos{
+    display: flex;
+    align-items: center;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-radius: .7rem;
+    padding: 1rem;
+    margin: 1rem 0rem 2.4rem 0rem;
+    width: 30vw;
+    cursor: pointer;
+    transition: all 350ms ease;
+}
+
+.atendimentos:hover{
+    border: solid 1px var(--black-color);
+}
+
+.valores{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.valores h3{
+    font-size: min(1.4rem, 2.2vw);
+}
+
+.valores p{
+    font-size: min(1.4rem, 2vw);
+}
+
 
 /*FIM*/ 
