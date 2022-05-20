@@ -1,4 +1,4 @@
-class CallsController < ApplicationController
+class CallsController < SessionsController
   before_action :set_call, only: %i[ show edit update destroy ]
 
   # GET /calls or /calls.json

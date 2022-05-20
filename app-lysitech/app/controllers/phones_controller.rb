@@ -1,4 +1,5 @@
-class PhonesController < ApplicationController
+class PhonesController < SessionsController
+  
   before_action :set_phone, only: %i[ show edit update destroy ]
 
   # GET /phones or /phones.json

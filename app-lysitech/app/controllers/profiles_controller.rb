@@ -1,4 +1,5 @@
-class ProfilesController < ApplicationController
+class ProfilesController < SessionsController
+  
   before_action :set_profile, only: %i[ show edit update destroy ]
 
   # GET /profiles or /profiles.json
