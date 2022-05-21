@@ -1,8 +1,10 @@
 :root{
     /* --primary-color: #0387DC; */
-    --primary-color:#42576e;
-    --backgroud-color: #EBEBEB;
-    --white-color: #ffffff; 
+    --primary-color:#42576E;
+    --backgroud-color: #F0F2F5;
+    --border-color: #C4C4C4;
+    --white-color: #ffffff;
+    --black-color: #000000; 
     --destaque-color: rgb(72, 72, 72);
 }
 
@@ -55,6 +57,7 @@ article{
     min-height: 100vh;
     background: var(--primary-color);
     position: relative;
+    border-radius: 0rem .7rem .7rem 0rem;
 }
 
 .barralateral li{
@@ -80,7 +83,7 @@ article{
 .name{
     padding: 1rem 0rem;
     text-align: center;
-    color: #ffffff;
+    color: var(--white-color);
 }
 
 .foto{
@@ -91,8 +94,7 @@ article{
     transition: all 350ms ease;
     height: 4.5rem;
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;   
 }
 
 .linha:hover{
@@ -112,78 +114,363 @@ article{
 }
 
 section{
-    width: 100vw;
     display: flex;
-    padding: 5rem;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 2.5rem 5rem;
 }
 
-.foto2 img{
-    width: 12rem;
+.edicao-perfil{
+    width: 100%;
 }
 
-.foto p{
-    text-align: center;
-}
-
-.foto button{
+.voltar{
+    position: absolute;
+    transition: all 350ms ease;
     cursor: pointer;
-    font-weight: bold;
-    background: var(--primary-color);
-    color: #ffffff;
-    padding: 1rem;
-    border-radius: 1rem;
-    border: none;
-    opacity: .95;
-    transition: all ease 300ms;
-    margin-top: 2rem;
+    opacity: .7;
 }
 
-.foto button:hover{
+.voltar:hover{
     opacity: 1;
 }
 
-form{
-    width: 100%;
-    height: 100%;
+.info-pessoais{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    width: 100%;
+    margin: 1rem 0rem;
 }
 
-h2{
-    font-size: min(3rem, 2.5vw);
+.top{
+    width: 100%;
+    text-align: center;
 }
 
-label{
-    font-size: min(2.2rem, 1.8vw);
+.top img{
+    margin-top: 1rem;
+}
+
+.labelnomecompleto{
+    width: 20%;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
     font-weight: bold;
-    display: block;
-    padding: 1rem 0.3rem .2rem .2rem;
 }
 
-input{
-    background: rgb(204, 204, 204);
-    font-size: min(1.6rem, 1.4vw);
-    padding: .1rem .6rem;
-    box-shadow: 0px 0px 2px rgb(0, 0, 0, .5);
-    border-radius: .5rem;
-}
-
-input:focus{
+.inputnomecompleto{
+    width: 40%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
+    margin-right: 5%;
+    padding: .5rem;
     outline: none;
+    font-size: min(1.1rem, 2vw);
 }
 
-@media screen and (max-width: 70rem) {
+.labelcpf{
+    width: 10%;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
+}
 
-    form{
-        flex-direction: column;
-    }
+.inputcpf{
+    width: 25%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
+    padding: .5rem;
+    outline: none;
+    font-size: min(1.1rem, 2vw);
+}
 
-    form div{
-        margin-bottom: 2rem;
-    }
+.labeldatanascimento{
+    width: 20%;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
+}
 
-    .endereco{
-        margin-left: -1rem;
-    }
-} 
+.inputdatanascimento{
+    width: 20%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
+    margin-right: 5%;
+    padding: .5rem;
+    outline: none;
+    font-size: min(1.1rem, 2vw);
+}
+
+.labelemail{
+    width: 15%;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
+}
+
+.inputemail{
+    width: 40%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
+    padding: .5rem;
+    outline: none;
+    font-size: min(1.1rem, 2vw);
+}
+
+.labeltelefone{
+    width: 15%;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
+}
+
+.inputtelefone{
+    width: 20%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
+    padding: .5rem;
+    outline: none;
+    font-size: min(1.1rem, 2vw);
+}
+
+
+
+
+.endereco{
+    display: flex;
+    width: 100%;
+    margin: 1rem 0rem;
+}
+
+.labelcep{
+    width: 10%;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
+}
+
+.inputcep{
+    width: 20%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
+    margin-right: 5%;
+    padding: .5rem;
+    outline: none;
+    font-size: min(1.1rem, 2vw);
+}
+
+.labelrua{
+    width: 10%;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
+}
+
+.inputrua{
+    width: 30%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
+    margin-right: 5%;
+    padding: .5rem;
+    outline: none;
+    font-size: min(1.1rem, 2vw);
+}
+
+.labeluf{
+    width: 10%;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
+}
+
+.inputuf{
+    width: 10%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
+    padding: .5rem;
+    outline: none;
+    font-size: min(1.1rem, 2vw);
+}
+
+.labelnumerocasa{
+    width: 10%;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
+}
+
+.inputnumerocasa{
+    width: 20%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
+    padding: .5rem;
+    outline: none;
+    font-size: min(1.1rem, 2vw);
+}
+
+
+
+
+.info-cadastrais{
+    display: flex;
+    width: 100%;
+    margin: 1rem 0rem;
+}
+
+.labelusuario{
+    width: 15%;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
+}
+
+.inputusuario{
+    width: 15%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
+    margin-right: 5%;
+    padding: .5rem;
+    outline: none;
+    font-size: min(1.1rem, 2vw);
+}
+
+.labelcargo{
+    width: 15%;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
+}
+
+.inputcargo{
+    width: 25%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
+    margin-right: 5%;
+    padding: .5rem;
+    outline: none;
+    font-size: min(1.1rem, 2vw);
+}
+
+.labelid{
+    width: 10%;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
+}
+
+.inputid{
+    width: 10%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
+    padding: .5rem;
+    outline: none;
+    font-size: min(1.1rem, 2vw);
+}
+
+.finalizar-edicao{
+    width: 100%;
+    text-align: center;
+}
+
+.finalizar-edicao button{
+    background: var(--primary-color);
+    border: solid 1px var(--border-color);
+    border-radius: .7rem;
+    padding: 1rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
+    color: var(--white-color);
+    cursor: pointer;
+    width: 25%;
+    transition: all 350ms ease;
+}
+
+.finalizar-edicao button:hover{
+    border: solid 1px var(--black-color);
+    font-size: min(1.2rem, 3.1vw);
+    width: 27%;
+}
