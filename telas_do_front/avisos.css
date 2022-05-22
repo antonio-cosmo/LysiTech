@@ -1,8 +1,9 @@
 :root{
-    /* --primary-color: #0387DC; */
-    --primary-color:#42576e;
-    --backgroud-color: #EBEBEB;
-    --white-color: #ffffff; 
+    --primary-color:#42576E;
+    --backgroud-color: #F0F2F5;
+    --border-color: #C4C4C4;
+    --white-color: #ffffff;
+    --black-color: #000000; 
     --destaque-color: rgb(72, 72, 72);
 }
 
@@ -80,7 +81,7 @@ article{
 .name{
     padding: 1rem 0rem;
     text-align: center;
-    color: #ffffff;
+    color: var(--white-color);
 }
 
 .foto{
@@ -120,7 +121,7 @@ section{
 }
 
 h1{
-    font-size: min(3rem, 5vw);
+    font-size: min(2rem, 4vw);
 }
 
 .muraldeavisos, .muraldeavisos2, .muraldeavisos3, .muraldeavisos4, .muraldeavisos5{
@@ -132,7 +133,8 @@ h1{
 
 .mural, .mural2, .mural3, .mural4, .mural5{
     display: flex;
-    background: var(--primary-color);
+    flex-direction: column;
+    background: var(--white-color);
     height: 4rem;
     padding: 1rem;
     border-radius: .5rem;
@@ -140,15 +142,21 @@ h1{
     margin-bottom: 1rem;
 }
 
+.mural .msg{
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
 .mural p, .mural2 p, .mural3 p, .mural4 p, .mural5 p{
     font-size: 1.3rem;
     font-weight: bold;
     transition: all ease 300ms;
-    color: #ffffff;
+    color: var(--black-color);
 }
 
 .divisoria.active, .divisoria2.active, .divisoria3.active, .divisoria4.active, .divisoria5.active{
-    border-bottom: #fff solid 1px;
+    border-bottom: var(--border-color) solid 1px;
     width: 100%;
     height: 2.5rem;
 }
@@ -166,7 +174,7 @@ h1{
     position: absolute;
     height: 1px;
     width: 50%;
-    background: #fff;
+    background: var(--black-color);
     transition: all ease 300ms;
 }
 

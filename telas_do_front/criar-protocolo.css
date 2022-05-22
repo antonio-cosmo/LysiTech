@@ -1,5 +1,4 @@
 :root{
-    /* --primary-color: #0387DC; */
     --primary-color:#42576E;
     --backgroud-color: #F0F2F5;
     --border-color: #C4C4C4;
@@ -109,7 +108,7 @@ article{
 
 /*FIM*/
 
-.cadastro{
+.protocolos{
     background: var(--destaque-color);
 }
 
@@ -118,7 +117,7 @@ section{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 2.5rem 5rem;
+    padding: 1.5rem 5rem;
 }
 
 .edicao-perfil{
@@ -139,7 +138,7 @@ section{
 .info-pessoais{
     display: flex;
     width: 100%;
-    margin: 1rem 0rem;
+    margin: .5rem 0rem;
 }
 
 .top{
@@ -148,7 +147,7 @@ section{
 }
 
 .top img{
-    margin-top: 1rem;
+    margin-top: .5rem;
 }
 
 .labelnomecompleto{
@@ -451,9 +450,34 @@ section{
     font-size: min(1.1rem, 2vw);
 }
 
+.labelsenha{
+    width: 10%;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
+}
+
+.inputsenha{
+    width: 10%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
+    padding: .5rem;
+    outline: none;
+    font-size: min(1.1rem, 2vw);
+}
+
 .finalizar-edicao{
     width: 100%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .finalizar-edicao button{
@@ -467,6 +491,7 @@ section{
     cursor: pointer;
     width: 25%;
     transition: all 350ms ease;
+    margin-top: 1rem;
 }
 
 .finalizar-edicao button:hover{

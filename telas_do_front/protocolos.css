@@ -108,7 +108,7 @@ article{
 
 /*FIM*/
 
-.funcionarios{
+.protocolos{
     background: var(--destaque-color);
 }
 
@@ -225,17 +225,21 @@ h1{
 }
 
 .nome{
-    width: 25%;
+    width: 20%;
 }
 
 .telefone{
-    width: 25%;
+    width: 20%;
 }
 
 .cpf{
-    width: 25%;
+    width: 20%;
+}
+
+.situacao{
+    width: 20%;
 }
 
 .cidade{
-    width: 25%;
+    width: 20%;
 }

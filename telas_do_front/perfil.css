@@ -1,5 +1,4 @@
 :root{
-    /* --primary-color: #0387DC; */
     --primary-color:#42576E;
     --backgroud-color: #F0F2F5;
     --border-color: #C4C4C4;
@@ -168,22 +167,30 @@ header ul{
 }
 
 .perfil2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     padding: 0rem 3rem;
 }
 
-.foto2 img{
-    width: min(8rem, 20vw)
-}
-
 .editar-informacoes{
-    text-align: center;
     cursor: pointer;
     border-radius: 1rem;
     transition: all 350ms ease;
 }
 
-.editar-informacoes img{
-    width: min(3rem, 8vw)
+.perfil2 .foto2{
+    width: min(8rem, 15vw);
+}
+
+.perfil2 .editar-informacoes{
+    width: min(3rem, 6vw);
+    height: 4rem;
+    opacity: .7;
+}
+
+.editar-informacoes:hover{
+    opacity: 1;
 }
 
 /*Top de funcionários e Quantidade de atendimentos*/
@@ -205,7 +212,7 @@ header ul{
     background: var(--white-color);
     border: solid 1px var(--border-color);
     border-radius: .7rem;
-    padding: 1rem;
+    padding: .5rem;
     margin-top: 1rem;
     width: 30vw;
     cursor: pointer;
@@ -259,6 +266,5 @@ header ul{
 .valores p{
     font-size: min(1.4rem, 2vw);
 }
-
 
 /*FIM*/ 
