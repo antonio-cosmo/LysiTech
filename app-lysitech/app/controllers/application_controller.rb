@@ -9,18 +9,13 @@ class ApplicationController < ActionController::Base
   
   private 
 
-  def logged_in?
-    if current_user
-      return true
+    def logged_in?
+      current_user.present?
     end
-    # return true
-  end
 
-  # current_user vai ser o usuario de acordo com o :user_id armazenado em sessão
-
-  def current_user
-    return session[:user_id] && User.find(session[:user_id])
-  end
+    def current_user
+      @_current_user ||= session[:user_id] && User.find_by(id: session[:user_id])
+    end
 
   
 end

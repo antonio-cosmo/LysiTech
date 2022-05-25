@@ -1,7 +1,7 @@
-const msgAlert = document.getElementById('notice')
+const msg = document.getElementById('notice')
 
-msgAlert.addEventListener('mouseover', function visibilidade() {
-  msgAlert.style.visibility = "hidden"
-  msgAlert.innerText= ""
+msg.addEventListener('mouseover', (el) => {
+  msg.style.visibility = "hidden"
+  msg.innerText= ""
 
 });

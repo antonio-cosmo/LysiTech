@@ -17,6 +17,13 @@
   <body>
     <%= yield %>
     <%= javascript_include_tag params[:controller] %>
+    
+    <%
+=begin%>
+ <%= javascript_importmap_tags %> 
+<%
+=end%>
 
+    
   </body>
 </html>

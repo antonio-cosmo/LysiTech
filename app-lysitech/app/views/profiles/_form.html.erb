@@ -1,42 +1,68 @@
-<%= form_with model: profile do |form| %>
-  <% if profile.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+<%= form_with model: profile, class: "edicao-perfil" do |f| %>
 
-      <ul>
-        <% profile.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <div class="top">
+      <h2>Informações Pessoais</h2>
+      <div class="photo"><%= image_tag "Foto_de_perfil.png" %></div>
 
-  <div>
-    <%= form.label :fullname, style: "display: block" %>
-    <%= form.text_field :fullname %>
   </div>
 
-  <div>
-    <%= form.label :register, style: "display: block" %>
-    <%= form.text_field :register %>
+  <div class="info-pessoais">
+      <%= f.label "Nome completo", class:"labelnomecompleto" %>
+      <%= f.text_field :fullname, class: "inputnomecompleto" %>
+      <%= f.label "CPF" , class: "labelcpf" %>
+      <%= f.text_field :cpf, class: "inputcpf" %>
   </div>
 
-  <div>
-    <%= form.label :department, style: "display: block" %>
-    <%= form.text_field :department %>
+  <div class="info-pessoais">
+      <%= f.label "Data de nascimento" ,class:"labeldatanascimento" %>
+      <%= f.date_field :birth_date, class: "inputdatanascimento" %>
+      <%= f.label "Email", class: "labelemail" %>
+      <%= f.email_field :email, class: "inputemail" %>
   </div>
 
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+  <div class="info-pessoais">
+      <%= f.label "Telefone", class: "labeltelefone" %>
+      <%= f.text_field :phone_num, class: "inputtelefone" %>
   </div>
 
-  <div>
-    <%= form.label :profile_type_id, style: "display: block" %>
-    <%= form.text_field :profile_type_id %>
+  <div class="top">
+      <h2>Endereço</h2>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="endereco">
+      <%= f.label 'CEP', class:"labelcep" %>
+      <%= f.text_field :cep, class: "inputcep"%>
+      <%= f.label 'Rua', class:"labelrua" %>
+      <%= f.text_field :district, class:"inputrua" %>
+      <%= f.label "Cidade", class: "labeluf" %>
+      <%= f.text_field :city, class:"inputuf"%>
+  </div>
+  <div class="endereco">
+      <%= f.label 'N°', class:"labelnumerocasa" %>
+      <%= f.text_field :house_number, class: "inputnumerocasa" %>
+  </div>
+
+  <div class="top">
+      <h2>Informações Cadastrais</h2>
+  </div>
+
+  <div class="info-cadastrais">
+      <%= f.label 'Usuario', class: "labelusuario" %>
+      <%= f.text_field :username, class: "inputusuario" %>
+      <%= f.label 'Cargo', class: "labelcargo" %>
+      <%= f.text_field :office, class: "inputcargo" %>
+      <%= f.label 'Tipo', class:"labelid" %>
+      <%= f.text_field :profile_type, class:"inputid" %>
+  </div>
+
+  <div class="info-cadastrais">
+      <%= f.label 'Salario', class:"labelsalario" %>
+      <%= f.number_field :salary, class:"inputsalario" %>
+      <%= f.label 'Senha', class: "labelsenha" %>
+      <%= f.text_field :userpassword,  class:"inputsenha" %>
+  </div>
+  
+  <div class="finalizar-edicao">
+      <%= f.submit "Cadastrar funcionário"%>
   </div>
 <% end %>

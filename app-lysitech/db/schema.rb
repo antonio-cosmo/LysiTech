@@ -62,6 +62,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_09_013215) do
 
   create_table "profiles", force: :cascade do |t|
     t.string "fullname"
+    t.string "cpf"
     t.date "birth_date"
     t.string "register"
     t.string "street"

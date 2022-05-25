@@ -11,7 +11,7 @@
         </div>
 
         <div class="contain-login">
-            <%= form_with model: @user, class: 'contain-form', url: "/login", method: :post do |f| %>
+            <%= form_with model: @user, class: 'contain-form', url: login_path, method: :post do |f| %>
                 <%= f.text_field :username, placeholder:'Usuario', class: 'field' %>
                 <%= f.password_field :userpassword, placeholder: "Senha", class: 'field' %>
                 <%= f.submit "Entrar", class: 'btn-submit' %>

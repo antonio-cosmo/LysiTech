@@ -6,30 +6,6 @@ class LoginController < ApplicationController
     @user = User.new
   end
 
-  # def find_user
-  #   #Faz a busca do usuario no BD
-  #   is_user = User.find_by(user_params)
-
-  #   # Se o usuario existir o redireciona para a pagina do seu perfil
-  #   if is_user 
-  #     user_type = is_user.profile.profile_type.description
-      
-  #     if user_type == "manager"
-  #       redirect_to '/admin'
-  #       return
-  #     end
-
-  #     redirect_to '/atend'
-  #     return
-  #   end
-
-  #   #se não existir o usuario redireciona para a pagina de login e mostra um alerta
-
-  #   flash[:alert] = 'Atenção: Usuario ou senha incorreto!'
-  #   redirect_to action: "index"
-
-  # end
-
   def create
     is_user = User.find_by(user_params)
     
