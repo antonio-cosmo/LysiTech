@@ -5,6 +5,8 @@ Projeto Integrador (Programação Orientada a Objetos): Sistema de gerenciamento
 
 ## Rodando localmente
 
+É necessario que o PostgreSQL e o pgAdmin estejam instalados para que se possa rodar o projeto localmente.
+
 Clone o projeto
 
 ```bash
@@ -26,8 +28,8 @@ Instale as dependências
 Crie o arquivo .env na raiz do projeto e adicione as seguintes variáveis de ambiente
 
 ```bash
-  APP_LYSITECH_DATABASE_USERNAME=valor
-  APP_LYSITECH_DATABASE_PASSWORD=valor
+  APP_LYSITECH_DATABASE_USERNAME=nome_do_usuario_do_BD_PostgreSQL
+  APP_LYSITECH_DATABASE_PASSWORD=senha_do_usuario_do_BD_PostgreSQL
 ```
 
 Inicie o setup da aplicação
