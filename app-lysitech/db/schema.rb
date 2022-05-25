@@ -73,7 +73,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_09_013215) do
     t.string "office"
     t.string "department"
     t.string "email"
-    t.bigint "profile_type_id", null: false
+    t.bigint "profile_type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["profile_type_id"], name: "index_profiles_on_profile_type_id"

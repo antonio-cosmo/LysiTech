@@ -13,7 +13,7 @@ class CreateProfiles < ActiveRecord::Migration[7.0]
       t.string :office
       t.string :department
       t.string :email
-      t.references :profile_type, null: false, foreign_key: true
+      t.references :profile_type, null: true, foreign_key: true
 
       t.timestamps
     end

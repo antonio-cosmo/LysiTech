@@ -9,8 +9,8 @@ class LoginController < ApplicationController
   def create
     is_user = User.find_by(user_params)
     
-    if is_user # se existir o usuario
-      reset_session # destroi a sessão atual
+    if is_user                                    # se existir o usuario
+      reset_session                               # destroi a sessão atual
       session[:user_id] = is_user.id   
       user_type = is_user.profile.profile_type.description 
 
@@ -19,7 +19,7 @@ class LoginController < ApplicationController
         return
       end
       
-      redirect_to atend_path
+      redirect_to support_path
       return                             
                                           
     end    

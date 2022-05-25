@@ -11,7 +11,7 @@ Rails.application.config.assets.version = "1.0"
 # folder are already added.
 Rails.application.config.assets.precompile += %w( 
                                                   admin.css 
-                                                  atend.css 
+                                                  support.css 
                                                   calls.css 
                                                   clients.css 
                                                   login.css 
@@ -19,7 +19,7 @@ Rails.application.config.assets.precompile += %w(
                                                 )
 Rails.application.config.assets.precompile += %w( 
                                                   admin.js 
-                                                  atend.js 
+                                                  support.js 
                                                   calls.js 
                                                   clients.js 
                                                   login.js 

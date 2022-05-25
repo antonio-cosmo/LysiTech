@@ -4,9 +4,9 @@
   <%= render @profile %>
 
   <div>
-    <%= link_to "Edit this profile", edit_profile_path(@profile) %> |
-    <%= link_to "Back to profiles", profiles_path %>
+    <%= link_to "Editar usuario", edit_profile_path(@profile) %> |
+    <%= link_to "Listar usuario", profiles_path %>
 
-    <%= button_to "Destroy this profile", @profile, method: :delete %>
+    <%= button_to "Excluir usuario", @profile, method: :delete %>
   </div>
 </section>

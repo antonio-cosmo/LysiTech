@@ -1,12 +1,12 @@
 class CallsController < SessionsController
   before_action :set_call, only: %i[ show edit update destroy ]
 
-  # GET /calls or /calls.json
+  # GET /calls 
   def index
     @calls = Call.all
   end
 
-  # GET /calls/1 or /calls/1.json
+  # GET /calls/1
   def show
   end
 
@@ -19,17 +19,15 @@ class CallsController < SessionsController
   def edit
   end
 
-  # POST /calls or /calls.json
+  # POST /calls 
   def create
     @call = Call.new(call_params)
 
     respond_to do |format|
       if @call.save
         format.html { redirect_to call_url(@call), notice: "Call was successfully created." }
-        format.json { render :show, status: :created, location: @call }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @call.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -39,21 +37,18 @@ class CallsController < SessionsController
     respond_to do |format|
       if @call.update(call_params)
         format.html { redirect_to call_url(@call), notice: "Call was successfully updated." }
-        format.json { render :show, status: :ok, location: @call }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @call.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /calls/1 or /calls/1.json
+  # DELETE /calls/1
   def destroy
     @call.destroy
 
     respond_to do |format|
       format.html { redirect_to calls_url, notice: "Call was successfully destroyed." }
-      format.json { head :no_content }
     end
   end
 

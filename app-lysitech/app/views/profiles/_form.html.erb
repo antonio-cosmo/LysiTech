@@ -1,4 +1,7 @@
+
 <%= form_with model: profile, class: "edicao-perfil" do |f| %>
+
+  <%= link_to (image_tag "voltar.svg", class: "voltar"), profiles_path %>
 
   <div class="top">
       <h2>Informações Pessoais</h2>
@@ -17,7 +20,7 @@
       <%= f.label "Data de nascimento" ,class:"labeldatanascimento" %>
       <%= f.date_field :birth_date, class: "inputdatanascimento" %>
       <%= f.label "Email", class: "labelemail" %>
-      <%= f.email_field :email, class: "inputemail" %>
+      <%= f.text_field :email, class: "inputemail" %>
   </div>
 
   <div class="info-pessoais">
@@ -30,16 +33,18 @@
   </div>
 
   <div class="endereco">
-      <%= f.label 'CEP', class:"labelcep" %>
-      <%= f.text_field :cep, class: "inputcep"%>
       <%= f.label 'Rua', class:"labelrua" %>
-      <%= f.text_field :district, class:"inputrua" %>
-      <%= f.label "Cidade", class: "labeluf" %>
-      <%= f.text_field :city, class:"inputuf"%>
-  </div>
-  <div class="endereco">
+      <%= f.text_field :street, class:"inputrua" %>
       <%= f.label 'N°', class:"labelnumerocasa" %>
       <%= f.text_field :house_number, class: "inputnumerocasa" %>
+      <%= f.label 'Bairro', class:"labelrua" %>
+      <%= f.text_field :district, class:"inputrua" %>
+  </div>
+  <div class="endereco">
+      <%= f.label "Cidade", class: "labeluf" %>
+      <%= f.text_field :city, class:"inputuf"%>
+      <%= f.label 'CEP', class:"labelcep" %>
+      <%= f.text_field :cep, class: "inputcep"%>
   </div>
 
   <div class="top">
@@ -48,18 +53,18 @@
 
   <div class="info-cadastrais">
       <%= f.label 'Usuario', class: "labelusuario" %>
-      <%= f.text_field :username, class: "inputusuario" %>
+      <%= f.text_field :username,  value: user ? user.username : '', class: "inputusuario" %>
       <%= f.label 'Cargo', class: "labelcargo" %>
       <%= f.text_field :office, class: "inputcargo" %>
       <%= f.label 'Tipo', class:"labelid" %>
-      <%= f.text_field :profile_type, class:"inputid" %>
+      <%= f.text_field :profile_type_id, class:"inputid" %>
   </div>
 
   <div class="info-cadastrais">
-      <%= f.label 'Salario', class:"labelsalario" %>
-      <%= f.number_field :salary, class:"inputsalario" %>
+      <%= f.label 'Departamento', class:"labelsalario" %>
+      <%= f.text_field :department, class:"inputsalario" %>
       <%= f.label 'Senha', class: "labelsenha" %>
-      <%= f.text_field :userpassword,  class:"inputsenha" %>
+      <%= f.text_field :userpassword, value: user ? user.userpassword : '',  class:"inputsenha" %>
   </div>
   
   <div class="finalizar-edicao">

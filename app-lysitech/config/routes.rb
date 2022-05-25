@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  get 'atend/index'
+
   scope :admin do
     resources :calls, :clients, :phones, :profiles, :profile_types
   end 
 
-  scope :atend do
+  scope :support do
     resources :calls, :clients, :phones
   end 
   
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   #--------- Dashboard ------------
   get '/admin', to: 'admin#index'
-  get '/atend', to: 'atend#index'
+  get '/support', to: 'support#index'
  
 
   # Pagina padrão
