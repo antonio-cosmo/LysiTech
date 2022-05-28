@@ -450,6 +450,30 @@ section{
     font-size: min(1.1rem, 2vw);
 }
 
+.labeldepartamento{
+    width: 15%;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
+}
+
+.inputdepartamento{
+    width: 25%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
+    margin-right: 5%;
+    padding: .5rem;
+    outline: none;
+    font-size: min(1.1rem, 2vw);
+}
+
 .labelsenha{
     width: 10%;
     background: var(--white-color);

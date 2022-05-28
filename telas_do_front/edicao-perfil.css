@@ -70,9 +70,13 @@ article{
     padding-left: .75rem;
 }
 
-
 .barralateral .perfil{
     width: 7rem;
+}
+
+.barralateral .foto{
+    padding: .3rem;
+    cursor: pointer;
 }
 
 .foto img{

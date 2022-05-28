@@ -108,165 +108,208 @@ article{
 
 /*FIM*/
 
-
-.section-1{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 2.5rem 5rem;
-}
-.voltar{
-    position: absolute;
-    transition: all 350ms ease;
-    cursor: pointer;
-    opacity: .7;
-    margin-left: 12rem;
-    margin-top: 2rem;
-}
-.voltar:hover{
-    opacity: 1;
+.protocolos{
+    background: var(--destaque-color);
 }
 
-.title {
-    width: 100%;
-    text-align: center;
-    margin-left: 60%;
-
-}
-
-
-
-.form-1{
-    width: 100%;
-    margin-top: 1rem;
-}
-.form-1 h3{
-    margin-left:30%;
-   }
-
-
-.style1{
-
-    width:28vw;
-    background: var(--white-color);
-    border: solid 1px var(--border-color);
-    border-radius: .7rem .7rem .7rem .7rem;
-    padding: .5rem;
-    outline: none;
-    font-size: min(1.1rem, 2vw);
-}
-
-.card{
-    padding-top: 1rem;
-}
-
-.style1::placeholder {
-    color: #000000;
-    font-size: min(1.1rem, 2vw);
-    font-weight: bold;
-  }
-
-
- .solução{
-    width:28vw;
-    height:35vh;
-    background: var(--white-color);
-    border: solid 1px var(--border-color);
-    border-radius: .7rem .7rem .7rem .7rem;
-    outline: none;
-    font-size: min(1.1rem, 2vw);
-  }
- 
-
-
-
- /*  section-2*/
-
-  .section-2{
+section{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 6.8rem 6.8rem;
+    padding: 1.5rem 5rem;
 }
+
+.edicao-perfil{
+    width: 100%;
+}
+
 .voltar{
     position: absolute;
     transition: all 350ms ease;
     cursor: pointer;
     opacity: .7;
-    margin-left: 12rem;
-    margin-top: 2rem;
 }
+
 .voltar:hover{
     opacity: 1;
 }
 
+.top{
+    width: 100%;
+    text-align: center;
+}
 
+.top img{
+    margin-top: .5rem;
+}
 
-.form-2 h3{
-   margin-left: 35%;
-   }
+.info-protocolo{
+    display: flex;
+}
 
+.coleta{
+    display: flex;
+    margin: .5rem 0rem;
+}
 
-.style2{
+.coleta2{
+    display: flex;
+    margin: .5rem 0rem;
+    justify-content: end;
+}
 
-    width:28vw;
+.coleta h3{
+    width: 80%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.coleta2 h3{
+    width: 80%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.info-cliente{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: .5rem 0rem;
+}
+
+.labelnome{
+    width: 20%;
     background: var(--white-color);
     border: solid 1px var(--border-color);
-    border-radius: .7rem .7rem .7rem .7rem;
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
+}
+
+.inputnome{
+    width: 60%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
     padding: .5rem;
     outline: none;
     font-size: min(1.1rem, 2vw);
 }
 
-.card{
-    padding-top: 1rem;
-}
-
-.style2::placeholder {
-    color: #000000;
-    font-size: min(1.1rem, 2vw);
-    font-weight: bold;
-  }
-
-
- .problema{
-    width:28vw;
-    height:35vh;
+.labeltelefone{
+    width: 20%;
     background: var(--white-color);
     border: solid 1px var(--border-color);
-    border-radius: .7rem .7rem .7rem .7rem;
-    outline: none;
-    font-size: min(1.1rem, 2vw);
-  }
- 
-  .finalizar-edicao{
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
 }
 
-.finalizar-edicao button{
+.inputtelefone{
+    width: 60%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
+    padding: .5rem;
+    outline: none;
+    font-size: min(1.1rem, 2vw);
+}
+
+.labelemail{
+    width: 20%;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
+}
+
+.inputemail{
+    width: 60%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
+    padding: .5rem;
+    outline: none;
+    font-size: min(1.1rem, 2vw);
+}
+
+.solucao{
+    width: 80%;
+    height: 25rem;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-radius: .7rem;
+    padding: .5rem;
+    outline: none;
+    font-size: min(1.1rem, 2vw);
+    resize: none;
+}
+
+.labelsituacao{
+    width: 20%;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-right: none;
+    border-radius: .7rem 0rem 0rem .7rem;
+    padding: .5rem;
+    font-size: min(1.1rem, 3vw);
+    font-weight: bold;
+}
+
+.inputsituacao{
+    width: 60%;
+    text-align: right;
+    background: var(--white-color);
+    border: solid 1px var(--border-color);
+    border-left: none;
+    border-radius: 0rem .7rem .7rem 0rem;
+    padding: .5rem;
+    outline: none;
+    font-size: min(1.1rem, 2vw);
+}
+
+.info-atendente{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: .5rem 0rem;
+}
+
+.finalizar-edicao{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.finalizar-edicao{
     background: var(--primary-color);
     border: solid 1px var(--border-color);
     border-radius: .7rem;
-    padding: 1rem;
+    padding: .5rem;
     font-size: min(1.1rem, 3vw);
     font-weight: bold;
     color: var(--white-color);
     cursor: pointer;
-    width: 100%;
-    height: 5%;
+    width: 80%;
     transition: all 350ms ease;
 }
 
-
-
-
-
-
-
-
-  
-
-  
+.finalizar-edicao:hover{
+    font-size: min(1.2rem, 3.1vw);
+    padding: .8rem;
+}

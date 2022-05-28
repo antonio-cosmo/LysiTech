@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<article>
+    <article>
         <aside class="barralateral">
             <div class="perfil">
                 <li class="foto" id="home"><img title="Home" src="svgs/Foto de perfil.png"></li>
@@ -23,13 +23,13 @@
                 <div class="linha cadastro" title="Cadastro" id="cadastro">
                     <li><img src="svgs/Funcionarios.svg"></li>
                 </div>
-                <div class="linha" title="Clientes">
+                <div class="linha clientes" title="Clientes">
                     <li><img src="svgs/Clientes.svg"></li> 
                 </div>
-                <div class="linha" title="Protocolos">
+                <div class="linha protocolos" title="Protocolos">
                     <li><img src="svgs/Protocolos.svg"></li>
                 </div>
-                <div class="linha" title="Avisos">
+                <div class="linha avisos" title="Avisos">
                     <li><img src="svgs/Avisos.svg"></li>
                 </div>
                 <div class="linha" title="Sair">
@@ -37,72 +37,78 @@
                 </div>
             </ul>
         </aside>
-
-
-
-
-
-        <img class="voltar" title="Voltar" src="svgs/voltar.svg">
-
         
-<section class="section-1">
-
-              <div class="title">
-               <h2>Nº PROTOCOLO</h2>
-                <h4>09658923</h4>  
-                </div>
-
-        <form class="form-1">
+        <section>
+            <form class="edicao-perfil">
                 
-                  <h3> ATENDENTE</h3>
+                <img class="voltar" title="Voltar" src="svgs/voltar.svg">
 
-                <div class="card">
-                   <input class="style1" type="text" placeholder="NOME" name="situação" id="situação"> 
+                <div class="top">
+                    <h2>Nº Protocolo</h2>
+                    <p>0023784656</p>
                 </div>
 
-                <div class="card">
-                   <input class="style1" type="text" placeholder="TELEFONE" name="situação" id="situação"> 
+                <div class="info-protocolo">
+
+                    <div class="info-cliente">
+                        <div class="coleta">
+                            <h3>Cliente</h3>
+                        </div>
+                        <div class="coleta">
+                            <label class="labelnome" for="nome">Nome</label>
+                            <input class="inputnome" type="text" name="nome" id="nome-cliente">
+                        </div>
+                        <div class="coleta">
+                            <label class="labeltelefone" for="telefone">CPF</label>
+                            <input class="inputtelefone" type="text" name="telefone" id="telefone-cliente">
+                        </div>
+                        <div class="coleta">
+                            <label class="labelemail" for="email">Email</label>
+                            <input class="inputemail" type="email" name="email" id="email-cliente">
+                        </div>
+                        <div class="coleta">
+                            <h3>Problema</h3>
+                        </div>
+                        <div class="coleta">
+                            <textarea class="solucao" name="problema" id="problema"></textarea>
+                        </div>
+                        <div class="coleta">
+                            <label class="labelsituacao" for="situacao">Situação</label>
+                            <input class="inputsituacao" type="text" name="situacao" id="situacao-cliente">
+                        </div>
+                    </div> 
+
+                    <div class="info-atendente">
+                        <div class="coleta2">
+                            <h3>Atedente</h3>
+                        </div>
+                        <div class="coleta2">
+                            <label class="labelnome" for="nome">Nome</label>
+                            <input class="inputnome" type="text" name="nome" id="nome-atedente">
+                        </div>
+                        <div class="coleta2">
+                            <label class="labeltelefone" for="telefone">CPF</label>
+                            <input class="inputtelefone" type="text" name="telefone" id="telefone-atedente">
+                        </div>
+                        <div class="coleta2">
+                            <label class="labelemail" for="email">Email</label>
+                            <input class="inputemail" type="email" name="email" id="email-atendente">
+                        </div>
+                        <div class="coleta2">
+                            <h3>Solução</h3>
+                        </div>
+                        <div class="coleta2">
+                            <textarea class="solucao" name="solucao" id="solucao"></textarea>
+                        </div>
+                        <div class="coleta2">
+                            <button class="finalizar-edicao" type="submit">Criar Protocolo</button>
+                        </div>
+                    </div> 
+
                 </div>
 
-                <div class="card">
-                   <input class="style1" type="text" placeholder="E-MAIL" name="situação" id="situação"> 
-                </div>
-
-                <div class="card">
-                <h3>SOLUÇÃO</h3>
-                    <input class="solução" type="text" name="solução" id="solução"> 
-                </div>
-
-                    <div class="card">
-                <input class="style1" type="text" placeholder="SITUAÇÃO" name="situação" id="situação"> 
-                </div>             
-        </form>
-</section>
-
-<section class="section-2">
-
-        <form class="form-2">
-  
-            <h3> CLIENTE</h3>
-
-                <div class="card">
-                <input class="style2" type="text" placeholder="NOME" name="situação" id="situação"> 
-                </div>
-                <div class="card">
-                <input class="style2" type="text" placeholder="TELEFONE" name="situação" id="situação"> 
-               </div>
-               <div class="card">
-               <input class="style2" type="text" placeholder="E-MAIL" name="situação" id="situação"> 
-               </div>
-               <div class="card">
-               <h3>PROBLEMA</h3>
-              <input class="problema" type="text" name="problema" id="problema"> 
-              </div>
-              <div class="finalizar-edicao">
-              <button type="submit">Finalizar edição</button>
-               </div>            
-        </form>
-</section>
+            </form>
+        </section>
 
  </article>
 </body>

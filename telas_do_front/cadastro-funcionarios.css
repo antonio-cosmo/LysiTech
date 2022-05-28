@@ -451,7 +451,7 @@ section{
 }
 
 
-.labelsalario{
+.labeldepartamento{
     width: 15%;
     background: var(--white-color);
     border: solid 1px var(--border-color);
@@ -462,7 +462,7 @@ section{
     font-weight: bold;
 }
 
-.inputsalario{
+.inputdepartamento{
     width: 15%;
     text-align: right;
     background: var(--white-color);

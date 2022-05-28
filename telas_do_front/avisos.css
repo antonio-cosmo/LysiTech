@@ -124,6 +124,16 @@ h1{
     font-size: min(2rem, 4vw);
 }
 
+.adicionar-aviso{
+    opacity: .7;
+    cursor: pointer;
+    transition: all 350ms ease;
+}
+
+.adicionar-aviso:hover{
+    opacity: 1;
+}
+
 .muraldeavisos, .muraldeavisos2, .muraldeavisos3, .muraldeavisos4, .muraldeavisos5{
     width: 80%;
     height: 100%;
