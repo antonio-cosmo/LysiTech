@@ -7,35 +7,68 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-profile_type = [
+# profile_type = [
+#   {
+#     description: 'manager',
+#   },
+#   {
+#     description: 'support'
+#   }
+# ]
+
+
+
+# profile_type.each do |type|
+#   ProfileType.find_or_create_by(type) 
+# end
+
+
+# profile = {
+#   fullname: 'admin',
+#   register: '0',
+#   department: 'admin',
+#   email: nil,
+#   profile_type: ProfileType.all.first
+# }
+
+# Profile.find_or_create_by(profile)
+
+
+# user = {
+#   username: 'admin',
+#   userpassword: 'admin',
+#   profile: Profile.all.first
+# }
+
+
+
+# User.find_or_create_by(user)
+
+
+tipo_perfil = [
   {
-    description: 'manager',
+    tipo: 'gerente',
   },
   {
-    description: 'support'
+    tipo: 'suporte'
   }
 ]
 
-profile_type.each do |type|
-  ProfileType.find_or_create_by(type) 
+tipo_perfil.each do |tipo|
+  TipoPerfil.find_or_create_by(tipo) 
 end
 
-
-
-profile = {
-  fullname: 'admin',
-  register: '0',
-  department: 'admin',
-  email: nil,
-  profile_type: ProfileType.all.first
+perfil = {
+  nome:'gerente',
+  tipo_perfil: TipoPerfil.all.first
 }
 
-Profile.find_or_create_by(profile)
+Perfil.find_or_create_by(perfil)
 
-user = {
-  username: 'admin',
-  userpassword: 'admin',
-  profile: Profile.all.first
+usuario = {
+  usuario: 'admin',
+  senha: '12345',
+  perfil: Perfil.all.first
 }
 
-User.find_or_create_by(user)
+Usuario.find_or_create_by(usuario)

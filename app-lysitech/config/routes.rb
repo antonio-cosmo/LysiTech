@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
 
   scope :admin do
-    resources :calls, :clients, :phones, :profiles, :profile_types
+    resources :ordem_servicos, :clientes, :perfils
   end 
 
   scope :support do
-    resources :calls, :clients, :phones
+    resources :ordem_servicos, :clientes
   end 
+
+
   
   #----Login--------
   post '/sign_in', to:'login#create',  as: :login

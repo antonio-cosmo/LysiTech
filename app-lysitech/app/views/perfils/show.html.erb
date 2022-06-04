@@ -1,0 +1,12 @@
+<section>
+  <p style="color: green"><%= notice %></p>
+
+  <%= render @profile %>
+
+  <div>
+    <%= link_to "Editar usuario", edit_perfil_path(@profile) %> |
+    <%= link_to "Listar usuario", perfils_path %>
+
+    <%= button_to "Excluir usuario", @profile, method: :delete %>
+  </div>
+</section>

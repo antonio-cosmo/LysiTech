@@ -1,0 +1,16 @@
+<section>
+  <p style="color: green"><%= notice %></p>
+
+  <h1>Profiles</h1>
+
+  <div id="profiles">
+    <% @profiles.each do |perfil| %>
+      <%= render perfil %>
+      <p>
+        <%= link_to "Mostrar usuario", perfil %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "Criar usuario", new_perfil_path %>
+</section>

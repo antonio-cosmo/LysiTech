@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @tipo_perfil %>
+
+<div>
+  <%= link_to "Edit this tipo perfil", edit_tipo_perfil_path(@tipo_perfil) %> |
+  <%= link_to "Back to tipo perfils", tipo_perfils_path %>
+
+  <%= button_to "Destroy this tipo perfil", @tipo_perfil, method: :delete %>
+</div>

@@ -12,16 +12,16 @@ Rails.application.config.assets.version = "1.0"
 Rails.application.config.assets.precompile += %w( 
                                                   admin.css 
                                                   support.css 
-                                                  calls.css 
-                                                  clients.css 
+                                                  ordem_servicos.css 
+                                                  clientes.css 
                                                   login.css 
-                                                  profiles.css 
+                                                  perfils.css 
                                                 )
 Rails.application.config.assets.precompile += %w( 
-                                                  admin.js 
-                                                  support.js 
-                                                  calls.js 
-                                                  clients.js 
-                                                  login.js 
-                                                  profiles.js 
+                                                  admin.css 
+                                                  support.css 
+                                                  ordem_servicos.css 
+                                                  clientes.css 
+                                                  login.css 
+                                                  perfils.css  
                                                 )

@@ -12,8 +12,8 @@
 
         <div class="contain-login">
             <%= form_with model: @user, class: 'contain-form', url: login_path, method: :post do |f| %>
-                <%= f.text_field :username, placeholder:'Usuario', class: 'field' %>
-                <%= f.password_field :userpassword, placeholder: "Senha", class: 'field' %>
+                <%= f.text_field :usuario, placeholder:'Usuario', class: 'field' %>
+                <%= f.password_field :senha, placeholder: "Senha", class: 'field' %>
                 <%= f.submit "Entrar", class: 'btn-submit' %>
                 <button class="recuperar" type="button">Recuperar senha</button>
             <% end %>   

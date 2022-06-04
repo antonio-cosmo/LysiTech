@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_09_013215) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_02_235527) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -30,6 +30,23 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_09_013215) do
     t.index ["user_id"], name: "index_calls_on_user_id"
   end
 
+  create_table "clientes", force: :cascade do |t|
+    t.string "cnpj"
+    t.string "inscr_estadual"
+    t.string "razao_social"
+    t.string "nome_fantasia"
+    t.string "email"
+    t.string "rua"
+    t.string "numero"
+    t.string "bairro"
+    t.string "cep"
+    t.string "cidade"
+    t.string "uf"
+    t.text "observacao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "clients", force: :cascade do |t|
     t.string "fullname"
     t.string "phone"
@@ -44,6 +61,41 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_09_013215) do
     t.text "note"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "ordem_servicos", force: :cascade do |t|
+    t.string "titulo"
+    t.string "categoria"
+    t.text "descricao"
+    t.text "solucao"
+    t.integer "estatus"
+    t.date "dt_abertura"
+    t.date "dt_encerramento"
+    t.bigint "perfil_id", null: false
+    t.bigint "cliente_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cliente_id"], name: "index_ordem_servicos_on_cliente_id"
+    t.index ["perfil_id"], name: "index_ordem_servicos_on_perfil_id"
+  end
+
+  create_table "perfils", force: :cascade do |t|
+    t.string "nome"
+    t.date "dt_nascimento"
+    t.string "cpf"
+    t.string "cargo"
+    t.string "departamento"
+    t.string "email"
+    t.string "rua"
+    t.string "numero"
+    t.string "bairro"
+    t.string "cep"
+    t.string "cidade"
+    t.string "uf"
+    t.bigint "tipo_perfil_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tipo_perfil_id"], name: "index_perfils_on_tipo_perfil_id"
   end
 
   create_table "phones", force: :cascade do |t|
@@ -79,6 +131,28 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_09_013215) do
     t.index ["profile_type_id"], name: "index_profiles_on_profile_type_id"
   end
 
+  create_table "telefone_clientes", force: :cascade do |t|
+    t.string "numero_tel"
+    t.bigint "cliente_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cliente_id"], name: "index_telefone_clientes_on_cliente_id"
+  end
+
+  create_table "telefone_perfils", force: :cascade do |t|
+    t.string "numero_tel"
+    t.bigint "perfil_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["perfil_id"], name: "index_telefone_perfils_on_perfil_id"
+  end
+
+  create_table "tipo_perfils", force: :cascade do |t|
+    t.string "tipo", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "userpassword"
@@ -88,9 +162,24 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_09_013215) do
     t.index ["profile_id"], name: "index_users_on_profile_id"
   end
 
+  create_table "usuarios", force: :cascade do |t|
+    t.string "usuario"
+    t.string "senha"
+    t.bigint "perfil_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["perfil_id"], name: "index_usuarios_on_perfil_id"
+  end
+
   add_foreign_key "calls", "clients"
   add_foreign_key "calls", "users"
+  add_foreign_key "ordem_servicos", "clientes"
+  add_foreign_key "ordem_servicos", "perfils"
+  add_foreign_key "perfils", "tipo_perfils"
   add_foreign_key "phones", "profiles"
   add_foreign_key "profiles", "profile_types"
+  add_foreign_key "telefone_clientes", "clientes"
+  add_foreign_key "telefone_perfils", "perfils"
   add_foreign_key "users", "profiles"
+  add_foreign_key "usuarios", "perfils"
 end

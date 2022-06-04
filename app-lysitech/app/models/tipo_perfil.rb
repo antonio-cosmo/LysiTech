@@ -1,0 +1,2 @@
+class TipoPerfil < ApplicationRecord
+end
