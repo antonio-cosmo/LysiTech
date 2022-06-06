@@ -70,9 +70,13 @@ article{
     padding-left: .75rem;
 }
 
-
 .barralateral .perfil{
     width: 7rem;
+}
+
+.barralateral .foto{
+    padding: .3rem;
+    cursor: pointer;
 }
 
 .foto img{
@@ -107,10 +111,6 @@ article{
 }
 
 /*FIM*/
-
-.funcionarios{
-    background: var(--destaque-color);
-}
 
 section{
     display: flex;
@@ -371,8 +371,6 @@ section{
 }
 
 
-
-
 .info-cadastrais{
     display: flex;
     width: 100%;
@@ -446,30 +444,7 @@ section{
     border-left: none;
     border-radius: 0rem .7rem .7rem 0rem;
     padding: .7rem;
-    outline: none;
-    font-size: min(1.1rem, 2vw);
-}
-
-.labeldepartamento{
-    width: 15%;
-    background: var(--white-color);
-    border: solid 1px var(--border-color);
-    border-right: none;
-    border-radius: .7rem 0rem 0rem .7rem;
-    padding: .7rem;
-    font-size: min(1.1rem, 3vw);
-    font-weight: bold;
-}
-
-.inputdepartamento{
-    width: 25%;
-    text-align: right;
-    background: var(--white-color);
-    border: solid 1px var(--border-color);
-    border-left: none;
-    border-radius: 0rem .7rem .7rem 0rem;
     margin-right: 5%;
-    padding: .7rem;
     outline: none;
     font-size: min(1.1rem, 2vw);
 }
