@@ -3,7 +3,7 @@ class PerfilsController < SessionsController
 
   # GET /perfils or /perfils.json
   def index
-    @profiles = Perfil.all
+    @profiles = Perfil.all.order(:nome)
   end
 
   # GET /perfils/1 or /perfils/1.json
@@ -58,7 +58,7 @@ class PerfilsController < SessionsController
 
     respond_to do |format|
       if @profile.update(profile) and @user.update(user)
-        format.html { redirect_to profile_url(@profile), notice: "Usuario atualizado." }
+        format.html { redirect_to perfil_url(@profile), notice: "Usuario atualizado." }
       else
         format.html { render :edit, status: :unprocessable_entity }
       end

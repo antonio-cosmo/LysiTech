@@ -1,0 +1,583 @@
+/* listar cliente */
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 5rem;
+}
+
+.barra-pesquisa{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: all 350ms ease;
+}
+
+.barra-pesquisa1{
+  width: 50%;
+  height: 3rem;
+  margin-top: 2rem;
+  border: solid 1px var(--border-color);
+  border-radius: .7rem;
+  background: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pesquisa{
+  width: 90%;
+  padding: .7rem;
+  border: none;
+  background: none;
+  font-size: min(1rem, 2vw);
+  color: var(--black-color);
+}
+
+.pesquisa:focus{
+  outline: none;
+  border-right: solid 1px var(--border-color);
+}
+
+table{
+  width: 100%;
+  border-spacing: 0 0.5rem;
+}
+th{
+  color: #000;
+  padding: 1rem 2rem;
+  text-align: left;
+  line-height: 1.5rem;
+}
+
+tr a {
+  color: #000;
+  text-decoration: none;
+}
+td{
+  padding:1rem 2rem;
+  border: 0;
+  background: #fff;
+  color: #000;
+  border-radius: 0.25rem;
+}
+
+td:first-child{
+  color:var(--text-title);
+}
+
+/* criar */
+
+.clientes{
+  background: var(--destaque-color);
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 5rem;
+}
+
+.edicao-perfil{
+  width: 100%;
+}
+
+.voltar{
+  position: absolute;
+  transition: all 350ms ease;
+  cursor: pointer;
+  opacity: .7;
+}
+
+.voltar:hover{
+  opacity: 1;
+}
+
+.info-pessoais{
+  display: flex;
+  width: 100%;
+  margin: 1rem 0rem;
+}
+
+.top{
+  width: 100%;
+  text-align: center;
+}
+
+.top img{
+  margin-top: .5rem;
+}
+
+.labelnomecompleto{
+  width: 20%;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-right: none;
+  border-radius: .7rem 0rem 0rem .7rem;
+  padding: .7rem;
+  font-size: min(1.1rem, 3vw);
+  font-weight: bold;
+}
+
+.inputnomecompleto{
+  width: 40%;
+  text-align: right;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-left: none;
+  border-radius: 0rem .7rem .7rem 0rem;
+  margin-right: 5%;
+  padding: .7rem;
+  outline: none;
+  font-size: min(1.1rem, 2vw);
+}
+
+.labelcpf{
+  width: 10%;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-right: none;
+  border-radius: .7rem 0rem 0rem .7rem;
+  padding: .7rem;
+  font-size: min(1.1rem, 3vw);
+  font-weight: bold;
+}
+
+.inputcpf{
+  width: 25%;
+  text-align: right;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-left: none;
+  border-radius: 0rem .7rem .7rem 0rem;
+  padding: .7rem;
+  outline: none;
+  font-size: min(1.1rem, 2vw);
+}
+
+.labeldatanascimento{
+  width: 20%;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-right: none;
+  border-radius: .7rem 0rem 0rem .7rem;
+  padding: .7rem;;
+  font-size: min(1.1rem, 3vw);
+  font-weight: bold;
+}
+
+.inputdatanascimento{
+  width: 20%;
+  text-align: right;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-left: none;
+  border-radius: 0rem .7rem .7rem 0rem;
+  margin-right: 5%;
+  padding: .7rem;
+  outline: none;
+  font-size: min(1.1rem, 2vw);
+}
+
+.labelemail{
+  width: 15%;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-right: none;
+  border-radius: .7rem 0rem 0rem .7rem;
+  padding: .7rem;
+  font-size: min(1.1rem, 3vw);
+  font-weight: bold;
+}
+
+.inputemail{
+  width: 40%;
+  text-align: right;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-left: none;
+  border-radius: 0rem .7rem .7rem 0rem;
+  padding: .7rem;
+  outline: none;
+  font-size: min(1.1rem, 2vw);
+}
+
+.labeltelefone{
+  width: 15%;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-right: none;
+  border-radius: .7rem 0rem 0rem .7rem;
+  padding: .7rem;
+  font-size: min(1.1rem, 3vw);
+  font-weight: bold;
+}
+
+.inputtelefone{
+  width: 20%;
+  text-align: right;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-left: none;
+  border-radius: 0rem .7rem .7rem 0rem;
+  padding: .7rem;
+  outline: none;
+  font-size: min(1.1rem, 2vw);
+}
+
+
+
+
+.endereco{
+  display: flex;
+  width: 100%;
+  margin: 1rem 0rem;
+}
+
+.labelcep{
+  width: 10%;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-right: none;
+  border-radius: .7rem 0rem 0rem .7rem;
+  padding: .7rem;
+  font-size: min(1.1rem, 3vw);
+  font-weight: bold;
+}
+
+.inputcep{
+  width: 20%;
+  text-align: right;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-left: none;
+  border-radius: 0rem .7rem .7rem 0rem;
+  margin-right: 5%;
+  padding: .7rem;
+  outline: none;
+  font-size: min(1.1rem, 2vw);
+}
+
+.labelrua{
+  width: 10%;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-right: none;
+  border-radius: .7rem 0rem 0rem .7rem;
+  padding: .7rem;
+  font-size: min(1.1rem, 3vw);
+  font-weight: bold;
+}
+
+.inputrua{
+  width: 30%;
+  text-align: right;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-left: none;
+  border-radius: 0rem .7rem .7rem 0rem;
+  margin-right: 5%;
+  padding: .7rem;
+  outline: none;
+  font-size: min(1.1rem, 2vw);
+}
+
+.labeluf{
+  width: 10%;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-right: none;
+  border-radius: .7rem 0rem 0rem .7rem;
+  padding: .7rem;
+  font-size: min(1.1rem, 3vw);
+  font-weight: bold;
+}
+
+.inputuf{
+  width: 10%;
+  text-align: right;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-left: none;
+  border-radius: 0rem .7rem .7rem 0rem;
+  padding: .7rem;
+  outline: none;
+  font-size: min(1.1rem, 2vw);
+}
+
+.labelnumerocasa{
+  width: 10%;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-right: none;
+  border-radius: .7rem 0rem 0rem .7rem;
+  padding: .7rem;
+  font-size: min(1.1rem, 3vw);
+  font-weight: bold;
+}
+
+.inputnumerocasa{
+  width: 20%;
+  text-align: right;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-left: none;
+  border-radius: 0rem .7rem .7rem 0rem;
+  padding: .7rem;
+  outline: none;
+  font-size: min(1.1rem, 2vw);
+}
+
+
+
+
+.info-cadastrais{
+  display: flex;
+  width: 100%;
+  margin: 1rem 0rem;
+}
+
+.labelusuario{
+  width: 15%;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-right: none;
+  border-radius: .7rem 0rem 0rem .7rem;
+  padding: .7rem;
+  font-size: min(1.1rem, 3vw);
+  font-weight: bold;
+}
+
+.inputusuario{
+  width: 15%;
+  text-align: right;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-left: none;
+  border-radius: 0rem .7rem .7rem 0rem;
+  margin-right: 5%;
+  padding: .7rem;
+  outline: none;
+  font-size: min(1.1rem, 2vw);
+}
+
+.labelcargo{
+  width: 15%;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-right: none;
+  border-radius: .7rem 0rem 0rem .7rem;
+  padding: .7rem;
+  font-size: min(1.1rem, 3vw);
+  font-weight: bold;
+}
+
+.inputcargo{
+  width: 25%;
+  text-align: right;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-left: none;
+  border-radius: 0rem .7rem .7rem 0rem;
+  margin-right: 5%;
+  padding: .7rem;;
+  outline: none;
+  font-size: min(1.1rem, 2vw);
+}
+
+.labelid{
+  width: 10%;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-right: none;
+  border-radius: .7rem 0rem 0rem .7rem;
+  padding: .7rem;
+  font-size: min(1.1rem, 3vw);
+  font-weight: bold;
+}
+
+.inputid{
+  width: 10%;
+  text-align: right;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-left: none;
+  border-radius: 0rem .7rem .7rem 0rem;
+  padding: .7rem;
+  outline: none;
+  font-size: min(1.1rem, 2vw);
+}
+
+.labelsenha{
+  width: 10%;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-right: none;
+  border-radius: .7rem 0rem 0rem .7rem;
+  padding: .7rem;
+  font-size: min(1.1rem, 3vw);
+  font-weight: bold;
+}
+
+.inputsenha{
+  width: 10%;
+  text-align: right;
+  background: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-left: none;
+  border-radius: 0rem .7rem .7rem 0rem;
+  padding: .7rem;
+  outline: none;
+  font-size: min(1.1rem, 2vw);
+}
+
+.finalizar-edicao{
+  width: 100%;
+  text-align: center;
+}
+
+.finalizar-edicao button{
+  background: var(--primary-color);
+  border: solid 1px var(--border-color);
+  border-radius: .7rem;
+  padding: 1rem;
+  font-size: min(1.1rem, 3vw);
+  font-weight: bold;
+  color: var(--white-color);
+  cursor: pointer;
+  width: 25%;
+  transition: all 350ms ease;
+}
+
+.finalizar-edicao button:hover{
+  border: solid 1px var(--black-color);
+  font-size: min(1.2rem, 3.1vw);
+  width: 27%;
+}
+
+
+
+
+
+.clientes{
+  background: var(--destaque-color);
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 0rem;
+}
+
+.bloco1{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  border-bottom: solid 2px var(--border-color);
+  height: 30%;
+  width: 85%;
+
+}
+
+.bloco1 ul{
+  list-style: none;
+}
+
+.style0{
+  width: 35%;
+  background: var(--white-color);
+  border-radius: .7rem .7rem .7rem .7rem;
+
+}
+.style0 h3{
+  font-size: min(1.4rem, 2.5vw);
+  padding: 0.2rem 0rem;
+}
+.style0 li{
+  font-size: min(1rem, 2vw);
+  list-style-type: none;
+}
+
+
+/*Cards*/
+
+.style1{
+  padding-left: .7rem;
+  height: 3.5rem;
+}
+
+.style2{
+  background:var( --primary-color);
+  padding-left: .7rem;
+  color: var(--white-color);
+  height: 3.5rem;
+}
+
+.style3{
+  padding-left: .7rem;
+  height: 3.5rem;
+}
+
+/* Foto e icone editar */
+
+.edicao{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0rem 3rem;
+}
+
+.editar-informacoes{
+  cursor: pointer;
+  border-radius: 1rem;
+  transition: all 350ms ease;
+}
+
+.edicao .foto2{
+  width: min(8rem, 15vw);
+}
+
+.edicao .editar-informacoes{
+  width: min(3rem, 6vw);
+  height: 4rem;
+  opacity: .7;
+}
+
+.editar-informacoes:hover{
+  opacity: 1;
+}
+
+/* FIM*/
+
+.bloco2{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 0rem;
+  justify-content: space-evenly;
+  list-style: none;
+  border-bottom: solid 2px var(--border-color);
+  height: 30%;
+  width: 85%;
+}
+
+.excluir{
+  list-style-type: none;
+  text-align: center;
+  padding-top: 5rem;
+  cursor: pointer;
+  width: min(3rem, 8vw);
+  opacity: .7;
+  transition: all 350ms ease;
+}
+
+.excluir:hover{
+  opacity: 1;
+}

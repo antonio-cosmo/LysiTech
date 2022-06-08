@@ -1,5 +1,5 @@
 <%= form_with(model: cliente, class: "edicao-perfil") do |f| %>
-    <%= link_to (image_tag "voltar.svg", class: "voltar"), clientes_path %>
+    <%= link_to (image_tag "voltar.svg", class: "voltar"), cliente %>
 
 
   <div class="top">
@@ -44,6 +44,6 @@
 
 
   <div class="finalizar-edicao">
-    <%= f.submit 'Cadastrar cliente' %>
+    <%= f.submit 'Atualizar' %>
   </div>
 <% end %>

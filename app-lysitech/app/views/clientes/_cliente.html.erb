@@ -1,62 +1,109 @@
-<div id="<%= dom_id cliente %>">
-  <p>
-    <strong>Cnpj:</strong>
-    <%= cliente.cnpj %>
-  </p>
 
-  <p>
-    <strong>Inscr estadual:</strong>
-    <%= cliente.inscr_estadual %>
-  </p>
+<div class="bloco1">
+        <div  class="style0">
+            <div class="style1">
+                <h3>Email</h3>
+                <ul>
+                    <li><%= @cliente.email%></li>
+                </ul>
+            </div>
 
-  <p>
-    <strong>Razao social:</strong>
-    <%= cliente.razao_social %>
-  </p>
+            <div class="style2">
+                <h3>Nome Fantasia</h3>
+                <ul>
+                    <li><%= @cliente.nome_fantasia%></li>
+                </ul>
+            </div>
 
-  <p>
-    <strong>Nome fantasia:</strong>
-    <%= cliente.nome_fantasia %>
-  </p>
+            <div class="style3">
+                <h3>CNP</h3>
+                <ul>
+                    <li><%= @cliente.cnpj%></li>
+                </ul>
+            </div>
+        </div>
 
-  <p>
-    <strong>Email:</strong>
-    <%= cliente.email %>
-  </p>
+        <div class="edicao">
+            <%= image_tag "Foto_de_perfil.png"%>
+            <%= link_to edit_cliente_path(@cliente) do %>
+              <%= image_tag "editar.svg"%>
+            <% end %>
+        </div>
 
-  <p>
-    <strong>Rua:</strong>
-    <%= cliente.rua %>
-  </p>
+        <div class="style0"> 
+            <div class="style1">
+                <h3> Razao Social</h3>
+                <ul>
+                    <li> <%= @cliente.razao_social%></li>
+                </ul>
+            </div>
 
-  <p>
-    <strong>Numero:</strong>
-    <%= cliente.numero %>
-  </p>
+            <div class="style2">
+                <h3>I.E</h3>
+                <ul>
+                    <li><%= @cliente.inscr_estadual%></li>
+                </ul>
+            </div>
 
-  <p>
-    <strong>Bairro:</strong>
-    <%= cliente.bairro %>
-  </p>
+            <div class="style3">
+                <h3> Telefone</h3>
+                <ul>
+                    <li>(88) 99345-9864</li>
+                </ul>
+            </div>
+        </div>
+</div>
 
-  <p>
-    <strong>Cep:</strong>
-    <%= cliente.cep %>
-  </p>
+<div class="bloco2">
+    <div  class="style0">
+        <div class="style1">
+            <h3>CEP</h3>
+            <ul>
+                <li><%= @cliente.cep%></li>
+            </ul>
+        </div>
 
-  <p>
-    <strong>Cidade:</strong>
-    <%= cliente.cidade %>
-  </p>
+        <div class="style2">
+            <h3>Cidade</h3>
+            <ul>
+                <li><%= @cliente.cidade%></li>
+            </ul>
+        </div>
 
-  <p>
-    <strong>Uf:</strong>
-    <%= cliente.uf %>
-  </p>
+        <div class="style3">
+            <h3>Nº</h3>
+            <ul>
+                <li><%= @cliente.numero%></li>
+            </ul>
+        </div>
+    </div>
 
-  <p>
-    <strong>Observacao:</strong>
-    <%= cliente.observacao %>
-  </p>
+    <div  class="style0">
+        <div class="style1">
+            <h3>UF</h3>
+            <ul>
+                <li><%= @cliente.uf%></li>
+            </ul>
+        </div>
 
+        <div class="style2">
+            <h3>Rua</h3>
+            <ul>
+                <li><%= @cliente.rua%></li>
+            </ul>
+        </div>
+
+        <div class="style3">
+            <h3>Referêncial</h3>
+            <ul>
+                <li>Fórum</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="bloco3">
+    <%= button_to  @cliente, method: :delete do %>
+      <%= image_tag "excluir.svg"%>
+    <% end %>
 </div>

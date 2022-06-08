@@ -1,14 +1,38 @@
-<p style="color: green"><%= notice %></p>
+<article>
+  <section>
+      <h1>Clientes</h1>
+      <%= link_to (image_tag "add.svg"), new_cliente_path %>
 
-<h1>Clientes</h1>
+      <div class="barra-pesquisa">
+          <div class="barra-pesquisa1">
+          <input type="text" class="pesquisa" placeholder="Pesquise aqui..."/>
+          <%= image_tag "Pesquisa.svg" %>
+          </div>
+      </div>
 
-<div id="clientes">
-  <% @clientes.each do |cliente| %>
-    <%= render cliente %>
-    <p>
-      <%= link_to "Show this cliente", cliente %>
-    </p>
-  <% end %>
-</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>CNPJ</th>
+            <th>Email</th>
+            <th>Cidade</th>
 
-<%= link_to "New cliente", new_cliente_path %>
+          </tr>
+        </thead>
+        <tbody>
+        
+          <% @clientes.each do |cliente| %>    
+              <tr>               
+                <td><%= link_to cliente.nome_fantasia , cliente %></td>
+                <td><%= cliente.cnpj %></td>
+                <td><%= cliente.email %></td>
+                <td><%= cliente.cidade %></td>
+              </tr>
+          <% end %>
+
+        </tbody>
+      </table>
+
+  </section>
+</article>

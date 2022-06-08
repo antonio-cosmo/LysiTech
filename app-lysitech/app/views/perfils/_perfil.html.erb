@@ -1,67 +1,133 @@
-<div id="<%= dom_id perfil %>">
-  <p>
-    <strong>Nome:</strong>
-    <%= perfil.nome %>
-  </p>
+   <div class="bloco1">
+                <div  class="style0">
+                    <div class="style1">
+                        <h3>Email</h3>
+                        <ul>
+                            <li><%= @profile.email%></li>
+                        </ul>
+                    </div>
 
-  <p>
-    <strong>Dt nascimento:</strong>
-    <%= perfil.dt_nascimento %>
-  </p>
+                    <div class="style2">
+                        <h3>Usuário</h3>
+                        <ul>
+                            <li><%= @profile.nome%></li>
+                        </ul>
+                    </div>
 
-  <p>
-    <strong>Cpf:</strong>
-    <%= perfil.cpf %>
-  </p>
+                    <div class="style3">
+                        <h3>CPF</h3>
+                        <ul>
+                            <li><%= @profile.cpf%></li>
+                        </ul>
+                    </div>
+                </div>
 
-  <p>
-    <strong>Cargo:</strong>
-    <%= perfil.cargo %>
-  </p>
+                <div class="edicao">
+                    <%= image_tag "Foto_de_perfil.png"%>
+                    <%= link_to edit_perfil_path(@profile) do %>
+                      <%= image_tag "editar.svg"%>
+                    <% end %>
 
-  <p>
-    <strong>Departamento:</strong>
-    <%= perfil.departamento %>
-  </p>
+                </div>
 
-  <p>
-    <strong>Email:</strong>
-    <%= perfil.email %>
-  </p>
+                <div class="style0"> 
+                    <div class="style1">
+                        <h3> Nome</h3>
+                        <ul>
+                            <li><%= @profile.nome%></li>
+                        </ul>
+                    </div>
 
-  <p>
-    <strong>Rua:</strong>
-    <%= perfil.rua %>
-  </p>
+                    <div class="style2">
+                        <h3>Data nascimento</h3>
+                        <ul>
+                            <li><%= @profile.dt_nascimento%></li>
+                        </ul>
+                    </div>
 
-  <p>
-    <strong>Numero:</strong>
-    <%= perfil.numero %>
-  </p>
+                    <div class="style3">
+                        <h3> Telefone</h3>
+                        <ul>
+                            <li>(88) 99345-9864</li>
+                        </ul>
+                    </div>
+                </div>
+  </div>
 
-  <p>
-    <strong>Bairro:</strong>
-    <%= perfil.bairro %>
-  </p>
+  <div class="bloco2">
+      <div  class="style0">
+          <div class="style1">
+              <h3>ID</h3>
+              <ul>
+                  <li><%= @profile.id%></li>
+              </ul>
+          </div>
 
-  <p>
-    <strong>Cep:</strong>
-    <%= perfil.cep %>
-  </p>
+          <div class="style2">
+              <h3>Cargo</h3>
+              <ul>
+                  <li><%= @profile.cargo%></li>
+              </ul>
+          </div>
 
-  <p>
-    <strong>Cidade:</strong>
-    <%= perfil.cidade %>
-  </p>
+          <div class="style3">
+              <h3>Departamento</h3>
+              <ul>
+                  <li><%= @profile.departamento%></li>
+              </ul>
+          </div>
+      </div>
 
-  <p>
-    <strong>Uf:</strong>
-    <%= perfil.uf %>
-  </p>
+            <div  class="style4">
+                <div class="style1">
+                    <h3>CEP</h3>
+                    <ul>
+                        <li><%= @profile.cep%></li>
+                    </ul>
+                </div>
 
-  <p>
-    <strong>Tipo perfil:</strong>
-    <%= perfil.tipo_perfil_id %>
-  </p>
+                <div class="style2">
+                    <h3>Cidade</h3>
+                    <ul>
+                        <li><%= @profile.cidade%></li>
+                    </ul>
+                </div>
 
-</div>
+                <div class="style3">
+                    <h3>Nº</h3>
+                    <ul>
+                        <li><%= @profile.numero%></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div  class="style0">
+                <div class="style1">
+                    <h3>UF</h3>
+                    <ul>
+                        <li><%= @profile.uf%></li>
+                    </ul>
+                </div>
+
+                <div class="style2">
+                    <h3>Rua</h3>
+                    <ul>
+                        <li><%= @profile.rua%></li>
+                    </ul>
+                </div>
+
+                <div class="style3">
+                    <h3>Referêncial</h3>
+                    <ul>
+                        <li>Fórum</li>
+                    </ul>
+                </div>
+            </div>
+  </div>
+
+  <div class="bloco3">
+    <%= button_to  @profile, method: :delete do %>
+      <%= image_tag "excluir.svg"%>
+    <% end %>
+  </div>
+

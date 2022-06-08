@@ -14,22 +14,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_02_235527) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "calls", force: :cascade do |t|
-    t.string "title"
-    t.string "category"
-    t.text "call_description"
-    t.text "solution"
-    t.date "begin_date"
-    t.date "end_date"
-    t.string "status"
-    t.bigint "client_id", null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["client_id"], name: "index_calls_on_client_id"
-    t.index ["user_id"], name: "index_calls_on_user_id"
-  end
-
   create_table "clientes", force: :cascade do |t|
     t.string "cnpj"
     t.string "inscr_estadual"
@@ -43,22 +27,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_02_235527) do
     t.string "cidade"
     t.string "uf"
     t.text "observacao"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "clients", force: :cascade do |t|
-    t.string "fullname"
-    t.string "phone"
-    t.string "email"
-    t.string "cpf"
-    t.string "cnpj"
-    t.string "street"
-    t.string "house_number"
-    t.string "district"
-    t.string "city"
-    t.string "cep"
-    t.text "note"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -98,39 +66,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_02_235527) do
     t.index ["tipo_perfil_id"], name: "index_perfils_on_tipo_perfil_id"
   end
 
-  create_table "phones", force: :cascade do |t|
-    t.string "phone_num"
-    t.bigint "profile_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["profile_id"], name: "index_phones_on_profile_id"
-  end
-
-  create_table "profile_types", force: :cascade do |t|
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "profiles", force: :cascade do |t|
-    t.string "fullname"
-    t.string "cpf"
-    t.date "birth_date"
-    t.string "register"
-    t.string "street"
-    t.string "house_number"
-    t.string "district"
-    t.string "city"
-    t.string "cep"
-    t.string "office"
-    t.string "department"
-    t.string "email"
-    t.bigint "profile_type_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["profile_type_id"], name: "index_profiles_on_profile_type_id"
-  end
-
   create_table "telefone_clientes", force: :cascade do |t|
     t.string "numero_tel"
     t.bigint "cliente_id", null: false
@@ -153,15 +88,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_02_235527) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "userpassword"
-    t.bigint "profile_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["profile_id"], name: "index_users_on_profile_id"
-  end
-
   create_table "usuarios", force: :cascade do |t|
     t.string "usuario"
     t.string "senha"
@@ -171,15 +97,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_02_235527) do
     t.index ["perfil_id"], name: "index_usuarios_on_perfil_id"
   end
 
-  add_foreign_key "calls", "clients"
-  add_foreign_key "calls", "users"
   add_foreign_key "ordem_servicos", "clientes"
   add_foreign_key "ordem_servicos", "perfils"
   add_foreign_key "perfils", "tipo_perfils"
-  add_foreign_key "phones", "profiles"
-  add_foreign_key "profiles", "profile_types"
   add_foreign_key "telefone_clientes", "clientes"
   add_foreign_key "telefone_perfils", "perfils"
-  add_foreign_key "users", "profiles"
   add_foreign_key "usuarios", "perfils"
 end
