@@ -32,7 +32,7 @@ Crie o arquivo .env na raiz do projeto e adicione as seguintes variáveis de amb
   APP_LYSITECH_DATABASE_PASSWORD=senha_do_usuario_do_BD_PostgreSQL
 ```
 
-Inicie o setup da aplicação
+Inicie o setup da aplicação. Usuario padrão criado para login na aplicação (login: admin, senha: 12345)
 
 ```bash
   rails dev:setup
