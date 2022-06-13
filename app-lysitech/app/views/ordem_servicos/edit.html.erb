@@ -1,10 +1,4 @@
-<h1>Editing ordem servico</h1>
-
-<%= render "form", ordem_servico: @ordem_servico %>
-
-<br>
-
-<div>
-  <%= link_to "Show this ordem servico", @ordem_servico %> |
-  <%= link_to "Back to ordem servicos", ordem_servicos_path %>
-</div>
+<section class="c-form">
+  <%= link_to (image_tag "voltar.svg", title: 'Voltar', class: "voltar"), @ordem_servico %>
+  <%= render "form_edit", ordem_servico: @ordem_servico, perfil: @perfil, cliente: @cliente %>
+</section>

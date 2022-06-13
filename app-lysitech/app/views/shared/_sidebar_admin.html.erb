@@ -1,7 +1,7 @@
 <aside class="sidebar">
     <div class="perfil">
       <div class="photo"><%= image_tag "Foto_de_perfil.png" %></div>
-      <p class="name">Níkollas David</p>
+      <p class="name"><%= @usuario.usuario%></p>
     </div>
     <ul> 
       <li class="link" title="Funcionários" ><%= link_to (image_tag "Funcionarios.svg"), perfils_path %></li>

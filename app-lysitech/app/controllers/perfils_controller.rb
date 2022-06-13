@@ -1,95 +1,69 @@
 class PerfilsController < SessionsController
-  before_action :set_profile, only: %i[ show edit update destroy ]
+  before_action :set_perfil, only: %i[ show edit update destroy ]
+  before_action :set_user_session, only: %i[ index show new edit update destroy ]
 
-  # GET /perfils or /perfils.json
   def index
-    @profiles = Perfil.all.order(:nome)
+    @perfils = Perfil.all.order(:nome)
+    @usuario = Usuario.find(session[:user_id])
   end
 
-  # GET /perfils/1 or /perfils/1.json
   def show
   end
 
-  # GET /perfils/new
   def new
-    @profile = Perfil.new
   end
 
-  # GET /perfils/1/edit
   def edit
   end
 
-  # POST /perfils or /perfils.json
   def create
-    profile ={
-      nome: profile_params[:nome], cpf: profile_params[:cpf], 
-      dt_nascimento: profile_params[:dt_nascimento], email: profile_params[:email], 
-      rua: profile_params[:rua], numero: profile_params[:numero], 
-      bairro: profile_params[:bairro], cidade: profile_params[:cidade], 
-      cep: profile_params[:cep], cargo: profile_params[:cargo], 
-      tipo_perfil_id: profile_params[:tipo_perfil_id], departamento: profile_params[:departamento]
-    }
-    @profile = Perfil.new(profile)
 
-    user = {usuario: profile_params[:usuario], senha: profile_params[:senha], perfil: @profile}
-    @user = Usuario.new(user)
+    @user = Usuario.new(usuario_params)
+    @perfil = Perfil.new(**perfil_params, usuario: @user)
 
     respond_to do |format|
-      if @profile.save and @user.save
-      format.html { redirect_to perfil_url(@profile), notice: "Usuario criado com sucesso." }
+      if @perfil.save and @user.save
+        format.html { redirect_to perfil_path(@perfil), notice: "Usuario criado com sucesso." }
       else
-      format.html { render :new, status: :unprocessable_entity }
+        format.html { render :new, status: :unprocessable_entity }
       end
     end
   end
 
-  # PATCH/PUT /perfils/1 or /perfils/1.json
   def update
-    profile ={
-      nome: profile_params[:nome], cpf: profile_params[:cpf], 
-      dt_nascimento: profile_params[:dt_nascimento], email: profile_params[:email], 
-      rua: profile_params[:rua], numero: profile_params[:numero], 
-      bairro: profile_params[:bairro], cidade: profile_params[:cidade], 
-      cep: profile_params[:cep], cargo: profile_params[:cargo], 
-      tipo_perfil_id: profile_params[:tipo_perfil_id], departamento: profile_params[:departamento]
-    }
-
-    user = {usuario: profile_params[:usuario], senha: profile_params[:senha], perfil: @profile}
-
-    respond_to do |format|
-      if @profile.update(profile) and @user.update(user)
-        format.html { redirect_to perfil_url(@profile), notice: "Usuario atualizado." }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-      end
+    if @user.update(usuario_params) and @perfil.update(**perfil_params, usuario: @user)
+      redirect_to perfil_url(@perfil), notice: "Usuario atualizado." 
+    else
+      render :edit, status: :unprocessable_entity 
     end
+   
   end
 
-  # DELETE /perfils/1 or /perfils/1.json
   def destroy
-    @user.destroy
-    @profile.destroy
 
-    respond_to do |format|
-      format.html { redirect_to perfils_url, notice: "Usuario deletado com sucesso." }
-    end
+    @perfil.destroy
+    @user.destroy
+
+    redirect_to perfils_url, notice: "Usuario deletado com sucesso." 
+  
   end
 
 
   private
-  # configurações ou restrições comuns entre actions.
-    def set_profile
-      @profile = Perfil.find(params[:id])
-      @user = Usuario.find_by(perfil_id: params[:id])
+    def set_perfil
+      @perfil = Perfil.find(params[:id])
+      @user = Usuario.find(@perfil.usuario_id)
     end
 
-  # Permitir apenas uma lista de parâmetros confiáveis.
-    def profile_params
-      params.require(:perfil).permit( 
-                                        :nome, :cpf, :dt_nascimento, :email, :numero_tel, 
-                                        :rua, :numero, :bairro, :cidade, :cep,
-                                        :usuario, :cargo, :departamento, :tipo_perfil_id,
-                                        :senha
-                                    )
+   
+    def perfil_params
+      params.require(:perfil).permit(
+        :nome, :cpf, :sexo, :dt_nascimento, :email, :telefone, :rua, :numero, :bairro,  
+        :cidade, :cep,:uf, :cargo, :departamento
+      )
+    end
+
+    def usuario_params
+      params.require(:user).permit(:usuario, :senha, :gestor, :ativo)
     end
 end

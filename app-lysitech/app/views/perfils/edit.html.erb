@@ -1,10 +1,4 @@
-<section>
-
-  <%= render "form_edit", profile: @profile, user: @user %>
-
-  <br>
-
-  <div>
-    <%= link_to "Listar usuario", perfils_path %>
-  </div>
+<section class="c-form">
+  <%= link_to (image_tag "voltar.svg", title: 'Voltar', class: "voltar"), @perfil %>
+  <%= render "form_edit", perfil: @perfil, user: @user %>
 </section>

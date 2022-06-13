@@ -1,5 +1,5 @@
-<section>
-
-  <%= render "form", profile: @profile, user: @user %>
+<section class="c-form">
+  <%= link_to (image_tag "voltar.svg", title: 'Voltar', class: "voltar"), perfils_path %>
+  <%= render "form" %>
 
 </section>

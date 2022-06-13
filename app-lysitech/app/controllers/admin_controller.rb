@@ -2,19 +2,14 @@ class AdminController < SessionsController
   before_action :is_admin?
   
   def index
+    @usuario = Usuario.find(session[:user_id])
   end
 
   private 
 
-    # def is_admin? 
-    #     profile =  Profile.find(session[:user_id])
-    #     return if profile.profile_type.description  == 'manager'
-    #     redirect_to root_path
-    # end
-
     def is_admin? 
-      profile =  Perfil.find(session[:user_id])
-      return if profile.tipo_perfil.tipo  == 'gerente'
+      user =  Usuario.find(session[:user_id])
+      return if user.ativo
       redirect_to root_path
   end
 

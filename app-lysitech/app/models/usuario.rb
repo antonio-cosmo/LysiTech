@@ -1,3 +1,3 @@
 class Usuario < ApplicationRecord
-  belongs_to :perfil
+  # belongs_to :perfil
 end

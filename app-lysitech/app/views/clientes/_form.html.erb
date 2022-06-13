@@ -1,49 +1,88 @@
-<%= form_with(model: cliente, class: "edicao-perfil") do |f| %>
-    <%= link_to (image_tag "voltar.svg", class: "voltar"), clientes_path %>
-
-
-  <div class="top">
-      <h2>Informações Pessoais</h2>
-      <div class="photo"><%= image_tag "Foto_de_perfil.png" %></div>
-      
+<%= form_with(model: cliente) do |f| %>
+  <h1> Cadastrar Cliente</h1>
+  <div class="c-dados-pessoais">
+    <h2>Dados pessoais</h2>
+    <div class="group-1">
+      <div class="c-dados-pessoais-email">
+        <label for="cliente_razao_social">Razão Social</label>
+        <%= f.text_field :razao_social %>
+      </div>
+      <div class="c-dados-pessoais-telefone">
+        <label for="cliente_nome_fantasia">Nome Fantasia</label>
+        <%= f.text_field :nome_fantasia %>
+      </div>
+      <div class="c-dados-pessoais-cargo">
+        <label for="cliente_cnpj">CNPJ</label>
+          <%= f.text_field :cnpj %>
+      </div>
+      <div class="c-dados-pessoais-departamento">
+        <label for="cliente_inscr_estadual">I.E</label>
+        <%= f.text_field :inscr_estadual %>
+      </div>
+    </div>
+    <div class="group-0">
+      <div class="c-dados-pessoais-cpf">
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+      </div>
+      <div class="c-dados-pessoais-nascimento">
+        <%= f.label :telefone %>
+        <%= f.text_field :telefone %>
+      </div>
+       <div class="c-login-ativo">
+        <p>Cliente Ativo?</p>
+        <div class="ativo">
+          <div>
+            <input type="radio" id="sim" name="cliente[ativo]" value="true" checked />
+            <label for="sim">Sim</label>
+          </div>
+          <div>
+            <input type="radio" id="nao" name="cliente[ativo]" value="false" />
+            <label for="nao">Não</label>
+          </div>
+        </div>
+      </div>  
+    </div>
+    
   </div>
 
-  <div class="info-pessoais">
-    <%= f.label 'Razão Social', :razao_social, class: 'labelnomecompleto' %>
-    <%= f.text_field :razao_social, class: 'inputnomecompleto' %>
-    <%= f.label 'CNPJ', :cnpj, class: 'labelcpf' %>
-    <%= f.text_field :cnpj, class: 'inputcpf' %>
+  <div class="c-endereco">
+    <h2>Endereço</h2>
+    <div class="group-2">
+      <div class="c-endereco-rua">
+        <%= f.label :rua %>
+        <%= f.text_field :rua %>
+      </div>
+      <div class="c-endereco-numero">
+        <label for="cliente_numero">Número</label>
+        <%= f.text_field :numero %>
+      </div>
+      <div class="c-endereco-bairro">
+        <%= f.label :bairro %>
+        <%= f.text_field :bairro %>
+      </div>    
+    </div>
+    <div class="group-3">
+      <div class="c-endereco-cep">
+        <label for="cliente_cep">CEP</label>
+        <%= f.text_field :cep %>
+      </div>
+      <div class="c-endereco-cidade">
+        <%= f.label :cidade %>
+        <%= f.text_field :cidade %>
+      </div>
+      <div class="c-endereco-uf">
+        <label for="cliente_uf">UF</label>
+        <%= f.text_field :uf %>
+      </div>
+    </div>
   </div>
-
-  <div class="info-pessoais">
-    <%= f.label 'I.E', :inscr_estadual, class:"labeldatanascimento" %>
-    <%= f.text_field :inscr_estadual, class:"inputdatanascimento" %>
-    <%= f.label 'Email', :email, class:"labelemail" %>
-    <%= f.email_field :email, class:"inputemail" %>
+  <div class="c-observacao">
+    <h2>Observação</h2>
+    <label for="nota">Digitar:</label>
+    <textarea id="nota" name="cliente[observacao]" ></textarea>
   </div>
-
-  <div class="info-pessoais">
-    <%= f.label 'Nome Fantasia', :nome_fantasia, class:"labeltelefone" %>
-    <%= f.text_field :nome_fantasia, class:"inputtelefone" %>
-  </div>
-
-  <div class="endereco">
-    <%= f.label 'Rua', :rua, class:"labelrua" %>
-    <%= f.text_field :rua, class:"inputrua" %>
-    <%= f.label 'Cep', :cep, class:"labelcep" %>
-    <%= f.text_field :cep, class:"inputcep" %>
-    <%= f.label 'UF', :uf, class:"labeluf" %>
-    <%= f.text_field :uf, class:"inputuf" %>
-  </div>
-
-  <div class="endereco" >
-    <%= f.label 'N°', :numero, class:"labelnumerocasa" %>
-    <%= f.text_field :numero, class:"inputnumerocasa" %>
-  </div>
-
-
-
-  <div class="finalizar-edicao">
-    <%= f.submit 'Cadastrar cliente' %>
+  <div class="submit">
+      <input type="submit" value="Cadastrar"/>
   </div>
 <% end %>

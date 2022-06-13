@@ -1,9 +1,4 @@
-<h1>New ordem servico</h1>
-
-<%= render "form", ordem_servico: @ordem_servico %>
-
-<br>
-
-<div>
-  <%= link_to "Back to ordem servicos", ordem_servicos_path %>
-</div>
+<section class="c-form">
+  <%= link_to (image_tag "voltar.svg", title: 'Voltar', class: "voltar"), ordem_servicos_path %>
+  <%= render "form", ordem_servico: @ordem_servico, perfil: @perfil %>
+</section>

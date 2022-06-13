@@ -1,9 +1,6 @@
 <section>
   <p style="color: green"><%= notice %></p>
+  <%= link_to (image_tag "voltar.svg", title: 'Voltar'), perfils_path , class: "voltar" %>
+  <%= render "perfil",  perfil: @perfil %>
 
-  <%= render @profile %>
-
-  <div>
-    <%= link_to "Voltar", perfils_path %>
-  </div>
 </section>

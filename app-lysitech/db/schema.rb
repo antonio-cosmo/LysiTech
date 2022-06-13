@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_02_235527) do
     t.string "inscr_estadual"
     t.string "razao_social"
     t.string "nome_fantasia"
+    t.string "telefone"
     t.string "email"
     t.string "rua"
     t.string "numero"
@@ -26,6 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_02_235527) do
     t.string "cep"
     t.string "cidade"
     t.string "uf"
+    t.boolean "ativo"
     t.text "observacao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -51,8 +53,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_02_235527) do
     t.string "nome"
     t.date "dt_nascimento"
     t.string "cpf"
+    t.string "sexo"
     t.string "cargo"
     t.string "departamento"
+    t.string "telefone"
     t.string "email"
     t.string "rua"
     t.string "numero"
@@ -60,26 +64,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_02_235527) do
     t.string "cep"
     t.string "cidade"
     t.string "uf"
-    t.bigint "tipo_perfil_id", null: false
+    t.bigint "usuario_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["tipo_perfil_id"], name: "index_perfils_on_tipo_perfil_id"
-  end
-
-  create_table "telefone_clientes", force: :cascade do |t|
-    t.string "numero_tel"
-    t.bigint "cliente_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["cliente_id"], name: "index_telefone_clientes_on_cliente_id"
-  end
-
-  create_table "telefone_perfils", force: :cascade do |t|
-    t.string "numero_tel"
-    t.bigint "perfil_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["perfil_id"], name: "index_telefone_perfils_on_perfil_id"
+    t.index ["usuario_id"], name: "index_perfils_on_usuario_id"
   end
 
   create_table "tipo_perfils", force: :cascade do |t|
@@ -91,16 +79,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_02_235527) do
   create_table "usuarios", force: :cascade do |t|
     t.string "usuario"
     t.string "senha"
-    t.bigint "perfil_id", null: false
+    t.boolean "ativo"
+    t.boolean "gestor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["perfil_id"], name: "index_usuarios_on_perfil_id"
   end
 
   add_foreign_key "ordem_servicos", "clientes"
   add_foreign_key "ordem_servicos", "perfils"
-  add_foreign_key "perfils", "tipo_perfils"
-  add_foreign_key "telefone_clientes", "clientes"
-  add_foreign_key "telefone_perfils", "perfils"
-  add_foreign_key "usuarios", "perfils"
+  add_foreign_key "perfils", "usuarios"
 end

@@ -1,33 +1,35 @@
-<article>
+
   <section>
       <h1>Funcionários</h1>
       <%= link_to (image_tag "add.svg"), new_perfil_path %>
 
-      <div class="barra-pesquisa">
-          <div class="barra-pesquisa1">
-          <input type="text" class="pesquisa" placeholder="Pesquise aqui..."/>
-          <%= image_tag "Pesquisa.svg" %>
+          <div class="c-pesquisa">
+            <input type="text"  placeholder="Pesquise aqui..."/>
+            <%= image_tag "Pesquisa.svg" %>
           </div>
-      </div>
 
       <table>
         <thead>
           <tr>
+            <th>Código</th>
             <th>Nome</th>
             <th>Cargo</th>
             <th>Email</th>
-            <th>Cidade</th>
+            <th>Telefone</th>
+            <th>Ver</th>
 
           </tr>
         </thead>
         <tbody>
         
-          <% @profiles.each do |profile| %>    
+          <% @perfils.each do |perfil| %>    
               <tr>               
-                <td><%= link_to profile.nome , profile %></td>
-                <td><%= profile.cargo %></td>
-                <td><%= profile.email %></td>
-                <td><%= profile.cidade %></td>
+                <td><%= perfil.id %></td>
+                <td><%= perfil.nome %></td>
+                <td><%= perfil.cargo %></td>
+                <td><%= perfil.email %></td>
+                <td><%= perfil.telefone %></td>
+                <td><%= link_to "visualizar" , perfil %></td>
               </tr>
           <% end %>
 
@@ -37,4 +39,3 @@
       
       
   </section>
-</article>

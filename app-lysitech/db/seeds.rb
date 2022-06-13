@@ -45,30 +45,41 @@
 # User.find_or_create_by(user)
 
 
-tipo_perfil = [
-  {
-    tipo: 'gerente',
-  },
-  {
-    tipo: 'suporte'
-  }
-]
+# tipo_perfil = [
+#   {
+#     tipo: 'gerente',
+#   },
+#   {
+#     tipo: 'suporte'
+#   }
+# ]
 
-tipo_perfil.each do |tipo|
-  TipoPerfil.find_or_create_by(tipo) 
-end
+# tipo_perfil.each do |tipo|
+#   TipoPerfil.find_or_create_by(tipo) 
+# end
 
-perfil = {
-  nome:'gerente',
-  tipo_perfil: TipoPerfil.all.first
-}
+# perfil = {
+#   nome:'gerente',
+#   tipo_perfil: TipoPerfil.all.first
+# }
 
-Perfil.find_or_create_by(perfil)
+# Perfil.find_or_create_by(perfil)
+
+# usuario = {
+#   usuario: 'admin',
+#   senha: '12345',
+#   perfil: Perfil.all.first
+# }
+
+# Usuario.find_or_create_by(usuario)
+
+
 
 usuario = {
   usuario: 'admin',
   senha: '12345',
-  perfil: Perfil.all.first
+  ativo: true,
+  gestor: true,
 }
 
 Usuario.find_or_create_by(usuario)

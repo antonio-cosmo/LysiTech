@@ -1,10 +1,5 @@
 
-
-.funcionarios{
-  background: var(--destaque-color);
-}
-
-section{
+section, .c-form{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,541 +7,26 @@ section{
   padding: 1.5rem 5rem;
 }
 
-.edicao-perfil{
-  width: 100%;
-}
-
-.voltar{
-  position: absolute;
-  transition: all 350ms ease;
-  cursor: pointer;
-  opacity: .7;
-}
-
-.voltar:hover{
-  opacity: 1;
-}
-
-.info-pessoais{
-  display: flex;
-  width: 100%;
-  margin: .5rem 0rem;
-}
-
-.top{
-  width: 100%;
-  text-align: center;
-}
-
-.top img{
-  margin-top: .5rem;
-}
-
-.labelnomecompleto{
-  width: 20%;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-right: none;
-  border-radius: .7rem 0rem 0rem .7rem;
-  padding: .5rem;
-  font-size: min(1.1rem, 3vw);
-  font-weight: bold;
-}
-
-.inputnomecompleto{
-  width: 40%;
-  text-align: right;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-left: none;
-  border-radius: 0rem .7rem .7rem 0rem;
-  margin-right: 5%;
-  padding: .5rem;
-  outline: none;
-  font-size: min(1.1rem, 2vw);
-}
-
-.labelcpf{
-  width: 10%;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-right: none;
-  border-radius: .7rem 0rem 0rem .7rem;
-  padding: .5rem;
-  font-size: min(1.1rem, 3vw);
-  font-weight: bold;
-}
-
-.inputcpf{
-  width: 25%;
-  text-align: right;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-left: none;
-  border-radius: 0rem .7rem .7rem 0rem;
-  padding: .5rem;
-  outline: none;
-  font-size: min(1.1rem, 2vw);
-}
-
-.labeldatanascimento{
-  width: 20%;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-right: none;
-  border-radius: .7rem 0rem 0rem .7rem;
-  padding: .5rem;
-  font-size: min(1.1rem, 3vw);
-  font-weight: bold;
-}
-
-.inputdatanascimento{
-  width: 20%;
-  text-align: right;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-left: none;
-  border-radius: 0rem .7rem .7rem 0rem;
-  margin-right: 5%;
-  padding: .5rem;
-  outline: none;
-  font-size: min(1.1rem, 2vw);
-}
-
-.labelemail{
-  width: 15%;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-right: none;
-  border-radius: .7rem 0rem 0rem .7rem;
-  padding: .5rem;
-  font-size: min(1.1rem, 3vw);
-  font-weight: bold;
-}
-
-.inputemail{
-  width: 40%;
-  text-align: right;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-left: none;
-  border-radius: 0rem .7rem .7rem 0rem;
-  padding: .5rem;
-  outline: none;
-  font-size: min(1.1rem, 2vw);
-}
-
-.labeltelefone{
-  width: 15%;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-right: none;
-  border-radius: .7rem 0rem 0rem .7rem;
-  padding: .5rem;
-  font-size: min(1.1rem, 3vw);
-  font-weight: bold;
-}
-
-.inputtelefone{
-  width: 20%;
-  text-align: right;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-left: none;
-  border-radius: 0rem .7rem .7rem 0rem;
-  padding: .5rem;
-  outline: none;
-  font-size: min(1.1rem, 2vw);
-}
-
-
-
-
-.endereco{
-  display: flex;
-  width: 100%;
-  margin: 1rem 0rem;
-}
-
-.labelcep{
-  width: 10%;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-right: none;
-  border-radius: .7rem 0rem 0rem .7rem;
-  padding: .5rem;
-  font-size: min(1.1rem, 3vw);
-  font-weight: bold;
-}
-
-.inputcep{
-  width: 20%;
-  text-align: right;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-left: none;
-  border-radius: 0rem .7rem .7rem 0rem;
-  margin-right: 5%;
-  padding: .5rem;
-  outline: none;
-  font-size: min(1.1rem, 2vw);
-}
-
-.labelrua{
-  width: 10%;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-right: none;
-  border-radius: .7rem 0rem 0rem .7rem;
-  padding: .5rem;
-  font-size: min(1.1rem, 3vw);
-  font-weight: bold;
-}
-
-.inputrua{
-  width: 30%;
-  text-align: right;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-left: none;
-  border-radius: 0rem .7rem .7rem 0rem;
-  margin-right: 5%;
-  padding: .5rem;
-  outline: none;
-  font-size: min(1.1rem, 2vw);
-}
-
-.labeluf{
-  width: 10%;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-right: none;
-  border-radius: .7rem 0rem 0rem .7rem;
-  padding: .5rem;
-  font-size: min(1.1rem, 3vw);
-  font-weight: bold;
-}
-
-.inputuf{
-  width: 10%;
-  text-align: right;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-left: none;
-  border-radius: 0rem .7rem .7rem 0rem;
-  padding: .5rem;
-  outline: none;
-  font-size: min(1.1rem, 2vw);
-}
-
-.labelnumerocasa{
-  width: 10%;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-right: none;
-  border-radius: .7rem 0rem 0rem .7rem;
-  padding: .5rem;
-  font-size: min(1.1rem, 3vw);
-  font-weight: bold;
-}
-
-.inputnumerocasa{
-  width: 20%;
-  text-align: right;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-left: none;
-  border-radius: 0rem .7rem .7rem 0rem;
-  padding: .5rem;
-  outline: none;
-  font-size: min(1.1rem, 2vw);
-}
-
-
-
-
-.info-cadastrais{
-  display: flex;
-  width: 100%;
-  margin: 1rem 0rem;
-}
-
-.labelusuario{
-  width: 15%;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-right: none;
-  border-radius: .7rem 0rem 0rem .7rem;
-  padding: .5rem;
-  font-size: min(1.1rem, 3vw);
-  font-weight: bold;
-}
-
-.inputusuario{
-  width: 15%;
-  text-align: right;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-left: none;
-  border-radius: 0rem .7rem .7rem 0rem;
-  margin-right: 5%;
-  padding: .5rem;
-  outline: none;
-  font-size: min(1.1rem, 2vw);
-}
-
-.labelcargo{
-  width: 15%;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-right: none;
-  border-radius: .7rem 0rem 0rem .7rem;
-  padding: .5rem;
-  font-size: min(1.1rem, 3vw);
-  font-weight: bold;
-}
-
-.inputcargo{
-  width: 25%;
-  text-align: right;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-left: none;
-  border-radius: 0rem .7rem .7rem 0rem;
-  margin-right: 5%;
-  padding: .5rem;
-  outline: none;
-  font-size: min(1.1rem, 2vw);
-}
-
-.labelid{
-  width: 10%;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-right: none;
-  border-radius: .7rem 0rem 0rem .7rem;
-  padding: .5rem;
-  font-size: min(1.1rem, 3vw);
-  font-weight: bold;
-}
-
-.inputid{
-  width: 10%;
-  text-align: right;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-left: none;
-  border-radius: 0rem .7rem .7rem 0rem;
-  padding: .5rem;
-  outline: none;
-  font-size: min(1.1rem, 2vw);
-}
-
-
-.labelsalario{
-  width: 15%;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-right: none;
-  border-radius: .7rem 0rem 0rem .7rem;
-  padding: .5rem;
-  font-size: min(1.1rem, 3vw);
-  font-weight: bold;
-}
-
-.inputsalario{
-  width: 15%;
-  text-align: right;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-left: none;
-  border-radius: 0rem .7rem .7rem 0rem;
-  margin-right: 5%;
-  padding: .5rem;
-  outline: none;
-  font-size: min(1.1rem, 2vw);
-}
-
-.labelsenha{
-  width: 10%;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-right: none;
-  border-radius: .7rem 0rem 0rem .7rem;
-  padding: .5rem;
-  font-size: min(1.1rem, 3vw);
-  font-weight: bold;
-}
-
-.inputsenha{
-  width: 10%;
-  text-align: right;
-  background: var(--white-color);
-  border: solid 1px var(--border-color);
-  border-left: none;
-  border-radius: 0rem .7rem .7rem 0rem;
-  padding: .5rem;
-  outline: none;
-  font-size: min(1.1rem, 2vw);
-}
-
-.finalizar-edicao{
-  width: 100%;
-  text-align: center;
-}
-
-.finalizar-edicao input[type="submit"] {
-  background: var(--primary-color);
-  border: solid 1px var(--border-color);
-  border-radius: .7rem;
-  padding: 1rem;
-  font-size: min(1.1rem, 3vw);
-  font-weight: bold;
-  color: var(--white-color);
-  cursor: pointer;
-  width: 25%;
-  transition: all 350ms ease;
-}
-
-.finalizar-edicao input[type="submit"]:hover{
-  border: solid 1px var(--black-color);
-  font-size: min(1.2rem, 3.1vw);
-  width: 27%;
-}
-
-/* Lista funcionario */
-/* .funcionarios{
-  background: var(--destaque-color);
-} */
-
-section{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 1.5rem 5rem;
-}
-
-h1{
-  font-size: min(2rem, 4vw);
-}
-
-.adicionar{
-  opacity: .7;
-  cursor: pointer;
-  transition: all 350ms ease;
-}
-
-.adicionar:hover{
-  opacity: 1;
-}
-
-.barra-pesquisa{
-  width: 100%;
+/* ####Index###### */
+.c-pesquisa{
+  width: 30rem;
   display: flex;
   justify-content: center;
-  transition: all 350ms ease;
-}
-
-.barra-pesquisa1{
-  width: 50%;
-  height: 3rem;
+  align-items: center;
+  background-color: var(--white-color);
+  border: solid 1px var(--border-color);
+  border-radius: 5px;
   margin-top: 2rem;
-  border: solid 1px var(--border-color);
-  border-radius: .7rem;
-  background: var(--white-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 
-.pesquisa{
+.c-pesquisa input{
   width: 90%;
-  padding: .7rem;
+  height: 2.5rem;
   border: none;
-  background: none;
-  font-size: min(1rem, 2vw);
-  color: var(--black-color);
-}
-
-.pesquisa:focus{
   outline: none;
-  border-right: solid 1px var(--border-color);
+  font-size: 1rem;
 }
-
-.icon-pesquisa{
-  background: none;
-  width: 3.5rem;
-  height: min(2.5rem, 4vw);
-  cursor: pointer;
-  opacity: 0.7;
-}
-
-.icon-pesquisa:hover{
-  opacity: 1;
-}
-
-
-
-.lista-funcionarios{
-  width: 100%;
-}
-
-.listagem-funcionarios{
-  height: 25rem;
-  overflow-y: scroll;
-}
-
-.cabeca-lista{
-  margin-top: 1rem;
-  width: 100%;
-  display: flex;
-  padding: 1rem;
-}
-
-.cabeca-lista li{
-  list-style: none;
-  font-size: min(1.4rem, 2.5vw);
-  font-weight: bold;
-}
-
-.corpo-lista{
-  margin-top: .5rem;
-  width: 100%;
-  display: flex;
-  padding: 1rem;
-  border: solid 1px var(--border-color);
-  border-radius: .7rem;
-  background: var(--white-color);
-  transition: all 350ms ease;
-  cursor: pointer;
-}
-
-.corpo-lista:hover{
-  border: solid 1px var(--black-color);
-}
-
-.corpo-lista li{
-  list-style: none;
-  font-size: min(1rem, 2vw);
-}
-
-.nome{
-  width: 25%;
-}
-
-.telefone{
-  width: 25%;
-}
-
-.cpf{
-  width: 25%;
-}
-
-.cidade{
-  width: 25%;
-}
-
 
 table{
   width: 100%;
@@ -574,6 +54,218 @@ td{
 td:first-child{
   color:var(--text-title);
 }
+
+/* formulario */
+
+.c-form > a {
+  align-self: flex-start;
+}
+
+.voltar {
+  width: 25px;
+  align-self: flex-start;
+
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+form h2{
+  margin: 20px 0;
+}
+
+.c-dados-pessoais {
+  width: 100%;
+
+}
+
+.c-dados-pessoais .c-dados-pessoais-nome {
+  margin-top: 1rem;
+
+}
+.c-dados-pessoais .c-dados-pessoais-nome label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.c-dados-pessoais .c-dados-pessoais-nome input {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid var(--border-color);
+  outline: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.c-dados-pessoais .group-0{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.c-dados-pessoais .group-0 .c-dados-pessoais-cpf label, 
+.c-dados-pessoais-nascimento label{
+  display: block;
+  margin-bottom: 5px;
+}
+
+.c-dados-pessoais .group-0 .c-dados-pessoais-cpf input, 
+.c-dados-pessoais-nascimento input {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid var(--border-color);
+  outline: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.c-dados-pessoais .group-1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.c-dados-pessoais .group-1 label{
+  display: block;
+  margin-bottom: 5px;
+}
+
+.c-dados-pessoais .group-1 input {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid var(--border-color);
+  outline: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.sexo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.sexo div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.c-endereco {
+  width: 100%;
+
+}
+.c-endereco .group-2 label, .group-3 label {
+  display: block;
+  margin-bottom: 5px;
+}
+.c-endereco .group-2 input, .group-3 input {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid var(--border-color);
+  outline: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.c-endereco .group-2{
+  display: grid;
+  grid-template-columns: 1fr 6rem 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.c-endereco .group-3{
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 6rem;
+  gap: 2rem;
+}
+
+.c-login {
+  width: 100%;
+
+}
+.c-login .group-4{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.c-login .group-4 label{
+  display: block;
+  margin-bottom: 5px;
+}
+
+.c-login .group-4 input {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid var(--border-color);
+  outline: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.c-login .group-5{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.gestor, .ativo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.gestor div, .ativo div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.submit {
+  width: 100%;
+  text-align: center;
+  margin-top: 3rem;
+
+}
+
+.submit input[type="submit"] {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--white-color);
+  cursor: pointer;
+  width: 10rem;
+  margin: 0 auto;
+  transition: filter 0.2s ;
+}
+
+.submit input[type="submit"]:hover{
+  filter: brightness(0.8);
+}
+
+
+/* listar funcionario */
+
 
 
 .bloco1{
@@ -626,7 +318,7 @@ td:first-child{
   height: 3.5rem;
 }
 
-/* Foto e icone editar */
+/* mostrar*/
 
 .edicao{
   display: flex;
@@ -635,27 +327,6 @@ td:first-child{
   padding: 0rem 3rem;
 }
 
-.editar-informacoes{
-  cursor: pointer;
-  border-radius: 1rem;
-  transition: all 350ms ease;
-}
-
-.edicao .foto2{
-  width: min(8rem, 15vw);
-}
-
-.edicao .editar-informacoes{
-  width: min(3rem, 6vw);
-  height: 4rem;
-  opacity: .7;
-}
-
-.editar-informacoes:hover{
-  opacity: 1;
-}
-
-/* FIM*/
 
 .bloco2{
   display: flex;
@@ -687,15 +358,21 @@ td:first-child{
 }
 
 .excluir{
-  list-style-type: none;
   text-align: center;
-  padding-top: 5rem;
+  padding-top: 3rem;
   cursor: pointer;
-  width: min(3rem, 8vw);
-  opacity: .7;
-  transition: all 350ms ease;
+  width: 40px;
 }
 
 .excluir:hover{
   opacity: 1;
+} 
+
+button[type="submit"]{
+  border: none;
 }
+
+
+
+
+

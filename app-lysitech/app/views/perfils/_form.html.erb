@@ -1,72 +1,135 @@
-<%= form_with model: profile, class: "edicao-perfil" do |f| %>
-
-  <%= link_to (image_tag "voltar.svg", class: "voltar"), perfils_path %>
-
-  <div class="top">
-      <h2>Informações Pessoais</h2>
-      <div class="photo"><%= image_tag "Foto_de_perfil.png" %></div>
-
+<form action="/admin/perfils" method="post" >
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" autocomplete="off">
+  <h1> Cadastrar Funcionario</h1>
+  <div class="c-dados-pessoais">
+    <h2>Dados pessoais</h2>
+    <div class="c-dados-pessoais-nome">
+      <label for="nome" >Nome</label>
+      <input id="nome" type="text" name="perfil[nome]" />
+    </div>
+    <div class="group-0">
+      <div class="c-dados-pessoais-cpf">
+        <label for="cpf">CPF</label>
+        <input id="cpf" type="text" name="perfil[cpf]" />
+      </div>
+      <div class="c-dados-pessoais-nascimento">
+        <label for="dt-nascimento">Data Nascimento</label>
+        <input id="dt-nascimento" type="date" name="perfil[dt_nascimento]" />
+      </div>
+      <div class="c-dados-pessoais-sexo">
+        <p>Sexo</p>
+        <div class="sexo">
+          <div>
+            <input type="radio" id="masculino" name="perfil[sexo]" value="masculino" checked />
+            <label for="masculino">masculino</label>
+          </div>
+          <div>
+            <input type="radio" id="feminino" name="perfil[sexo]" value="feminino" />
+            <label for="feminino">feminino</label>
+          </div>
+        </div>
+      </div>    
+    </div>
+    <div class="group-1">
+      <div class="c-dados-pessoais-email">
+          <label for="email">Email</label>
+          <input id="email" type="text" name="perfil[email]"/>
+      </div>
+      <div class="c-dados-pessoais-email">
+          <label for="tel">Telefone</label>
+          <input id="id" type="text" name="perfil[telefone]" />
+      </div>
+      <div class="c-dados-pessoais-cargo">
+          <label for="cargo">Cargo</label>
+          <input id="cargo" type="text" name="perfil[cargo]" />
+      </div>
+      <div class="c-dados-pessoais-departamento">
+          <label for="depart">Departamento</label>
+          <input id="depart" type="text" name="perfil[departamento]" />
+      </div>
+    </div>
   </div>
 
-  <div class="info-pessoais">
-      <%= f.label "Nome completo", class:"labelnomecompleto" %>
-      <%= f.text_field :nome, class: "inputnomecompleto" %>
-      <%= f.label "CPF" , class: "labelcpf" %>
-      <%= f.text_field :cnpj, class: "inputcpf" %>
-  </div>
-
-  <div class="info-pessoais">
-      <%= f.label "Data de nascimento" ,class:"labeldatanascimento" %>
-      <%= f.date_field :dt_nascimento, class: "inputdatanascimento" %>
-      <%= f.label "Email", class: "labelemail" %>
-      <%= f.text_field :email, class: "inputemail" %>
-  </div>
-
-  <div class="info-pessoais">
-      <%= f.label "Telefone", class: "labeltelefone" %>
-      <%= f.text_field :numero_tel, class: "inputtelefone" %>
-  </div>
-
-  <div class="top">
-      <h2>Endereço</h2>
-  </div>
-
-  <div class="endereco">
-      <%= f.label 'Rua', class:"labelrua" %>
-      <%= f.text_field :rua, class:"inputrua" %>
-      <%= f.label 'N°', class:"labelnumerocasa" %>
-      <%= f.text_field :numero, class: "inputnumerocasa" %>
-      <%= f.label 'Bairro', class:"labelrua" %>
-      <%= f.text_field :bairro, class:"inputrua" %>
-  </div>
-  <div class="endereco">
-      <%= f.label "Cidade", class: "labeluf" %>
-      <%= f.text_field :cidade, class:"inputuf"%>
-      <%= f.label 'CEP', class:"labelcep" %>
-      <%= f.text_field :cep, class: "inputcep"%>
-  </div>
-
-  <div class="top">
-      <h2>Informações Cadastrais</h2>
-  </div>
-
-  <div class="info-cadastrais">
-      <%= f.label 'Usuario', class: "labelusuario" %>
-      <%= f.text_field :usuario,  value: user ? user.usuario : '', class: "inputusuario" %>
-      <%= f.label 'Cargo', class: "labelcargo" %>
-      <%= f.text_field :cargo, class: "inputcargo" %>
-      <%= f.label 'Tipo', class:"labelid" %>
-      <%= f.text_field :tipo_perfil_id, class:"inputid" %>
-  </div>
-
-  <div class="info-cadastrais">
-      <%= f.label 'Departamento', class:"labelsalario" %>
-      <%= f.text_field :departamento, class:"inputsalario" %>
-      <%= f.label 'Senha', class: "labelsenha" %>
-      <%= f.text_field :senha, value: user ? user.senha : '',  class:"inputsenha" %>
+  <div class="c-endereco">
+    <h2>Endereço</h2>
+    <div class="group-2">
+      <div class="c-endereco-rua">
+        <label for="rua">Rua</label>
+        <input id="id" type="text" name="perfil[rua]"/>
+      </div>
+      <div class="c-endereco-numero">
+        <label>Número</label>
+        <input type="text" name="perfil[numero]"/>
+      </div>
+      <div class="c-endereco-bairro">
+        <label>Bairro</label>
+        <input type="text" name="perfil[bairro]" />
+      </div>    
+    </div>
+    <div class="group-3">
+      <div class="c-endereco-cep">
+        <label>Cep</label>
+        <input type="text" name="perfil[cep]" />
+      </div>
+      <div class="c-endereco-cidade">
+        <label>Cidade</label>
+        <input type="text" name="perfil[cidade]" />
+      </div>
+      <div class="c-endereco-uf">
+        <label>UF</label>
+        <input type="text" name="perfil[uf]"/>
+      </div>
+    </div>
   </div>
   
-  <div class="finalizar-edicao">
-      <%= f.submit "Cadastrar funcionário"%>
+  <div class="c-login">
+    <h2>Login</h2>
+    <div class="group-4">
+      <div class="c-login-usuario">
+        <label>Usuario</label>
+        <input type="text" name="user[usuario]"/>
+      </div>
+
+      <div class="c-login-senha">
+        <label>Senha</label>
+        <input type="text"  name="user[senha]" />
+      </div>
+    </div>
   </div>
-<% end %>
+
+  <div class="c-login">
+    <div class="group-5">
+      <div class="c-login-gestor">
+        <p>Usuario Administrador?</p>
+        <div class="gestor">
+          <div>
+            <input type="radio" id="sim" name="user[gestor]" value="true" checked />
+            <label for="sim">Sim</label>
+          </div>
+          <div>
+            <input type="radio" id="nao" name="user[gestor]" value="false" />
+            <label for="nao">Não</label>
+          </div>
+        </div>
+      </div>  
+
+      <div class="c-login-ativo">
+        <p>Usuario Ativo?</p>
+        <div class="ativo">
+          <div>
+            <input type="radio" id="sim" name="user[ativo]" value="true" checked />
+            <label for="sim">Sim</label>
+          </div>
+          <div>
+            <input type="radio" id="nao" name="user[ativo]" value="false" />
+            <label for="nao">Não</label>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+  
+  <div class="submit">
+      <input type="submit" value="Cadastrar"/>
+  </div>
+</form>

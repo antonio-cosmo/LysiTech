@@ -1,5 +1,6 @@
 class ClientesController < SessionsController
   before_action :set_cliente, only: %i[ show edit update destroy ]
+  before_action :set_user_session, only: %i[ index show new edit update destroy ]
 
   # GET /clientes or /clientes.json
   def index
@@ -65,6 +66,9 @@ class ClientesController < SessionsController
 
     # Only allow a list of trusted parameters through.
     def cliente_params
-      params.require(:cliente).permit(:cnpj, :inscr_estadual, :razao_social, :nome_fantasia, :email, :rua, :numero, :bairro, :cep, :cidade, :uf, :observacao)
+      params.require(:cliente).permit(
+        :cnpj, :inscr_estadual, :razao_social, :nome_fantasia, 
+        :telefone, :email, :rua, :numero, :bairro, :cep, :cidade, :uf, :observacao, :ativo
+      )
     end
 end

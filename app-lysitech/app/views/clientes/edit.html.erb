@@ -1,10 +1,4 @@
-<section>
-
+<section class="c-form">
+  <%= link_to (image_tag "voltar.svg", title: 'Voltar', class: "voltar"), @cliente %>
   <%= render "form_edit", cliente: @cliente %>
-
-  <br>
-
-  <div>
-    <%= link_to "Listar usuario", clientes_path %>
-  </div>
 </section>

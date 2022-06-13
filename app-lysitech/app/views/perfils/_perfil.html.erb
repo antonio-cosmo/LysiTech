@@ -3,28 +3,28 @@
                     <div class="style1">
                         <h3>Email</h3>
                         <ul>
-                            <li><%= @profile.email%></li>
+                            <li><%= perfil.email%></li>
                         </ul>
                     </div>
 
                     <div class="style2">
                         <h3>Usuário</h3>
                         <ul>
-                            <li><%= @profile.nome%></li>
+                            <li><%= perfil.nome%></li>
                         </ul>
                     </div>
 
                     <div class="style3">
                         <h3>CPF</h3>
                         <ul>
-                            <li><%= @profile.cpf%></li>
+                            <li><%= perfil.cpf%></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="edicao">
                     <%= image_tag "Foto_de_perfil.png"%>
-                    <%= link_to edit_perfil_path(@profile) do %>
+                    <%= link_to edit_perfil_path(perfil) do %>
                       <%= image_tag "editar.svg"%>
                     <% end %>
 
@@ -34,21 +34,21 @@
                     <div class="style1">
                         <h3> Nome</h3>
                         <ul>
-                            <li><%= @profile.nome%></li>
+                            <li><%= perfil.nome%></li>
                         </ul>
                     </div>
 
                     <div class="style2">
                         <h3>Data nascimento</h3>
                         <ul>
-                            <li><%= @profile.dt_nascimento%></li>
+                            <li><%= perfil.dt_nascimento%></li>
                         </ul>
                     </div>
 
                     <div class="style3">
                         <h3> Telefone</h3>
                         <ul>
-                            <li>(88) 99345-9864</li>
+                            <li><%= perfil.telefone %></li>
                         </ul>
                     </div>
                 </div>
@@ -59,21 +59,21 @@
           <div class="style1">
               <h3>ID</h3>
               <ul>
-                  <li><%= @profile.id%></li>
+                  <li><%= perfil.id%></li>
               </ul>
           </div>
 
           <div class="style2">
               <h3>Cargo</h3>
               <ul>
-                  <li><%= @profile.cargo%></li>
+                  <li><%= perfil.cargo%></li>
               </ul>
           </div>
 
           <div class="style3">
               <h3>Departamento</h3>
               <ul>
-                  <li><%= @profile.departamento%></li>
+                  <li><%= perfil.departamento%></li>
               </ul>
           </div>
       </div>
@@ -82,21 +82,21 @@
                 <div class="style1">
                     <h3>CEP</h3>
                     <ul>
-                        <li><%= @profile.cep%></li>
+                        <li><%= perfil.cep%></li>
                     </ul>
                 </div>
 
                 <div class="style2">
                     <h3>Cidade</h3>
                     <ul>
-                        <li><%= @profile.cidade%></li>
+                        <li><%= perfil.cidade%></li>
                     </ul>
                 </div>
 
                 <div class="style3">
                     <h3>Nº</h3>
                     <ul>
-                        <li><%= @profile.numero%></li>
+                        <li><%= perfil.numero%></li>
                     </ul>
                 </div>
             </div>
@@ -105,14 +105,14 @@
                 <div class="style1">
                     <h3>UF</h3>
                     <ul>
-                        <li><%= @profile.uf%></li>
+                        <li><%= perfil.uf%></li>
                     </ul>
                 </div>
 
                 <div class="style2">
                     <h3>Rua</h3>
                     <ul>
-                        <li><%= @profile.rua%></li>
+                        <li><%= perfil.rua%></li>
                     </ul>
                 </div>
 
@@ -126,8 +126,8 @@
   </div>
 
   <div class="bloco3">
-    <%= button_to  @profile, method: :delete do %>
-      <%= image_tag "excluir.svg"%>
+    <%= button_to  perfil, method: :delete do %>
+      <%= image_tag "excluir.svg", class:"excluir" %>
     <% end %>
   </div>
 
