@@ -14,14 +14,14 @@
     
     <div>
       <%= form.label :dt_abertura %>
-      <%= form.date_field :dt_abertura, disabled: true %>
+      <%= form.datetime_local_field :dt_abertura, disabled: true %>
     </div>
   </div>
 
   <h3>Cliente</h3>
   <div class="group-2">
     <div>
-      <%= form.label :cliente_id%>
+      <label for="ordem_servico_cliente_id">Codigo</label>
       <%= form.text_field :cliente_id, disabled: true %>
     </div>
     <div>
@@ -79,7 +79,7 @@
 
     <div>
       <%= form.label :dt_encerramento %>
-      <%= form.date_field :dt_encerramento %>
+      <%= form.datetime_local_field :dt_encerramento %>
     </div>
   </div>
 

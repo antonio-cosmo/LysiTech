@@ -70,6 +70,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 3rem;
 }
 
 form > h3 {
@@ -80,7 +81,7 @@ form > h3 {
 form .group-1 {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 150px;
+  grid-template-columns: 2fr 1fr 180px;
   gap: 2rem;
   margin-top: 1rem;
 }
@@ -206,3 +207,49 @@ form .group-4 select {
   filter: brightness(0.8);
 }
 
+.c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.editar {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--white-color);
+  cursor: pointer;
+  text-decoration: none;
+  transition: filter 0.2s ;
+}
+
+.editar:hover{
+  filter: brightness(0.8);
+}
+
+.button_to{
+  margin: 0;
+}
+.excluir {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: filter 0.2s ;
+}
+
+.excluir:hover{
+  filter: brightness(0.8);
+}
+
+.new img{
+  width: 30px;
+  height: 30px;
+}

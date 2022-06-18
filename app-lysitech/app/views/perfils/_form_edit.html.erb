@@ -1,7 +1,7 @@
-<form action="/admin/perfils/<%= perfil.id%>" method="post" >
+<form action="/dashboard/perfils/<%= perfil.id%>" method="post" >
   <input type="hidden" name="_method" value="patch" autocomplete="off">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" autocomplete="off">
-  <h1> Cadastrar Funcionario</h1>
+  <h1> Atualizar Cadastro</h1>
   <div class="c-dados-pessoais">
     <h2>Dados pessoais</h2>
     <div class="c-dados-pessoais-nome">
@@ -42,11 +42,23 @@
       </div>
       <div class="c-dados-pessoais-cargo">
           <label for="cargo">Cargo</label>
-          <input id="cargo" type="text" name="perfil[cargo]" value="<%= perfil.cargo or ""%>" />
+          <input 
+            id="cargo" 
+            type="text" 
+            name="perfil[cargo]" 
+            value="<%= perfil.cargo or ""%>"
+            <%= "disabled" if !@usuario_logado.gestor%>  
+          />
       </div>
       <div class="c-dados-pessoais-departamento">
           <label for="depart">Departamento</label>
-          <input id="depart" type="text" name="perfil[departamento]" value="<%= perfil.departamento or ""%>" />
+          <input 
+            id="depart" 
+            type="text" 
+            name="perfil[departamento]" 
+            value="<%= perfil.departamento or ""%>" 
+            <%= "disabled" if !@usuario_logado.gestor%>
+          />
       </div>
     </div>
   </div>
@@ -97,38 +109,39 @@
       </div>
     </div>
   </div>
+  <% if @usuario_logado.gestor%>
+    <div class="c-login">
+      <div class="group-5">
+        <div class="c-login-gestor">
+          <p>Usuario Administrador?</p>
+          <div class="gestor">
+            <div>
+              <input type="radio" id="sim" name="user[gestor]" value="true" <%= "checked" if user.gestor == true %> />
+              <label for="sim">Sim</label>
+            </div>
+            <div>
+              <input type="radio" id="nao" name="user[gestor]" value="false" <%= "checked" if user.gestor == false %> />
+              <label for="nao">Não</label>
+            </div>
+          </div>
+        </div>  
 
-  <div class="c-login">
-    <div class="group-5">
-      <div class="c-login-gestor">
-        <p>Usuario Administrador?</p>
-        <div class="gestor">
-          <div>
-            <input type="radio" id="sim" name="user[gestor]" value="true" <%= "checked" if user.gestor == true %> />
-            <label for="sim">Sim</label>
+        <div class="c-login-ativo">
+          <p>Usuario ativo?</p>
+          <div class="ativo">
+            <div>
+              <input type="radio" id="sim" name="user[ativo]" value="true" <%= "checked" if user.ativo %> />
+              <label for="sim">Sim</label>
+            </div>
+            <div>
+              <input type="radio" id="nao" name="user[ativo]" value="false" <%= "checked" if !user.ativo %> />
+              <label for="nao">Não</label>
+            </div>
           </div>
-          <div>
-            <input type="radio" id="nao" name="user[gestor]" value="false" <%= "checked" if user.gestor == false %> />
-            <label for="nao">Não</label>
-          </div>
-        </div>
-      </div>  
-
-      <div class="c-login-ativo">
-        <p>Usuario ativo?</p>
-        <div class="ativo">
-          <div>
-            <input type="radio" id="sim" name="user[ativo]" value="true" <%= "checked" if user.ativo %> />
-            <label for="sim">Sim</label>
-          </div>
-          <div>
-            <input type="radio" id="nao" name="user[ativo]" value="false" <%= "checked" if !user.ativo %> />
-            <label for="nao">Não</label>
-          </div>
-        </div>
-      </div>  
+        </div>  
+      </div>
     </div>
-  </div>
+  <% end %>
 
   <div class="submit">
       <input type="submit" value="Atualizar cadastro"/>

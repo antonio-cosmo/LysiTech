@@ -1,10 +1,8 @@
-<form action="/dashboard/perfils/<%= perfil.id%>" method="post" >
+<form action="/login/<%= perfil.id%>" method="post" >
   <input type="hidden" name="_method" value="patch" autocomplete="off">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" autocomplete="off">
   <h1> Cadastro</h1>
-  <% if @usuario_logado.id == 1%>
-    <%= link_to "Fazer login com o novo usuario", root_path %>
-  <%end%>
+  <%= link_to "Fazer login com o novo usuario", root_path %>
   <div class="c-dados-pessoais">
     <h2>Dados pessoais</h2>
     <div class="c-dados-pessoais-nome">
@@ -112,7 +110,6 @@
       </div>
     </div>
   </div>
-  <% if @usuario_logado.gestor%>
     <div class="c-login">
       <div class="group-5">
         <div class="c-login-gestor">
@@ -144,11 +141,7 @@
         </div>  
       </div>
     </div>
-  <% end %>
 </form>
 <div class="c">
-  <%= link_to "Editar", edit_perfil_path(perfil), class: "editar"%>
-  <% if @usuario_logado.gestor %>
-    <%= button_to "Excluir", perfil, method: :delete, class: "excluir" %>
-  <% end %>
+  <%= link_to "Editar", edit_login_path(perfil), class: "editar"%>
 </div>

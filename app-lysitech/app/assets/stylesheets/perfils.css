@@ -265,112 +265,50 @@ form h2{
 
 
 /* listar funcionario */
-
-
-
-.bloco1{
+.c {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  list-style: none;
-  border-bottom: solid 2px var(--border-color);
-  height: 30%;
-  width: 85%;
-
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
 }
-
-.bloco1 ul{
-  list-style: none;
-}
-
-.style0{
-  width: 35%;
-  background: var(--white-color);
-  border-radius: .7rem .7rem .7rem .7rem;
-
-}
-.style0 h3{
-  font-size: min(1.4rem, 2.5vw);
-  padding: 0.2rem 0rem;
-}
-.style0 li{
-  font-size: min(1rem, 2vw);
-  list-style-type: none;
-}
-
-
-/*Cards*/
-
-.style1{
-  padding-left: .7rem;
-  height: 3.5rem;
-}
-
-.style2{
-  background:var( --primary-color);
-  padding-left: .7rem;
+.editar {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
   color: var(--white-color);
-  height: 3.5rem;
-}
-
-.style3{
-  padding-left: .7rem;
-  height: 3.5rem;
-}
-
-/* mostrar*/
-
-.edicao{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 0rem 3rem;
-}
-
-
-.bloco2{
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 1.5rem 0rem;
-  justify-content: space-evenly;
-  list-style: none;
-  border-bottom: solid 2px var(--border-color);
-  height: 30%;
-  width: 85%;
-}
-
-.style4{
-  width: 25%;
-  background: var(--white-color);
-  border-radius: .7rem .7rem .7rem .7rem;
-  align-items: center;
-}
-
-.style4 h3{
-  font-size: min(1.4rem, 2.5vw);
-  padding: 0.2rem 0rem;
-}
-
-.style4 li{
-  font-size: min(1rem, 2vw);
-  list-style-type: none;
-}
-
-.excluir{
-  text-align: center;
-  padding-top: 3rem;
   cursor: pointer;
-  width: 40px;
+  text-decoration: none;
+  transition: filter 0.2s ;
+}
+
+.editar:hover{
+  filter: brightness(0.8);
+}
+
+.button_to{
+  margin: 0;
+}
+.excluir {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: filter 0.2s ;
 }
 
 .excluir:hover{
-  opacity: 1;
-} 
-
-button[type="submit"]{
-  border: none;
+  filter: brightness(0.8);
 }
+
+
 
 
 

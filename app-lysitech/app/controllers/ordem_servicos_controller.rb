@@ -1,26 +1,33 @@
 class OrdemServicosController < SessionsController
+  before_action :require_logged_user
   before_action :set_ordem_servico, only: %i[ show edit update destroy ]
   before_action :set_user_session, only: %i[ index show new edit update destroy ]
 
   # GET /ordem_servicos or /ordem_servicos.json
   def index
-    @ordem_servicos = OrdemServico.all
+    if @usuario_logado.gestor
+      @ordem_servicos = OrdemServico.all.order(:dt_abertura, :id)
+    else
+      @ordem_servicos = OrdemServico.where(perfil_id: @perfil_logado).order(:dt_abertura, :id)
+    end
   end
 
   # GET /ordem_servicos/1 or /ordem_servicos/1.json
   def show
+    @perfil = Perfil.find(@ordem_servico.perfil_id)
+    @cliente = Cliente.find(@ordem_servico.cliente_id)
   end
 
   # GET /ordem_servicos/new
   def new
     @ordem_servico = OrdemServico.new
     @clientes = Cliente.all
-    @perfil = Perfil.find_by(usuario_id: @usuario.id)
+    @perfil = @perfil_logado
   end
 
   # GET /ordem_servicos/1/edit
   def edit
-    @perfil = Perfil.find_by(usuario_id: @usuario.id)
+    @perfil = Perfil.find(@ordem_servico.perfil_id)
     @cliente = Cliente.find(@ordem_servico.cliente_id)
   end
 

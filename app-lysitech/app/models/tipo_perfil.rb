@@ -1,2 +1,0 @@
-class TipoPerfil < ApplicationRecord
-end

@@ -28,9 +28,9 @@ h1, h2, h3, h4, h5, h6, strong {
 button {
   cursor: pointer;
 }
+
 [disabled] {
   color: #000;
-  opacity: none;
   cursor: not-allowed;
 }
 
@@ -80,6 +80,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid #5b6977;
 }
 
 .photo{
@@ -120,6 +121,11 @@ button {
 
 .link:hover{
   background: #075d96;
+}
+
+.username {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 

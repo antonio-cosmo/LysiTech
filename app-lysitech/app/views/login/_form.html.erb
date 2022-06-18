@@ -1,10 +1,6 @@
-<form action="/dashboard/perfils" method="post" >
+<form action="/login" method="post" >
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" autocomplete="off">
-  <% if @usuario_logado.id == 1%>
     <h1> Cadastrar Perfil</h1>
-  <% else %>
-    <h1> Cadastrar Funcionario</h1>
-  <% end %>
   <div class="c-dados-pessoais">
     <h2>Dados pessoais</h2>
     <div class="c-dados-pessoais-nome">

@@ -1,4 +1,6 @@
 class ClientesController < SessionsController
+  before_action :require_logged_user
+  before_action :is_admin?, only: %i[edit update destroy]
   before_action :set_cliente, only: %i[ show edit update destroy ]
   before_action :set_user_session, only: %i[ index show new edit update destroy ]
 

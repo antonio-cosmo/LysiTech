@@ -1,14 +1,19 @@
 <aside class="sidebar">
     <div class="perfil">
       <div class="photo"><%= image_tag "Foto_de_perfil.png" %></div>
-      <p class="name"><%= @usuario.usuario%></p>
+      <p class="name">
+        <%= link_to @usuario_logado.usuario,
+        (@perfil_logado or dashboard_path), class: "username"%>     
+      </p>
     </div>
     <ul> 
-      <li class="link" title="Funcionários" ><%= link_to (image_tag "Funcionarios.svg"), perfils_path %></li>
+      <li class="link" title="Home"><%= link_to (image_tag "Home.svg"), dashboard_path %></li> 
+      <%if @usuario_logado.gestor%>
+        <li class="link" title="Funcionários" ><%= link_to (image_tag "Funcionarios.svg"), perfils_path %></li>
+      <% end %>
       <li class="link" title="Clientes"><%= link_to (image_tag "Clientes.svg"), clientes_path %></li> 
       <li class="link" title="Protocolos"><%= link_to (image_tag "Protocolos.svg"), ordem_servicos_path %></li>
-      <li class="link" title="Avisos"><%= link_to (image_tag "Avisos.svg"), "#" %></li>
-      <li class="link" title="Sair"><%= link_to (image_tag "Logout.svg"), logout_path %></li>
+      <li class="link" title="Sair"><%= link_to (image_tag "Logout.svg"), '/sign_out' %></li>
     </ul>
 </aside>
 

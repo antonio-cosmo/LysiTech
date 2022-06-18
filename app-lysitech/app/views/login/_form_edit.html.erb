@@ -1,34 +1,31 @@
-<form action="/dashboard/perfils/<%= perfil.id%>" method="post" >
+<form action="/login/<%= perfil.id%>" method="post" >
   <input type="hidden" name="_method" value="patch" autocomplete="off">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" autocomplete="off">
-  <h1> Cadastro</h1>
-  <% if @usuario_logado.id == 1%>
-    <%= link_to "Fazer login com o novo usuario", root_path %>
-  <%end%>
+  <h1> Atualizar Cadastro</h1>
   <div class="c-dados-pessoais">
     <h2>Dados pessoais</h2>
     <div class="c-dados-pessoais-nome">
       <label for="nome" >Nome</label>
-      <input id="nome" type="text" name="perfil[nome]" value="<%= perfil.nome or ""%>" disabled/>
+      <input id="nome" type="text" name="perfil[nome]" value="<%= perfil.nome or ""%>"/>
     </div>
     <div class="group-0">
       <div class="c-dados-pessoais-cpf">
         <label for="cpf">CPF</label>
-        <input id="cpf" type="text" name="perfil[cpf]" value="<%= perfil.cpf or ""%>" disabled/>
+        <input id="cpf" type="text" name="perfil[cpf]" value="<%= perfil.cpf or ""%>"/>
       </div>
       <div class="c-dados-pessoais-nascimento">
         <label for="dt-nascimento">Data Nascimento</label>
-        <input id="dt-nascimento" type="date" name="perfil[dt_nascimento]" value="<%= perfil.dt_nascimento or ""%>" disabled />
+        <input id="dt-nascimento" type="date" name="perfil[dt_nascimento]" value="<%= perfil.dt_nascimento or ""%>" />
       </div>
       <div class="c-dados-pessoais-sexo">
         <p>Sexo</p>
         <div class="sexo">
           <div>
-            <input type="radio" id="masculino" name="perfil[sexo]" value="masculino" <%= "checked" if perfil.sexo == "masculino"%> disabled />
+            <input type="radio" id="masculino" name="perfil[sexo]" value="masculino" <%= "checked" if perfil.sexo == "masculino" %>  />
             <label for="masculino">masculino</label>
           </div>
           <div>
-            <input type="radio" id="feminino" name="perfil[sexo]" value="feminino" <%= "checked" if perfil.sexo == "feminino" %> disabled />
+            <input type="radio" id="feminino" name="perfil[sexo]" value="feminino" <%= "checked" if perfil.sexo == "feminino" %> />
             <label for="feminino">feminino</label>
           </div>
         </div>
@@ -37,11 +34,11 @@
     <div class="group-1">
       <div class="c-dados-pessoais-email">
           <label for="email">Email</label>
-          <input id="email" type="text" name="perfil[email]" value="<%= perfil.email or ""%>" disabled/>
+          <input id="email" type="text" name="perfil[email]" value="<%= perfil.email or ""%>" />
       </div>
       <div class="c-dados-pessoais-email">
           <label for="tel">Telefone</label>
-          <input id="id" type="text" name="perfil[telefone]" value="<%= perfil.telefone or ""%>" disabled/>
+          <input id="id" type="text" name="perfil[telefone]" value="<%= perfil.telefone or ""%>" />
       </div>
       <div class="c-dados-pessoais-cargo">
           <label for="cargo">Cargo</label>
@@ -50,7 +47,6 @@
             type="text" 
             name="perfil[cargo]" 
             value="<%= perfil.cargo or ""%>"
-            disabled  
           />
       </div>
       <div class="c-dados-pessoais-departamento">
@@ -60,7 +56,6 @@
             type="text" 
             name="perfil[departamento]" 
             value="<%= perfil.departamento or ""%>" 
-            disabled
           />
       </div>
     </div>
@@ -71,29 +66,29 @@
     <div class="group-2">
       <div class="c-endereco-rua">
         <label for="rua">Rua</label>
-        <input id="id" type="text" name="perfil[rua]" value="<%= perfil.rua or ""%>" disabled />
+        <input id="id" type="text" name="perfil[rua]" value="<%= perfil.rua or ""%>" />
       </div>
       <div class="c-endereco-numero">
         <label>Número</label>
-        <input type="text" name="perfil[numero]" value="<%= perfil.numero or ""%>" disabled/>
+        <input type="text" name="perfil[numero]" value="<%= perfil.numero or ""%>"/>
       </div>
       <div class="c-endereco-bairro">
         <label>Bairro</label>
-        <input type="text" name="perfil[bairro]" value="<%= perfil.bairro or ""%>" disabled />
+        <input type="text" name="perfil[bairro]" value="<%= perfil.bairro or ""%>" />
       </div>    
     </div>
     <div class="group-3">
       <div class="c-endereco-cep">
         <label>Cep</label>
-        <input type="text" name="perfil[cep]" value="<%= perfil.cep or ""%>" disabled />
+        <input type="text" name="perfil[cep]" value="<%= perfil.cep or ""%>" />
       </div>
       <div class="c-endereco-cidade">
         <label>Cidade</label>
-        <input type="text" name="perfil[cidade]" value="<%= perfil.cidade or ""%>" disabled/>
+        <input type="text" name="perfil[cidade]" value="<%= perfil.cidade or ""%>" />
       </div>
       <div class="c-endereco-uf">
         <label>UF</label>
-        <input type="text" name="perfil[uf]" value="<%= perfil.uf or ""%>" disabled />
+        <input type="text" name="perfil[uf]" value="<%= perfil.uf or ""%>" />
       </div>
     </div>
   </div>
@@ -103,27 +98,26 @@
     <div class="group-4">
       <div class="c-login-usuario">
         <label>Usuario</label>
-        <input type="text" name="user[usuario]" value="<%= user.usuario or ""%>" disabled/>
+        <input type="text" name="user[usuario]" value="<%= user.usuario or ""%>" />
       </div>
 
       <div class="c-login-senha">
         <label>Senha</label>
-        <input type="text"  name="user[senha]" value="<%= user.senha or ""%>" disabled/>
+        <input type="text"  name="user[senha]" value="<%= user.senha or ""%>" />
       </div>
     </div>
   </div>
-  <% if @usuario_logado.gestor%>
     <div class="c-login">
       <div class="group-5">
         <div class="c-login-gestor">
           <p>Usuario Administrador?</p>
           <div class="gestor">
             <div>
-              <input type="radio" id="sim" name="user[gestor]" value="true" <%= "checked" if user.gestor == true %> disabled/>
+              <input type="radio" id="sim" name="user[gestor]" value="true" <%= "checked" if user.gestor == true %> />
               <label for="sim">Sim</label>
             </div>
             <div>
-              <input type="radio" id="nao" name="user[gestor]" value="false" <%= "checked" if user.gestor == false %> disabled/>
+              <input type="radio" id="nao" name="user[gestor]" value="false" <%= "checked" if user.gestor == false %> />
               <label for="nao">Não</label>
             </div>
           </div>
@@ -133,22 +127,19 @@
           <p>Usuario ativo?</p>
           <div class="ativo">
             <div>
-              <input type="radio" id="sim" name="user[ativo]" value="true" <%= "checked" if user.ativo %> disabled/>
+              <input type="radio" id="sim" name="user[ativo]" value="true" <%= "checked" if user.ativo %> />
               <label for="sim">Sim</label>
             </div>
             <div>
-              <input type="radio" id="nao" name="user[ativo]" value="false" <%= "checked" if !user.ativo %> disabled/>
+              <input type="radio" id="nao" name="user[ativo]" value="false" <%= "checked" if !user.ativo %> />
               <label for="nao">Não</label>
             </div>
           </div>
         </div>  
       </div>
     </div>
-  <% end %>
+
+  <div class="submit">
+      <input type="submit" value="Atualizar cadastro"/>
+  </div>
 </form>
-<div class="c">
-  <%= link_to "Editar", edit_perfil_path(perfil), class: "editar"%>
-  <% if @usuario_logado.gestor %>
-    <%= button_to "Excluir", perfil, method: :delete, class: "excluir" %>
-  <% end %>
-</div>

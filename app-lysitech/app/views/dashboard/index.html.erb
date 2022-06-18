@@ -1,0 +1,80 @@
+
+<% if @perfil%>   
+<section>
+<div>
+  <h3>Aberto</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Chamado</th>
+        <th> Visualizar</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% if @ch_abertos%>
+      <% @ch_abertos.each do |chamado| %>    
+          <tr>               
+            <td><%= chamado.id %></td>
+            <td><%= chamado.titulo %></td>
+            <td><%= link_to "ver" , chamado %></td>
+          </tr>
+      <% end %>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <h3>Em andamento</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Data Abertura</th>
+        <th>Chamado</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% if @ch_em_andamentos%>
+      <% @ch_em_andamentos.each do |chamado| %>    
+          <tr>               
+            <td><%= chamado.id %></td>
+            <td><%= chamado.titulo %></td>
+            <td><%= link_to "ver" , chamado %></td>
+          </tr>
+      <% end %>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <h3>Concluido</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Data Abertura</th>
+        <th>Chamado</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% if @ch_em_andamentos%>
+      <% @ch_concluidos.each do |chamado| %>    
+          <tr>               
+            <td><%= chamado.id %></td>
+            <td><%= chamado.titulo %></td>
+            <td><%= link_to "ver" , chamado %></td>
+          </tr>
+      <% end %>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+<section>
+
+<% else %>
+  <h1>Crie um perfil administrador</h1>
+<% end%>
+

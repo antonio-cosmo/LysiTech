@@ -1,47 +1,94 @@
-<div id="<%= dom_id ordem_servico %>">
-  <p>
-    <strong>Titulo:</strong>
-    <%= ordem_servico.titulo %>
-  </p>
+<h1>Chamado</h1>
+<%= form_with(model: ordem_servico) do |form| %>
+  <h3>Chamado</h3>
+  <div class="group-1">
+    <div>
+      <%= form.label :titulo %>
+      <%= form.text_field :titulo, disabled: true %>
+    </div>
+    
+    <div>
+      <%= form.label :categoria %>
+      <%= form.text_field :categoria, disabled: true %>
+    </div>
+    
+    <div>
+      <%= form.label :dt_abertura %>
+      <%= form.datetime_local_field :dt_abertura, disabled: true %>
+    </div>
+  </div>
 
-  <p>
-    <strong>Categoria:</strong>
-    <%= ordem_servico.categoria %>
-  </p>
+  <h3>Cliente</h3>
+  <div class="group-2">
+    <div>
+      <label for="ordem_servico_cliente_id">Codigo</label>
+      <%= form.text_field :cliente_id, disabled: true %>
+    </div>
+    <div>
+      <label>Razão Social</label>
+      <input type="text" value="<%= cliente ? cliente.razao_social : " " %>" disabled />
+    </div>
+    <div>
+      <label>Nome Fantasia</label>
+      <input type="text" value="<%= cliente ? cliente.nome_fantasia : " " %>" disabled />
+    </div>
+  </div>
 
-  <p>
-    <strong>Descricao:</strong>
-    <%= ordem_servico.descricao %>
-  </p>
+  <div class="group-3">
+    <div>
+      <label for="ordem_servico_descricao">Descrição do Problema</label>
+      <%= form.text_area :descricao, disabled: true %>
+    </div>
 
-  <p>
-    <strong>Solucao:</strong>
-    <%= ordem_servico.solucao %>
-  </p>
+    <div>
+      <label for="ordem_servico_solucao">Procedimento Realizado</label>
+      <%= form.text_area :solucao, disabled: true %>
+    </div>
+  </div>
 
-  <p>
-    <strong>Estatus:</strong>
-    <%= ordem_servico.estatus %>
-  </p>
+  <div class="group-4">
+    <div>
+      <label for="ordem_servico_perfil_id">Tecnico</label>
+      <input id="ordem_servico_perfil_id" name="ordem_servico[perfil_id]" value="<%= perfil ? perfil.id : " "%>" disabled />
+    </div>
 
-  <p>
-    <strong>Dt abertura:</strong>
-    <%= ordem_servico.dt_abertura %>
-  </p>
+    <div>
+      <label for="perfil">Nome</label>
+      <input id="perfil" type="text" value="<%= perfil ? perfil.nome : " "%>" disabled />
+    </div>
+  
+    <div>
+      <label for="ordem-servico">Status</label>
+      <select name="ordem_servico[estatus]" id="ordem-servico" disabled>
+        <% if ordem_servico.estatus == 3 %>
+          <option value="3">Concluido</option>
+          <option value="1">Aberto</option>
+          <option value="2">Em andamento</option>
+        <% elsif ordem_servico.estatus == 2      %>
+          <option value="2">Em andamento</option>
+          <option value="1">Aberto</option>
+          <option value="3">Concluido</option>
+        <% else%>
+          <option value="1">Aberto</option>
+          <option value="2">Em andamento</option>
+          <option value="3">Concluido</option>
+        <% end %>
+        
+      </select>
+    </div>
 
-  <p>
-    <strong>Dt encerramento:</strong>
-    <%= ordem_servico.dt_encerramento %>
-  </p>
+    <div>
+      <%= form.label :dt_encerramento %>
+      <%= form.datetime_local_field :dt_encerramento, disabled: true %>
+    </div>
+  </div>
 
-  <p>
-    <strong>Perfil:</strong>
-    <%= ordem_servico.perfil_id %>
-  </p>
 
-  <p>
-    <strong>Cliente:</strong>
-    <%= ordem_servico.cliente_id %>
-  </p>
+ 
 
+<% end %>
+
+<div class="c">
+  <%= link_to "Editar", edit_ordem_servico_path(ordem_servico), class: "editar"%>
+  <%= button_to "Excluir", ordem_servico, method: :delete, class: "excluir" %>
 </div>

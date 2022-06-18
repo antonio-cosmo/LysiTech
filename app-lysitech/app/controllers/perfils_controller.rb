@@ -1,10 +1,11 @@
 class PerfilsController < SessionsController
+  before_action :require_logged_user
+  before_action :is_admin?, only: %i[index new destroy]
   before_action :set_perfil, only: %i[ show edit update destroy ]
   before_action :set_user_session, only: %i[ index show new edit update destroy ]
 
   def index
     @perfils = Perfil.all.order(:nome)
-    @usuario = Usuario.find(session[:user_id])
   end
 
   def show
@@ -66,4 +67,5 @@ class PerfilsController < SessionsController
     def usuario_params
       params.require(:user).permit(:usuario, :senha, :gestor, :ativo)
     end
+
 end

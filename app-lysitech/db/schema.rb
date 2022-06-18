@@ -39,8 +39,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_02_235527) do
     t.text "descricao"
     t.text "solucao"
     t.integer "estatus"
-    t.date "dt_abertura"
-    t.date "dt_encerramento"
+    t.datetime "dt_abertura"
+    t.datetime "dt_encerramento"
     t.bigint "perfil_id", null: false
     t.bigint "cliente_id", null: false
     t.datetime "created_at", null: false

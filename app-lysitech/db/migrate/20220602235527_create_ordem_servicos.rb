@@ -6,8 +6,8 @@ class CreateOrdemServicos < ActiveRecord::Migration[7.0]
       t.text :descricao
       t.text :solucao
       t.integer :estatus
-      t.date :dt_abertura
-      t.date :dt_encerramento
+      t.datetime :dt_abertura
+      t.datetime :dt_encerramento
       t.references :perfil, null: false, foreign_key: true
       t.references :cliente, null: false, foreign_key: true
 

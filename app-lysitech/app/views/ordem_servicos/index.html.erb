@@ -1,8 +1,7 @@
 
-  <section>
+  <section class="chamados">
       <h1>Chamados</h1>
-      <%= link_to (image_tag "add.svg"), new_ordem_servico_path %>
-
+      <%= link_to (image_tag "plus.svg"), new_ordem_servico_path, class: 'new' %> 
       <div class="c-pesquisa">
         <input type="text" placeholder="Pesquise aqui..."/>
         <%= image_tag "Pesquisa.svg" %>
@@ -22,12 +21,11 @@
           </tr>
         </thead>
         <tbody>
-        
           <% @ordem_servicos.each do |ordem_servico| %>    
               <tr>               
                 <td><%= ordem_servico.id %></td>
                 <td>
-                  <%= ordem_servico.dt_abertura.strftime("%d/%m/%Y") if ordem_servico.dt_abertura %>
+                  <%= ordem_servico.dt_abertura.strftime("%d/%m/%Y %H:%M:%S") if ordem_servico.dt_abertura %>
                 </td>
                 <td><%= ordem_servico.titulo %></td>
                 <td>
@@ -40,12 +38,11 @@
                   <% end %>
                 </td>
                 <td>
-                  <%= ordem_servico.dt_encerramento.strftime("%d/%m/%Y") if ordem_servico.dt_encerramento %>
+                  <%= ordem_servico.dt_encerramento.strftime("%d/%m/%Y %H:%M:%S") if ordem_servico.dt_encerramento %>
                 </td>
                 <td><%= link_to "visualizar" , ordem_servico %></td>
               </tr>
           <% end %>
-
         </tbody>
       </table>
 

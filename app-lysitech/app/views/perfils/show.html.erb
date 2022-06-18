@@ -1,6 +1,9 @@
 <section>
-  <p style="color: green"><%= notice %></p>
-  <%= link_to (image_tag "voltar.svg", title: 'Voltar'), perfils_path , class: "voltar" %>
-  <%= render "perfil",  perfil: @perfil %>
+  <%= link_to (image_tag "voltar.svg", title: 'Voltar'), 
+      (@usuario_logado.gestor ? perfils_path : dashboard_path) , 
+      class: "voltar" 
+  %>
+  
+  <%= render "perfil",  perfil: @perfil, user: @user %>
 
 </section>
