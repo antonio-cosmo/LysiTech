@@ -1,0 +1,36 @@
+<section>
+      <h1>Usuarios</h1>
+          <div class="c-pesquisa">
+            <input type="text"  placeholder="Pesquise aqui..."/>
+            <%= image_tag "Pesquisa.svg" %>
+          </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Ativo?</th>
+            <th>Admin?</th>
+            <th>Ver</th>
+
+          </tr>
+        </thead>
+        <tbody>
+        
+          <% @usuarios.each do |user| %>    
+              <tr>               
+                <td><%= user.id %></td>
+                <td><%= user.usuario %></td>
+                <td><%= user.ativo ? 'Sim' : 'Não' %></td>
+                <td><%= user.gestor ? 'Sim' : 'Não' %></td>
+                <td><%= link_to (image_tag 'eye.png') , user %></td>
+              </tr>
+          <% end %>
+
+        </tbody>
+      </table>
+
+      
+      
+  </section>

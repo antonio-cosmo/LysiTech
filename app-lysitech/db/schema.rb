@@ -70,12 +70,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_02_235527) do
     t.index ["usuario_id"], name: "index_perfils_on_usuario_id"
   end
 
-  create_table "tipo_perfils", force: :cascade do |t|
-    t.string "tipo", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "usuarios", force: :cascade do |t|
     t.string "usuario"
     t.string "senha"

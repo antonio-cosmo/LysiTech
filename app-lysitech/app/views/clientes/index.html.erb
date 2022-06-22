@@ -1,7 +1,7 @@
 
   <section>
       <h1>Clientes</h1>
-      <%= link_to (image_tag "add.svg"), new_cliente_path %>
+      <%= link_to (image_tag "user-plus-light.png"), new_cliente_path %>
 
       <div class="c-pesquisa">
         <input type="text"  placeholder="Pesquise aqui..."/>
@@ -27,7 +27,7 @@
                 <td><%= cliente.ativo ? "S" : "N" %></td>
                 <td><%= cliente.razao_social %></td>
                 <td><%= cliente.nome_fantasia %></td>
-                <td><%= link_to "visualizar" , cliente %></td>
+                <td><%= link_to (image_tag 'eye.png'), cliente %></td>
 
 
               </tr>

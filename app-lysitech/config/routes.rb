@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   scope :dashboard do
-    resources :ordem_servicos, :clientes, :perfils
+    resources :ordem_servicos, :clientes, :perfils, :usuarios
   end 
   resources :login
   #----Login--------

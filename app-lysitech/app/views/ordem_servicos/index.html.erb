@@ -40,7 +40,7 @@
                 <td>
                   <%= ordem_servico.dt_encerramento.strftime("%d/%m/%Y %H:%M:%S") if ordem_servico.dt_encerramento %>
                 </td>
-                <td><%= link_to "visualizar" , ordem_servico %></td>
+                <td><%= link_to (image_tag 'eye.png') , ordem_servico %></td>
               </tr>
           <% end %>
         </tbody>

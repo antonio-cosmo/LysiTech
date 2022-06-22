@@ -1,0 +1,9 @@
+<section class="c-form">
+  <%= link_to (image_tag "voltar.svg", title: 'Voltar'), 
+      (@usuario_logado.gestor ? usuarios_path : dashboard_path) , 
+      class: "voltar" 
+  %>
+  
+  <%= render "usuario", user: @user %>
+
+</section>

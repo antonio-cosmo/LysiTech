@@ -7,6 +7,9 @@ section, .c-form{
   padding: 1.5rem 5rem;
 }
 
+section > a > img {
+  width: 40px;
+}
 /* ####Index###### */
 .c-pesquisa{
   width: 30rem;
@@ -49,6 +52,11 @@ td{
   background: #fff;
   color: #000;
   border-radius: 0.25rem;
+}
+
+td img {
+  width: 25px;
+  height: 25px;
 }
 
 td:first-child{

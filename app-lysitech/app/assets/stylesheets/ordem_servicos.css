@@ -51,6 +51,11 @@ td{
   border-radius: 0.25rem;
 }
 
+td img {
+  width: 25px;
+  height: 25px;
+}
+
 td:first-child{
   color:var(--text-title);
 }

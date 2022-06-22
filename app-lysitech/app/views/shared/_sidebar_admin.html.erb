@@ -7,13 +7,17 @@
       </p>
     </div>
     <ul> 
-      <li class="link" title="Home"><%= link_to (image_tag "Home.svg"), dashboard_path %></li> 
+      <li class="link" title="Home"><%= link_to (image_tag "house-light.png"), dashboard_path %></li> 
       <%if @usuario_logado.gestor%>
-        <li class="link" title="Funcionários" ><%= link_to (image_tag "Funcionarios.svg"), perfils_path %></li>
+        <li class="link" title="Funcionários" ><%= link_to (image_tag "employee.png"), perfils_path %></li>
       <% end %>
-      <li class="link" title="Clientes"><%= link_to (image_tag "Clientes.svg"), clientes_path %></li> 
-      <li class="link" title="Protocolos"><%= link_to (image_tag "Protocolos.svg"), ordem_servicos_path %></li>
-      <li class="link" title="Sair"><%= link_to (image_tag "Logout.svg"), '/sign_out' %></li>
+      <li class="link" title="Clientes"><%= link_to (image_tag "user-light.png"), clientes_path %></li> 
+      <li class="link" title="Protocolos"><%= link_to (image_tag "support.png"), ordem_servicos_path %></li>
+      <%if @usuario_logado.gestor%>  
+        <li class="link" title="Usuarios"><%= link_to (image_tag "users-three-light"), usuarios_path %></li>
+      <% end %>
+      <li class="link" title="Sair"><%= link_to (image_tag "sign-out-light.png"), '/sign_out' %></li>
+
     </ul>
 </aside>
 

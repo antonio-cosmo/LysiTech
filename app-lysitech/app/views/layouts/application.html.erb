@@ -7,12 +7,12 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag params[:controller] %>
+    <%= javascript_importmap_tags %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="shortcut icon" href=<%= image_path('Icon.svg')%> type="image/svg" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <title>Lysitech</title>
-    <%= stylesheet_link_tag params[:controller] %>
-    <%= javascript_importmap_tags %>
 
   </head>
 
@@ -24,10 +24,7 @@
       </main>
     </div>
     
-    <%
-=begin%>
- <%= javascript_include_tag params[:controller] %> 
-<%
-=end%>
+    <%= javascript_include_tag params[:controller] %> 
+
   </body>
 </html>

@@ -1,0 +1,42 @@
+<%= form_with(model: user) do |f| %>
+  <div class="usuario">
+    <%= f.label :usuario %>
+    <%= f.text_field :usuario %>
+  </div>
+  <div class="senha">
+    <%= f.label :senha %>
+    <%= f.text_field :senha %>
+  </div>
+
+  <div class="ativo">
+    <p>Usuario Ativo?</p>
+    <div class="ativo">
+      <div>
+        <input type="radio" id="sim" name="usuario[ativo]" value="true" <%= "checked" if user.ativo %> />
+        <label for="sim">Sim</label>
+      </div>
+      <div>
+        <input type="radio" id="nao" name="usuario[ativo]" value="false" <%= "checked" if !user.ativo %> />
+        <label for="nao">Não</label>
+      </div>
+    </div>
+  </div>  
+
+  <div class="gestor">
+    <p>Usuario Administrador?</p>
+    <div class="gestor">
+      <div>
+        <input type="radio" id="sim" name="usuario[gestor]" value="true" <%= "checked" if user.gestor%> />
+        <label for="sim">Sim</label>
+      </div>
+      <div>
+        <input type="radio" id="nao" name="usuario[gestor]" value="false" <%= "checked" if !user.gestor%> />
+        <label for="nao">Não</label>
+      </div>
+    </div>
+  </div> 
+
+  <div class="submit">
+      <input type="submit" value="Atualizar"/>
+  </div>
+<% end %>
