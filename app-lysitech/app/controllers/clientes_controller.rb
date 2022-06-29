@@ -6,7 +6,13 @@ class ClientesController < SessionsController
 
   # GET /clientes or /clientes.json
   def index
-    @clientes = Cliente.all
+    q = params[:search]
+    if q
+      q.strip!
+      @value_search = q
+      @clientes = search(q)
+    end
+    @clientes = search(q)
   end
 
   # GET /clientes/1 or /clientes/1.json
@@ -52,6 +58,12 @@ class ClientesController < SessionsController
 
   # DELETE /clientes/1 or /clientes/1.json
   def destroy
+    protocols = OrdemServico.where(cliente_id: @cliente.id)
+
+    for protocol in protocols
+      protocol.destroy
+    end
+    
     @cliente.destroy
 
     respond_to do |format|
@@ -72,5 +84,12 @@ class ClientesController < SessionsController
         :cnpj, :inscr_estadual, :razao_social, :nome_fantasia, 
         :telefone, :email, :rua, :numero, :bairro, :cep, :cidade, :uf, :observacao, :ativo
       )
+    end
+
+    def search(value)
+      if value and value.size > 0
+        return Cliente.where("razao_social ILIKE ?", "%#{value}%").order(:id)
+      end
+      return Cliente.all.order(:id)
     end
 end

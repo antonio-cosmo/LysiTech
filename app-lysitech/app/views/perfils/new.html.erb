@@ -1,5 +1,10 @@
 <section class="c-form">
-  <%= link_to (image_tag "voltar.svg", title: 'Voltar', class: "voltar"), perfils_path %>
+  <div id="notice" <%=flash[:alert] ? 'style=visibility:visible' : 'style=display:none'%>>
+    <%if flash[:alert] %>
+      <div class="alert"><%= flash[:alert]%></div>
+    <%end%>
+  </div>
+  <%= link_to (image_tag 'left.png', title: 'Voltar', class: "voltar"), perfils_path %>
   <%= render "form" %>
 
 </section>

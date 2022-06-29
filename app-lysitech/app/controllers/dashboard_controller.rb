@@ -29,45 +29,20 @@ class DashboardController < SessionsController
                 chamado.estatus == 1
               end
         return arr
+
       elsif status == 'andamento'
         arr = chamados.select do |chamado|
                   chamado.estatus == 2
               end
-
         return arr
+
       elsif status == 'concluido'
         arr = chamados.select do |chamado|
                 chamado.estatus == 3
             end
-
         return arr
       end
-    end
-    
-    
-    # def chamados_abertos(chamados)
-    #   arr = chamados.select do |chamado|
-    #             chamado.estatus == 1
-    #         end
-
-    #   return arr
-    # end
-
-    # def chamados_andamentos(chamados)
-    #   arr = chamados.select do |chamado|
-    #             chamado.estatus == 2
-    #         end
-
-    #   return arr
       
-    # end
-
-    # def chamados_concluidos(chamados)
-    #    arr = chamados.select do |chamado|
-    #             chamado.estatus == 3
-    #          end
-
-    #     return arr
-    # end
+    end
 
 end

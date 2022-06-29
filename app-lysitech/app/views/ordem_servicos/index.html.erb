@@ -2,9 +2,12 @@
   <section class="chamados">
       <h1>Chamados</h1>
       <%= link_to (image_tag "plus.svg"), new_ordem_servico_path, class: 'new' %> 
-      <div class="c-pesquisa">
-        <input type="text" placeholder="Pesquise aqui..."/>
-        <%= image_tag "Pesquisa.svg" %>
+      <div class="c-search">
+        <form action="/dashboard/ordem_servicos" method="get" class="c-pesquisa">
+          <input type="text"  placeholder="Pesquise por titulo..." name="search" value="<%= @value_search %>" />
+          <button type="submit"><%= image_tag "Pesquisa.svg" %></button>
+        </form>
+        <a href='/dashboard/ordem_servicos'>Listar Todos</a>
       </div>
      
 
@@ -13,7 +16,7 @@
           <tr>
             <th>Código</th>
             <th>Data Abertura</th>
-            <th>Chamado</th>
+            <th>Titulo</th>
             <th>Estatus</th>
             <th>Data Encerramento</th>
             <th>Ver</th>

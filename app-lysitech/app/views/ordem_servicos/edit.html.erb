@@ -1,4 +1,4 @@
 <section class="c-form">
-  <%= link_to (image_tag "voltar.svg", title: 'Voltar', class: "voltar"), @ordem_servico %>
+  <%= link_to (image_tag 'left.png', title: 'Voltar', class: "voltar"), @ordem_servico %>
   <%= render "form_edit", ordem_servico: @ordem_servico, perfil: @perfil, cliente: @cliente %>
 </section>

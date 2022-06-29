@@ -3,9 +3,12 @@
       <h1>Clientes</h1>
       <%= link_to (image_tag "user-plus-light.png"), new_cliente_path %>
 
-      <div class="c-pesquisa">
-        <input type="text"  placeholder="Pesquise aqui..."/>
-        <%= image_tag "Pesquisa.svg" %>
+      <div class='c-search'>
+        <form action="/dashboard/clientes" method="get" class="c-pesquisa">
+          <input type="text"  placeholder="Pesquisar razão social..." name="search" value="<%= @value_search %>" />
+          <button type="submit"><%= image_tag "Pesquisa.svg" %></button>
+        </form>
+        <a href='/dashboard/clientes'>Listar Todos</a>
       </div>
 
       <table>

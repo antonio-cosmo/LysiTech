@@ -1,9 +1,12 @@
 <section>
       <h1>Usuarios</h1>
-          <div class="c-pesquisa">
-            <input type="text"  placeholder="Pesquise aqui..."/>
-            <%= image_tag "Pesquisa.svg" %>
-          </div>
+      <div class='c-search'>
+          <form action="/dashboard/usuarios" method="get" class="c-pesquisa">
+            <input type="text"  placeholder="Pesquise aqui..." name="search" value="<%= @value_search %>" />
+            <button type="submit"><%= image_tag "Pesquisa.svg" %></button>
+          </form>
+          <a href='/dashboard/usuarios'>Listar Todos</a>
+      </div>
 
       <table>
         <thead>

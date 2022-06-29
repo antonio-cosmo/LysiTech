@@ -3,10 +3,14 @@
       <h1>Funcionários</h1>
       <%= link_to (image_tag "user-plus-light.png"), new_perfil_path %>
 
-          <div class="c-pesquisa">
-            <input type="text"  placeholder="Pesquise aqui..."/>
-            <%= image_tag "Pesquisa.svg" %>
-          </div>
+      <div class="c-search">
+        <form action="/dashboard/perfils" method="get" class="c-pesquisa">
+          <input type="text"  placeholder="Pesquisar por nome..." name="search" value="<%= @value_search %>" />
+          <button type="submit"><%= image_tag "Pesquisa.svg" %></button>
+        </form>
+        <a href='/dashboard/perfils'>Listar Todos</a>
+      </div>
+
 
       <table>
         <thead>

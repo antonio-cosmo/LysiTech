@@ -5,7 +5,10 @@ class PerfilsController < SessionsController
   before_action :set_user_session, only: %i[ index show new edit update destroy ]
 
   def index
-    @perfils = Perfil.all.order(:nome)
+    q = params[:search]
+    q.strip! if q
+    @value_search = q
+    @perfils = search(q)
   end
 
   def show
@@ -18,16 +21,13 @@ class PerfilsController < SessionsController
   end
 
   def create
-
     @user = Usuario.new(usuario_params)
     @perfil = Perfil.new(**perfil_params, usuario: @user)
 
-    respond_to do |format|
-      if @perfil.save and @user.save
-        format.html { redirect_to perfil_path(@perfil), notice: "Usuario criado com sucesso." }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-      end
+    if @user.save and @perfil.save 
+      redirect_to perfils_path, notice: "Usuario criado com sucesso." 
+    else
+      redirect_to new_perfil_path, alert: "Funcionario não cadastrado, informe usuario e senha"
     end
   end
 
@@ -41,6 +41,11 @@ class PerfilsController < SessionsController
   end
 
   def destroy
+    protocols = OrdemServico.where(perfil_id: @perfil.id)
+
+    for protocol in protocols
+      protocol.destroy
+    end
 
     @perfil.destroy
     @user.destroy
@@ -66,6 +71,13 @@ class PerfilsController < SessionsController
 
     def usuario_params
       params.require(:user).permit(:usuario, :senha, :gestor, :ativo)
+    end
+
+    def search(value)
+      if value and value.size > 0
+        return Perfil.where("nome ILIKE ?", "%#{value}%").order(:id)
+      end
+      return Perfil.all.order(:id)
     end
 
 end

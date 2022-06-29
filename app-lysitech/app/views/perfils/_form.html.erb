@@ -1,10 +1,7 @@
-<form action="/dashboard/perfils" method="post" >
+<form class="form" action="/dashboard/perfils" method="post" >
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" autocomplete="off">
-  <% if @usuario_logado.id == 1%>
-    <h1> Cadastrar Perfil</h1>
-  <% else %>
-    <h1> Cadastrar Funcionario</h1>
-  <% end %>
+  
+  <h1> Cadastrar Funcionario</h1>
   <div class="c-dados-pessoais">
     <h2>Dados pessoais</h2>
     <div class="c-dados-pessoais-nome">
@@ -91,12 +88,12 @@
     <div class="group-4">
       <div class="c-login-usuario">
         <label>Usuario</label>
-        <input type="text" name="user[usuario]"/>
+        <input type="text" name="user[usuario]" autocomplete="off" />
       </div>
 
       <div class="c-login-senha">
         <label>Senha</label>
-        <input type="text"  name="user[senha]" />
+        <input type="text"  name="user[senha]" autocomplete="off" />
       </div>
     </div>
   </div>

@@ -5,10 +5,24 @@ class OrdemServicosController < SessionsController
 
   # GET /ordem_servicos or /ordem_servicos.json
   def index
+    q = params[:search]
+
     if @usuario_logado.gestor
-      @ordem_servicos = OrdemServico.all.order(:dt_abertura, :id)
+      if q and q.size > 0
+        q.strip!
+        @value_search = q
+        @ordem_servicos = OrdemServico.where("titulo ILIKE ?", "%#{q}%").order(:id, :dt_abertura)
+      else
+        @ordem_servicos = OrdemServico.all.order(:id, :dt_abertura)
+      end
     else
-      @ordem_servicos = OrdemServico.where(perfil_id: @perfil_logado).order(:dt_abertura, :id)
+      if q and q.size > 0
+        q.strip!
+        @value_search = q
+        @ordem_servicos = OrdemServico.where("perfil_id = ? and titulo ILIKE ?",@perfil_logado, "%#{q}%").order(:id, :dt_abertura)
+      else
+        @ordem_servicos = OrdemServico.where(perfil_id: @perfil_logado).order(:id, :dt_abertura)
+      end
     end
   end
 
@@ -37,7 +51,7 @@ class OrdemServicosController < SessionsController
 
     respond_to do |format|
       if @ordem_servico.save
-        format.html { redirect_to ordem_servico_url(@ordem_servico), notice: "Ordem servico was successfully created." }
+        format.html { redirect_to ordem_servicos_path, notice: "Ordem servico was successfully created." }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -48,7 +62,7 @@ class OrdemServicosController < SessionsController
   def update
     respond_to do |format|
       if @ordem_servico.update(ordem_servico_params)
-        format.html { redirect_to ordem_servico_url(@ordem_servico), notice: "Ordem servico was successfully updated." }
+        format.html { redirect_to ordem_servicos_path, notice: "Ordem servico was successfully updated." }
       else
         format.html { render :edit, status: :unprocessable_entity }
       end
@@ -74,4 +88,5 @@ class OrdemServicosController < SessionsController
     def ordem_servico_params
       params.require(:ordem_servico).permit(:titulo, :categoria, :descricao, :solucao, :estatus, :dt_abertura, :dt_encerramento, :perfil_id, :cliente_id)
     end
+
 end

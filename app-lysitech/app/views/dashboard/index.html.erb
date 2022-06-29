@@ -1,77 +1,72 @@
-
-<% if @perfil%>   
 <section>
-<div>
-  <h3>Aberto</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Código</th>
-        <th colspan="2">Chamado</th>
-      </tr>
-    </thead>
-    <tbody>
-    <% if @ch_abertos%>
-      <% @ch_abertos.each do |chamado| %>    
-          <tr>               
-            <td><%= chamado.id %></td>
-            <td><%= chamado.titulo %></td>
-            <td><%= link_to (image_tag 'eye.png') , chamado %></td>
-          </tr>
+  <div>
+    <h3>Aberto</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th colspan="2">Chamado</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% if @ch_abertos%>
+        <% @ch_abertos.each do |chamado| %>    
+            <tr>               
+              <td><%= chamado.id %></td>
+              <td><%= chamado.titulo %></td>
+              <td><%= link_to (image_tag 'eye.png') , chamado %></td>
+            </tr>
+        <% end %>
       <% end %>
-    <% end %>
-    </tbody>
-  </table>
-</div>
+      </tbody>
+    </table>
+  </div>
 
-<div>
-  <h3>Em andamento</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Código</th>
-        <th colspan="2">Chamado</th>
-      </tr>
-    </thead>
-    <tbody>
-    <% if @ch_em_andamentos%>
-      <% @ch_em_andamentos.each do |chamado| %>    
-          <tr>               
-            <td><%= chamado.id %></td>
-            <td><%= chamado.titulo %></td>
-            <td><%= link_to (image_tag 'eye.png') , chamado %></td>
-          </tr>
+  <div>
+    <h3>Em andamento</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th colspan="2">Chamado</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% if @ch_em_andamentos%>
+        <% @ch_em_andamentos.each do |chamado| %>    
+            <tr>               
+              <td><%= chamado.id %></td>
+              <td><%= chamado.titulo %></td>
+              <td><%= link_to (image_tag 'eye.png') , chamado %></td>
+            </tr>
+        <% end %>
       <% end %>
-    <% end %>
-    </tbody>
-  </table>
-</div>
+      </tbody>
+    </table>
+  </div>
 
-<div>
-  <h3>Concluido</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Código</th>
-        <th colspan="2">Chamado</th>
-      </tr>
-    </thead>
-    <tbody>
-    <% if @ch_em_andamentos%>
-      <% @ch_concluidos.each do |chamado| %>    
-          <tr>               
-            <td><%= chamado.id %></td>
-            <td><%= chamado.titulo %></td>
-            <td><%= link_to (image_tag 'eye.png') , chamado %></td>
-          </tr>
+  <div>
+    <h3>Concluido</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th colspan="2">Chamado</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% if @ch_em_andamentos%>
+        <% @ch_concluidos.each do |chamado| %>    
+            <tr>               
+              <td><%= chamado.id %></td>
+              <td><%= chamado.titulo %></td>
+              <td><%= link_to (image_tag 'eye.png') , chamado %></td>
+            </tr>
+        <% end %>
       <% end %>
-    <% end %>
-    </tbody>
-  </table>
-</div>
-<section>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-<% else %>
-  <h1>Crie um perfil administrador</h1>
-<% end%>
 

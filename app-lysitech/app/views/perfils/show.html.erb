@@ -1,5 +1,5 @@
 <section>
-  <%= link_to (image_tag "voltar.svg", title: 'Voltar'), 
+  <%= link_to (image_tag 'left.png', title: 'Voltar'), 
       (@usuario_logado.gestor ? perfils_path : dashboard_path) , 
       class: "voltar" 
   %>

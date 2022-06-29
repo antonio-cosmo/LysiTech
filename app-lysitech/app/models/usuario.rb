@@ -1,3 +1,4 @@
 class Usuario < ApplicationRecord
-  # belongs_to :perfil
+  validates :usuario, presence: true
+  validates :senha, presence: true
 end

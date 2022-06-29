@@ -17,11 +17,11 @@ Rails.application.config.assets.precompile += %w(
                                                   perfils.css 
                                                   usuarios.css
                                                 )
-Rails.application.config.assets.precompile += %w( 
-                                                  dashboard.js
-                                                  ordem_servicos.js 
-                                                  clientes.js 
-                                                  login.js 
-                                                  perfils.js  
-                                                  usuarios.js
-                                                )
+# Rails.application.config.assets.precompile += %w( 
+#                                                   dashboard.js
+#                                                   ordem_servicos.js 
+#                                                   clientes.js 
+#                                                   login.js 
+#                                                   perfils.js  
+#                                                   usuarios.js
+#                                                 )

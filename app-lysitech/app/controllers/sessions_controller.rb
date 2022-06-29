@@ -43,7 +43,7 @@ class SessionsController < ApplicationController
     end
 
     def current_user
-      @_current_user ||= session[:user_id] && Usuario.find(session[:user_id])
+      return @_current_user ||= session[:user_id] && Usuario.find_by(id: session[:user_id])
     end
 
     def set_user_session

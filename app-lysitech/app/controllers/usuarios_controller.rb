@@ -6,7 +6,14 @@ class UsuariosController < SessionsController
 
 
   def index 
-    @usuarios = Usuario.all.order(:id)
+    q = params[:search]
+    if q
+      q.strip!
+      @value_search = q
+      @usuarios = search(q)
+    end
+    @usuarios = search(q)
+
   end
 
   def show 
@@ -30,5 +37,12 @@ class UsuariosController < SessionsController
 
     def usuario_params
       params.require(:usuario).permit(:usuario, :senha, :gestor, :ativo)
+    end
+
+    def search(value)
+      if value and value.size > 0
+        return Usuario.where("usuario ILIKE ?", "%#{value}%").order(:id)
+      end
+      return Usuario.all.order(:id)
     end
 end

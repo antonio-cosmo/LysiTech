@@ -9,8 +9,32 @@ section, .c-form{
 section > a {
   align-self: flex-start;
 }
+section > a > img {
+  width: 25px;
+}
 /* index */
+.c-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
 
+}
+
+.c-search a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  text-decoration: none;
+  color: #fff;
+  background: var(--primary-color);
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
 .c-pesquisa{
   width: 30rem;
   display: flex;
@@ -19,8 +43,6 @@ section > a {
   background-color: var(--white-color);
   border: solid 1px var(--border-color);
   border-radius: 5px;
-  margin-top: 2rem;
-
 }
 
 .c-pesquisa input{
@@ -29,6 +51,12 @@ section > a {
   border: none;
   outline: none;
   font-size: 1rem;
+}
+
+.c-pesquisa button {
+  background: none;
+  border: none;
+  outline: none;
 }
 
 table{
